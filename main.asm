@@ -295,6 +295,8 @@ INCLUDE "engine/events/engine_flags.asm"
 INCLUDE "engine/overworld/variables.asm"
 INCLUDE "data/text/battle.asm"
 
+SECTION "New Base Stats", ROMX
+INCLUDE "data/pokemon/base_stats_new.asm"
 
 SECTION "bank21", ROMX
 
@@ -302,7 +304,8 @@ INCLUDE "engine/printer/printer_serial.asm"
 INCLUDE "engine/printer/printer.asm"
 INCLUDE "gfx/battle_anims.asm"
 INCLUDE "engine/events/halloffame.asm"
-INCLUDE "data/pokemon/base_stats_new.asm"
+INCLUDE "engine/events/field_moves.asm"
+INCLUDE "engine/events/magnet_train.asm"
 
 SECTION "Crystal Features 2", ROMX
 
@@ -320,12 +323,9 @@ SECTION "bank23", ROMX
 
 INCLUDE "engine/tilesets/timeofday_pals.asm"
 INCLUDE "engine/battle/battle_transition.asm"
-INCLUDE "engine/events/field_moves.asm"
-INCLUDE "engine/events/magnet_train.asm"
 INCLUDE "engine/battle/battlestart_copytilemapatonce.asm"
 INCLUDE "engine/gfx/sprites.asm"
 INCLUDE "engine/gfx/mon_icons.asm"
-
 
 SECTION "bank24", ROMX
 
@@ -450,8 +450,6 @@ SECTION "Pic Animations 1", ROMX
 INCLUDE "engine/gfx/pic_animation.asm"
 INCLUDE "gfx/pokemon/anim_pointers.asm"
 INCLUDE "gfx/pokemon/anims.asm"
-INCLUDE "gfx/pokemon/idle_pointers.asm"
-INCLUDE "gfx/pokemon/idles.asm"
 
 SECTION "Pic Animations 2", ROMX
 
@@ -483,9 +481,17 @@ INCLUDE "gfx/pokemon/new_frames.asm"
 
 SECTION "Pic Animations 5", ROMX
 
+INCLUDE "gfx/pokemon/new_frames_2.asm"
+
+SECTION "Pic Animations 6", ROMX
+
+INCLUDE "gfx/pokemon/idle_pointers.asm"
+INCLUDE "gfx/pokemon/idles.asm"
+
+SECTION "Pic Animations 8", ROMX
+
 INCLUDE "gfx/pokemon/bitmask_pointers.asm"
 INCLUDE "gfx/pokemon/bitmasks.asm"
-
 
 SECTION "bank38", ROMX
 
@@ -509,6 +515,10 @@ SECTION "bank3E", ROMX
 
 INCLUDE "engine/gfx/load_font.asm"
 
+SECTION "Footprints", ROMX
+
+Footprints:
+INCLUDE "gfx/footprints.asm"
 
 SECTION "bank3F", ROMX
 

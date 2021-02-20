@@ -1,5 +1,6 @@
 FirstEvoStages::
 	; lists the lowest stage for each Pokémon
+	; lists the lowest stage for each Pokémon
 	dw BULBASAUR
 	dw BULBASAUR
 	dw BULBASAUR
@@ -112,7 +113,7 @@ FirstEvoStages::
 	dw KOFFING
 	dw RHYHORN
 	dw RHYHORN    ;70
-	dw CHANSEY
+	dw HAPPINY
 	dw TANGELA
 	dw KANGASKHAN
 	dw HORSEA
@@ -121,7 +122,7 @@ FirstEvoStages::
 	dw GOLDEEN
 	dw STARYU     ;78
 	dw STARYU
-	dw MR__MIME
+	dw MIME_JR
 	dw SCYTHER
 	dw SMOOCHUM
 	dw ELEKID
@@ -142,7 +143,7 @@ FirstEvoStages::
 	dw KABUTO
 	dw KABUTO
 	dw AERODACTYL
-	dw SNORLAX
+	dw MUNCHLAX
 	dw ARTICUNO   ;90
 	dw ZAPDOS
 	dw MOLTRES
@@ -182,9 +183,9 @@ FirstEvoStages::
 	dw MAREEP
 	dw MAREEP
 	dw ODDISH
-	dw MARILL
-	dw MARILL     ;b8
-	dw SUDOWOODO
+	dw AZURILL
+	dw AZURILL     ;b8
+	dw BONSLY
 	dw POLIWAG
 	dw HOPPIP
 	dw HOPPIP
@@ -201,7 +202,7 @@ FirstEvoStages::
 	dw SLOWPOKE
 	dw MISDREAVUS ;c8
 	dw UNOWN
-	dw WOBBUFFET
+	dw WYNAUT
 	dw GIRAFARIG
 	dw PINECO
 	dw PINECO
@@ -225,7 +226,7 @@ FirstEvoStages::
 	dw REMORAID
 	dw REMORAID   ;e0
 	dw DELIBIRD
-	dw MANTINE
+	dw MANTYKE
 	dw SKARMORY
 	dw HOUNDOUR
 	dw HOUNDOUR
@@ -241,7 +242,7 @@ FirstEvoStages::
 	dw ELEKID
 	dw MAGBY      ;f0
 	dw MILTANK
-	dw CHANSEY
+	dw HAPPINY
 	dw RAIKOU
 	dw ENTEI
 	dw SUICUNE
@@ -250,7 +251,7 @@ FirstEvoStages::
 	dw LARVITAR   ;f8
 	dw LUGIA
 	dw HO_OH
-	dw CELEBI
+	dw CELEBI	
     dw TREECKO
 	dw TREECKO
 	dw TREECKO
@@ -314,7 +315,7 @@ FirstEvoStages::
 	dw MINUN
 	dw VOLBEAT
 	dw ILLUMISE
-	dw ROSELIA
+	dw BUDEW
 	dw GULPIN
 	dw GULPIN
 	dw CARVANHA
@@ -357,7 +358,7 @@ FirstEvoStages::
 	dw DUSKULL
 	dw DUSKULL
 	dw TROPIUS
-	dw CHIMECHO
+	dw CHINGLING
 	dw ABSOL
 	dw WYNAUT
 	dw SNORUNT
@@ -386,3 +387,113 @@ FirstEvoStages::
 	dw RAYQUAZA
 	dw JIRACHI
 	dw DEOXYS
+	dw TURTWIG
+	dw TURTWIG
+	dw TURTWIG
+	dw CHIMCHAR
+	dw CHIMCHAR
+	dw CHIMCHAR
+	dw PIPLUP
+	dw PIPLUP
+	dw PIPLUP
+	dw STARLY
+	dw STARLY
+	dw STARLY
+	dw BIDOOF
+	dw BIDOOF
+	dw KRICKETOT
+	dw KRICKETOT
+	dw SHINX
+	dw SHINX
+	dw SHINX
+	dw BUDEW
+	dw BUDEW
+	dw CRANIDOS
+	dw CRANIDOS
+	dw SHIELDON
+	dw SHIELDON
+	dw BURMY
+	dw BURMY
+	dw BURMY
+	dw COMBEE
+	dw COMBEE
+	dw PACHIRISU
+	dw BUIZEL
+	dw BUIZEL
+	dw CHERUBI
+	dw CHERUBI
+	dw SHELLOS
+	dw SHELLOS
+	dw AIPOM
+	dw DRIFLOON
+	dw DRIFLOON
+	dw BUNEARY
+	dw BUNEARY
+	dw MISDREAVUS
+	dw MURKROW
+	dw GLAMEOW
+	dw GLAMEOW
+	dw CHINGLING
+	dw STUNKY
+	dw STUNKY
+	dw BRONZOR
+	dw BRONZOR
+	dw BONSLY
+	dw MIME_JR
+	dw HAPPINY
+	dw CHATOT
+	dw SPIRITOMB
+	dw GIBLE
+	dw GIBLE
+	dw GIBLE
+	dw MUNCHLAX
+	dw RIOLU
+	dw RIOLU
+	dw HIPPOPOTAS
+	dw HIPPOPOTAS
+	dw SKORUPI
+	dw SKORUPI
+	dw CROAGUNK
+	dw CROAGUNK
+	dw CARNIVINE
+	dw FINNEON
+	dw FINNEON
+	dw MANTYKE
+	dw SNOVER
+	dw SNOVER
+	dw SNEASEL
+	dw MAGNEMITE
+	dw LICKITUNG
+	dw RHYHORN
+	dw TANGELA
+	dw ELEKID
+	dw MAGBY
+	dw TOGEPI
+	dw YANMA
+	dw EEVEE
+	dw EEVEE
+	dw GLIGAR
+	dw SWINUB
+	dw PORYGON
+	dw RALTS
+	dw NOSEPASS
+	dw DUSKULL
+	dw SNORUNT
+	dw ROTOM
+	dw UXIE
+	dw MESPRIT
+	dw AZELF
+	dw DIALGA
+	dw PALKIA
+	dw HEATRAN
+	dw REGIGIGAS
+	dw GIRATINA
+	dw CRESSELIA
+	dw PHIONE
+	dw MANAPHY
+	dw DARKRAI
+	dw SHAYMIN
+	dw ARCEUS
+	dw EEVEE
+	dw REGIELEKI
+	dw REGIDRAGO
