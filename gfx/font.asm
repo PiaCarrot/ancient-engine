@@ -32,29 +32,14 @@ INCBIN "gfx/battle/hp_exp_bar_border.1bpp"
 ExpBarGFX:
 INCBIN "gfx/battle/expbar.2bpp"
 
-TownMapGFX:
-INCBIN "gfx/pokegear/town_map.2bpp.lz"
-
-UnusedWeekdayKanjiGFX: ; unused kanji
-INCBIN "gfx/font/unused_weekday_kanji.2bpp"
-
 PokegearPhoneIconGFX:
 INCBIN "gfx/font/phone_icon.2bpp"
-
-UnusedBoldFontGFX: ; unused bold letters + unown chars
-INCBIN "gfx/font/unused_bold_font.1bpp"
 
 TextboxSpaceGFX:
 INCBIN "gfx/frames/space.1bpp"
 
 FontsExtra_SolidBlackGFX:
 INCBIN "gfx/font/black.1bpp"
-
-UnusedUpArrowGFX: ; unused up arrow + whitespace
-INCBIN "gfx/font/unused_up_arrow.1bpp"
-
-MobilePhoneTilesGFX:
-INCBIN "gfx/mobile/phone_tiles.2bpp"
 
 MapEntryFrameGFX:
 INCBIN "gfx/frames/map_entry_sign.2bpp"
