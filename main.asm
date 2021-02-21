@@ -450,6 +450,8 @@ SECTION "Pic Animations 1", ROMX
 INCLUDE "engine/gfx/pic_animation.asm"
 INCLUDE "gfx/pokemon/anim_pointers.asm"
 INCLUDE "gfx/pokemon/anims.asm"
+INCLUDE "gfx/pokemon/idle_pointers.asm"
+INCLUDE "gfx/pokemon/idles.asm"
 
 SECTION "Pic Animations 2", ROMX
 
@@ -485,8 +487,10 @@ INCLUDE "gfx/pokemon/new_frames_2.asm"
 
 SECTION "Pic Animations 6", ROMX
 
-INCLUDE "gfx/pokemon/idle_pointers.asm"
-INCLUDE "gfx/pokemon/idles.asm"
+INCLUDE "gfx/pokemon/anim_pointers_new.asm"
+INCLUDE "gfx/pokemon/anims_new.asm"
+INCLUDE "gfx/pokemon/idle_pointers_new.asm"
+INCLUDE "gfx/pokemon/idles_new.asm"
 
 SECTION "Pic Animations 8", ROMX
 
