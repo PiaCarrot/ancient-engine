@@ -84,11 +84,11 @@ PlayersHouseBookshelfScript:
 ;	jumpstd picturebookshelf
 	opentext
 	givepoke TOTODILE, 100
-	givepoke TREECKO, 100
+	givepoke DRIFBLIM, 100
 	givepoke DEOXYS, 100
 	givepoke CELEBI, 100
-	givepoke MEW, 100
-	givepoke BULBASAUR, 100
+	givepoke ARCEUS, 100
+	givepoke DRIFLOON, 100
 	closetext
 	end
 

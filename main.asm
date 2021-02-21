@@ -487,9 +487,7 @@ INCLUDE "gfx/pokemon/new_frames_2.asm"
 
 SECTION "Pic Animations 6", ROMX
 
-INCLUDE "gfx/pokemon/anim_pointers_new.asm"
 INCLUDE "gfx/pokemon/anims_new.asm"
-INCLUDE "gfx/pokemon/idle_pointers_new.asm"
 INCLUDE "gfx/pokemon/idles_new.asm"
 
 SECTION "Pic Animations 8", ROMX
