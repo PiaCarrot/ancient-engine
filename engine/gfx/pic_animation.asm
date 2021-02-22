@@ -70,15 +70,15 @@ PokeAnims:
 	dw .Egg1
 	dw .Egg2
 
-.Slow:   pokeanim StereoCry, Setup2, Play
+.Slow:	 pokeanim StereoCry, Setup2, Play
 .Normal: pokeanim StereoCry, Setup, Play
-.Menu:   pokeanim CryNoWait, Setup, Play, SetWait, Wait, Idle, Play
-.Trade:  pokeanim Idle, Play2, Idle, Play, SetWait, Wait, Cry, Setup, Play
+.Menu:	 pokeanim CryNoWait, Setup, Play, SetWait, Wait, Idle, Play
+.Trade:	pokeanim Idle, Play2, Idle, Play, SetWait, Wait, Cry, Setup, Play
 .Evolve: pokeanim Idle, Play, SetWait, Wait, CryNoWait, Setup, Play
-.Hatch:  pokeanim Idle, Play, CryNoWait, Setup, Play, SetWait, Wait, Idle, Play
-.HOF:    pokeanim CryNoWait, Setup, Play, SetWait, Wait, Idle, Play
-.Egg1:   pokeanim Setup, Play
-.Egg2:   pokeanim Idle, Play
+.Hatch:	pokeanim Idle, Play, CryNoWait, Setup, Play, SetWait, Wait, Idle, Play
+.HOF:	pokeanim CryNoWait, Setup, Play, SetWait, Wait, Idle, Play
+.Egg1:	 pokeanim Setup, Play
+.Egg2:	 pokeanim Idle, Play
 
 AnimateFrontpic:
 	call AnimateMon_CheckIfPokemon
@@ -718,7 +718,7 @@ PokeAnim_ConvertAndApplyBitmask:
 
 ._5by5:
 	poke_anim_box 5
-	; db  9, 10, 11, 12, 13
+	; db	9, 10, 11, 12, 13
 	; db 16, 17, 18, 19, 20
 	; db 23, 24, 25, 26, 27
 	; db 30, 31, 32, 33, 34
@@ -726,7 +726,7 @@ PokeAnim_ConvertAndApplyBitmask:
 
 ._6by6:
 	poke_anim_box 6
-	; db  8,  9, 10, 11, 12, 13
+	; db	8,	9, 10, 11, 12, 13
 	; db 15, 16, 17, 18, 19, 20
 	; db 22, 23, 24, 25, 26, 27
 	; db 29, 30, 31, 32, 33, 34
@@ -907,38 +907,48 @@ GetMonAnimPointer:
 	call PokeAnim_IsEgg
 	jr z, .egg
 
-	ld c, BANK(UnownAnimationPointers) ; aka BANK(UnownAnimationIdlePointers)
-	ld hl, UnownAnimationPointers - 2
-	ld de, UnownAnimationIdlePointers - 2
 	call PokeAnim_IsUnown
 	jr z, .unown
-	ld c, BANK(AnimationPointers) ; aka BANK(AnimationIdlePointers)
-	ld hl, AnimationPointers - 2
-	ld de, AnimationIdlePointers - 2
-.unown
 
+	ld a, [wPokeAnimSpeciesOrUnown]
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
 	ld a, [wPokeAnimIdleFlag]
 	and a
-	jr nz, .got_pointer
-	ld d, h
-	ld e, l
-.got_pointer
-
-	call PokeAnim_IsUnown
-	ld a, [wPokeAnimSpeciesOrUnown]
-	ld l, a
-	ld h, 0
-	call nz, GetPokemonIndexFromID
-	add hl, hl
-	add hl, de
-	ld a, c
+	ld a, BANK(AnimationPointers)
+	ld hl, AnimationPointers
+	jr z, .got_pointers
+	ld a, BANK(AnimationIdlePointers)
+	ld hl, AnimationIdlePointers
+.got_pointers
+	call LoadDoubleIndirectPointer
+	jr z, .egg ; error handler
+.load_pointer
+	ld a, b
 	ld [wPokeAnimPointerBank], a
-	call GetFarHalfword
 	ld a, l
 	ld [wPokeAnimPointerAddr], a
 	ld a, h
 	ld [wPokeAnimPointerAddr + 1], a
 	ret
+
+.unown
+	assert BANK(UnownAnimationPointers) == BANK(UnownAnimationIdlePointers)
+	ld b, BANK(UnownAnimationPointers)
+	ld hl, UnownAnimationPointers - 2
+	ld a, [wPokeAnimIdleFlag]
+	and a
+	jr z, .got_unown_pointer
+	ld hl, UnownAnimationIdlePointers - 2
+.got_unown_pointer
+	ld a, [wPokeAnimSpeciesOrUnown]
+	add a, a
+	add a, l
+	ld l, a
+	adc h
+	sub l
+	jr .load_pointer
 
 .egg
 	ld hl, EggAnimation
