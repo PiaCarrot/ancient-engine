@@ -1199,17 +1199,18 @@ PlaceMoveData:
 	hlcoord 12, 12
 	ld de, String_MoveAtk
 	call PlaceString
+;	ld a, [wCurSpecies]
+;	ld b, a
+;	farcall GetMoveCategoryName
+;	hlcoord 1, 11
+;	ld de, wStringBuffer1
+;	call PlaceString
 	ld a, [wCurSpecies]
 	ld b, a
-	farcall GetMoveCategoryName
-	hlcoord 1, 11
-	ld de, wStringBuffer1
-	call PlaceString
-	ld a, [wCurSpecies]
-	ld b, a
-	hlcoord 1, 12
-	ld [hl], "/"
-	inc hl
+	hlcoord 2, 12
+;	hlcoord 1, 12
+;	ld [hl], "/"
+;	inc hl
 	predef PrintMoveType
 	ld a, [wCurSpecies]
 	ld l, a
@@ -1236,9 +1237,11 @@ PlaceMoveData:
 	ret
 
 String_MoveType_Top:
-	db "┌────────┐@"
+;	db "┌────────┐@"
+	db "┌─────┐@"
 String_MoveType_Bottom:
-	db "│        └@"
+;	db "│        └@"
+	db "│TYPE/└@"
 String_MoveAtk:
 	db "ATK/@"
 String_MoveNoPower:
