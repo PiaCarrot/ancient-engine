@@ -11,16 +11,16 @@ the engine is finished.
 * 16 Bit Pokemon - 493 Pokemon as well as 3 Secret Pokemon from newer generations ;Placeholders Currently
 * 16 Bit Moves - All Moves from Gen III and Gen IV barring a couple double battle specific moves ;Placeholders Currently
 * 60 FPS TODO
-* Running Shoes TODO
+* Running Shoes ; Generic Bike Speed Implementation...For Now.
 * Forms - (Castform, Deoxys, Cherrim, Burmy, Wormadam, Arceus etc) TODO
 * New Evolution Methods TODO
 * TM/HM Separated from Items TODO
 * Abilities - All Gen 3 and Gen 4 abilities save double battle specific abilities, still in planning and undecided
 * Sideway Stairs
-* PSS Split TODO
+* PSS Split ; Not 16 bit aware yet
 * Erratic and Fluctuating Growth Rates
-* Extended PC Boxes
-* MBC30 Mapper
+* Extended PC Boxes TODO ; SRAM Expansion Should allow for a lot...
+* MBC30 Mapper ; 64KB SRAM, 4MB ROM
 
 All of this is to update the hack to be similar to Gen IV in features, while keeping compatibility for trading for the other
 nearly 300 Pokemon not in the regional dex. (E.G Ancient Ruby, and `master` will attempt to build into a 251 Crystal Hack)
@@ -31,7 +31,7 @@ nearly 300 Pokemon not in the regional dex. (E.G Ancient Ruby, and `master` will
 * DarkZeta
 * BloodlessNS
 * MonstaRules
-
+* Scarlax
 
 ## Credits
 

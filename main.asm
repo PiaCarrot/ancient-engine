@@ -152,12 +152,14 @@ INCLUDE "engine/battle/ai/redundant.asm"
 INCLUDE "engine/events/move_deleter.asm"
 INCLUDE "engine/link/mystery_gift_2.asm"
 INCLUDE "engine/items/tmhm.asm"
-INCLUDE "engine/pokemon/print_move_description.asm"
-INCLUDE "data/moves/descriptions.asm"
 INCLUDE "engine/events/pokerus/pokerus.asm"
 INCLUDE "engine/battle/start_battle.asm"
 INCLUDE "engine/gfx/place_graphic.asm"
 
+SECTION "Move Descriptions", ROMX
+
+INCLUDE "engine/pokemon/print_move_description.asm"
+INCLUDE "data/moves/descriptions.asm"
 
 SECTION "Effect Commands", ROMX
 
@@ -181,9 +183,11 @@ INCLUDE "data/battle/effect_command_pointers.asm"
 SECTION "bank10", ROMX
 
 INCLUDE "engine/pokedex/pokedex.asm"
-INCLUDE "data/moves/moves.asm"
 INCLUDE "engine/pokemon/evolve.asm"
 
+SECTION "Moves", ROMX
+
+INCLUDE "data/moves/moves.asm"
 
 SECTION "bank11", ROMX
 
@@ -422,11 +426,13 @@ INCLUDE "engine/phone/scripts/erin.asm"
 INCLUDE "engine/phone/scripts/generic_callee.asm"
 INCLUDE "engine/events/trainer_scripts.asm"
 
+SECTION "Move Anims", ROMX
+
+INCLUDE "data/moves/animations.asm"
 
 SECTION "bank32", ROMX
 
 INCLUDE "engine/battle_anims/bg_effects.asm"
-INCLUDE "data/moves/animations.asm"
 INCLUDE "engine/events/poisonstep_pals.asm"
 
 TheEndGFX::

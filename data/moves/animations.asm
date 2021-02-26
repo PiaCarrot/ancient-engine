@@ -276,6 +276,223 @@ BattleAnimations::
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_BeatUp
 	dw BattleAnim_SweetScent2
+;==========================
+;	New Moves Start Here
+;==========================
+	dw BattleAnim_FakeOut
+	dw BattleAnim_Uproar
+	dw BattleAnim_Stockpile
+	dw BattleAnim_SpitUp
+	dw BattleAnim_Swallow
+	dw BattleAnim_HeatWave
+	dw BattleAnim_Hail
+	dw BattleAnim_Torment
+	dw BattleAnim_Flatter
+	dw BattleAnim_WillOWisp
+	dw BattleAnim_Memento
+	dw BattleAnim_Facade
+	dw BattleAnim_FocusPunch
+	dw BattleAnim_SmellingSalts
+	dw BattleAnim_NaturePower
+	dw BattleAnim_Charge
+	dw BattleAnim_Taunt
+	dw BattleAnim_Trick
+	dw BattleAnim_RolePlay
+	dw BattleAnim_Wish
+	dw BattleAnim_Assist
+	dw BattleAnim_Ingrain
+	dw BattleAnim_Superpower
+	dw BattleAnim_MagicCoat
+	dw BattleAnim_Recycle
+	dw BattleAnim_Revenge
+	dw BattleAnim_BrickBreak
+	dw BattleAnim_Yawn
+	dw BattleAnim_KnockOff
+	dw BattleAnim_Endeavor
+	dw BattleAnim_Eruption
+	dw BattleAnim_SkillSwap
+	dw BattleAnim_Imprison
+	dw BattleAnim_Refresh
+	dw BattleAnim_Grudge
+	dw BattleAnim_Snatch
+	dw BattleAnim_SecretPower
+	dw BattleAnim_Dewater
+	dw BattleAnim_ArmThrust
+	dw BattleAnim_Camouflage
+	dw BattleAnim_TailGlow
+	dw BattleAnim_LusterPurge
+	dw BattleAnim_MistBall
+	dw BattleAnim_FeatherDance
+	dw BattleAnim_TeeterDance
+	dw BattleAnim_BlazeKick
+	dw BattleAnim_MudSport
+	dw BattleAnim_IceBall
+	dw BattleAnim_NeedleArm
+	dw BattleAnim_SlackOff
+	dw BattleAnim_HyperVoice
+	dw BattleAnim_PoisonFang
+	dw BattleAnim_CrushClaw
+	dw BattleAnim_BlastBurn
+	dw BattleAnim_HydroCannon
+	dw BattleAnim_MeteorMash
+	dw BattleAnim_Astonish
+	dw BattleAnim_WeatherBall
+	dw BattleAnim_Aromatherapy
+	dw BattleAnim_FakeTears
+	dw BattleAnim_AirCutter
+	dw BattleAnim_Overheat
+	dw BattleAnim_OdorSleuth
+	dw BattleAnim_RockTomb
+	dw BattleAnim_SilverWind
+	dw BattleAnim_MetalSound
+	dw BattleAnim_GrassWhistle
+	dw BattleAnim_Tickle
+	dw BattleAnim_CosmicPower
+	dw BattleAnim_WaterSpout
+	dw BattleAnim_SignalBeam
+	dw BattleAnim_ShadowPunch
+	dw BattleAnim_Extrasensory
+	dw BattleAnim_SkyUppercut
+	dw BattleAnim_SandTomb
+	dw BattleAnim_SheerCold
+	dw BattleAnim_MuddyWater
+	dw BattleAnim_BulletSeed
+	dw BattleAnim_AerialAce
+	dw BattleAnim_IcicleSpear
+	dw BattleAnim_IronDefense
+	dw BattleAnim_Block
+	dw BattleAnim_Howl
+	dw BattleAnim_DragonClaw
+	dw BattleAnim_FrenzyPlant
+	dw BattleAnim_BulkUp
+	dw BattleAnim_Bounce
+	dw BattleAnim_MudShot
+	dw BattleAnim_PoisonTail
+	dw BattleAnim_Covet
+	dw BattleAnim_VoltTackle
+	dw BattleAnim_MagicalLeaf
+	dw BattleAnim_WaterSport
+	dw BattleAnim_CalmMind
+	dw BattleAnim_LeafBlade
+	dw BattleAnim_DragonDance
+	dw BattleAnim_RockBlast
+	dw BattleAnim_ShockWave
+	dw BattleAnim_WaterPulse
+	dw BattleAnim_DoomDesire
+	dw BattleAnim_PsychoBoost
+	dw BattleAnim_Roost
+	dw BattleAnim_Gravity
+	dw BattleAnim_MiracleEye
+	dw BattleAnim_WakeUpSlap
+	dw BattleAnim_HammerArm
+	dw BattleAnim_GyroBall
+	dw BattleAnim_HealingWish
+	dw BattleAnim_Brinewater
+	dw BattleAnim_NaturalGift
+	dw BattleAnim_Feint
+	dw BattleAnim_Pluck
+	dw BattleAnim_Tailwind
+	dw BattleAnim_Acupressure
+	dw BattleAnim_MetalBurst
+	dw BattleAnim_UTurn
+	dw BattleAnim_CloseCombat
+	dw BattleAnim_Payback
+	dw BattleAnim_Assurance
+	dw BattleAnim_Embargo
+	dw BattleAnim_Fling
+	dw BattleAnim_PsychoShift
+	dw BattleAnim_TrumpCard
+	dw BattleAnim_HealBlock
+	dw BattleAnim_WringOut
+	dw BattleAnim_PowerTrick
+	dw BattleAnim_GastroAcid
+	dw BattleAnim_LuckyChant
+	dw BattleAnim_MeFirst
+	dw BattleAnim_Copycat
+	dw BattleAnim_PowerSwap
+	dw BattleAnim_GuardSwap
+	dw BattleAnim_Punishment
+	dw BattleAnim_LastResort
+	dw BattleAnim_WorrySeed
+	dw BattleAnim_SuckerPunch
+	dw BattleAnim_ToxicSpikes
+	dw BattleAnim_HeartSwap
+	dw BattleAnim_AquaRing
+	dw BattleAnim_MagnetRise
+	dw BattleAnim_FlareBlitz
+	dw BattleAnim_ForcePalm
+	dw BattleAnim_AuraSphere
+	dw BattleAnim_RockPolish
+	dw BattleAnim_PoisonJab
+	dw BattleAnim_DarkPulse
+	dw BattleAnim_NightSlash
+	dw BattleAnim_AquaTail
+	dw BattleAnim_SeedBomb
+	dw BattleAnim_AirSlash
+	dw BattleAnim_XScissor
+	dw BattleAnim_BugBuzz
+	dw BattleAnim_DragonPulse
+	dw BattleAnim_DragonRush
+	dw BattleAnim_PowerGem
+	dw BattleAnim_DrainPunch
+	dw BattleAnim_VacuumWave
+	dw BattleAnim_FocusBlast
+	dw BattleAnim_EnergyBall
+	dw BattleAnim_BraveBird
+	dw BattleAnim_EarthPower
+	dw BattleAnim_Switcheroo
+	dw BattleAnim_GigaImpact
+	dw BattleAnim_NastyPlot
+	dw BattleAnim_BulletPunch
+	dw BattleAnim_Avalanche
+	dw BattleAnim_IceShard
+	dw BattleAnim_ShadowClaw
+	dw BattleAnim_ThunderFang
+	dw BattleAnim_IceFang
+	dw BattleAnim_FireFang
+	dw BattleAnim_ShadowSneak
+	dw BattleAnim_MudBomb
+	dw BattleAnim_PsychoCut
+	dw BattleAnim_ZenHeadbutt
+	dw BattleAnim_MirrorShot
+	dw BattleAnim_FlashCannon
+	dw BattleAnim_RockClimb
+	dw BattleAnim_Defog
+	dw BattleAnim_TrickRoom
+	dw BattleAnim_DracoMeteor
+	dw BattleAnim_Discharge
+	dw BattleAnim_LavaPlume
+	dw BattleAnim_LeafStorm
+	dw BattleAnim_PowerWhip
+	dw BattleAnim_RockWrecker
+	dw BattleAnim_CrossPoison
+	dw BattleAnim_GunkShot
+	dw BattleAnim_IronHead
+	dw BattleAnim_MagnetBomb
+	dw BattleAnim_StoneEdge
+	dw BattleAnim_Captivate
+	dw BattleAnim_StealthRock
+	dw BattleAnim_GrassKnot
+	dw BattleAnim_Chatter
+	dw BattleAnim_Judgment
+	dw BattleAnim_BugBite
+	dw BattleAnim_ChargeBeam
+	dw BattleAnim_WoodHammer
+	dw BattleAnim_AquaJet
+	dw BattleAnim_AttackOrder
+	dw BattleAnim_DefendOrder
+	dw BattleAnim_HealOrder
+	dw BattleAnim_HeadSmash
+	dw BattleAnim_DoubleHit
+	dw BattleAnim_RoarOfTime
+	dw BattleAnim_SpacialRend
+	dw BattleAnim_LunarDance
+	dw BattleAnim_CrushGrip
+	dw BattleAnim_MagmaStorm
+	dw BattleAnim_DarkVoid
+	dw BattleAnim_SeedFlare
+	dw BattleAnim_OminousWind
+	dw BattleAnim_ShadowForce
 
 BattleAnim_0:
 BattleAnim_MirrorMove:
@@ -4807,6 +5024,1940 @@ BattleAnim_Synthesis_branch_cbc80:
 	anim_loop 2, .loop
 	anim_wait 16
 	anim_ret
+	
+;==========================
+;	New Moves Start Here
+;==========================
+
+BattleAnim_FakeOut:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Uproar:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Stockpile:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_SpitUp:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Swallow:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_HeatWave:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Hail:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Torment:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Flatter:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_WillOWisp:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Memento:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Facade:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_FocusPunch:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_SmellingSalts:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_NaturePower:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Charge:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Taunt:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Trick:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_RolePlay:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Wish:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Assist:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Ingrain:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Superpower:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_MagicCoat:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Recycle:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Revenge:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_BrickBreak:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Yawn:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_KnockOff:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Endeavor:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Eruption:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_SkillSwap:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Imprison:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Refresh:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Grudge:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Snatch:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_SecretPower:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Dewater:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_ArmThrust:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Camouflage:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_TailGlow:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_LusterPurge:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_MistBall:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_FeatherDance:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_TeeterDance:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_BlazeKick:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_MudSport:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_IceBall:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_NeedleArm:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_SlackOff:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_HyperVoice:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_PoisonFang:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_CrushClaw:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_BlastBurn:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_HydroCannon:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_MeteorMash:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Astonish:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_WeatherBall:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Aromatherapy:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_FakeTears:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_AirCutter:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Overheat:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_OdorSleuth:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_RockTomb:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_SilverWind:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_MetalSound:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_GrassWhistle:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Tickle:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_CosmicPower:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_WaterSpout:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_SignalBeam:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_ShadowPunch:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Extrasensory:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_SkyUppercut:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_SandTomb:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_SheerCold:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_MuddyWater:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_BulletSeed:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_AerialAce:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_IcicleSpear:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_IronDefense:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Block:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Howl:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_DragonClaw:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_FrenzyPlant:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_BulkUp:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Bounce:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_MudShot:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_PoisonTail:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Covet:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_VoltTackle:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_MagicalLeaf:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_WaterSport:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_CalmMind:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_LeafBlade:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_DragonDance:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_RockBlast:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_ShockWave:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_WaterPulse:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_DoomDesire:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_PsychoBoost:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Roost:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Gravity:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_MiracleEye:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_WakeUpSlap:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_HammerArm:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_GyroBall:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_HealingWish:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Brinewater:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_NaturalGift:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Feint:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Pluck:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Tailwind:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Acupressure:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_MetalBurst:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_UTurn:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_CloseCombat:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Payback:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Assurance:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Embargo:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Fling:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_PsychoShift:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_TrumpCard:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_HealBlock:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_WringOut:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_PowerTrick:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_GastroAcid:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_LuckyChant:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_MeFirst:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Copycat:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_PowerSwap:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_GuardSwap:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Punishment:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_LastResort:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_WorrySeed:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_SuckerPunch:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_ToxicSpikes:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_HeartSwap:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_AquaRing:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_MagnetRise:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_FlareBlitz:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_ForcePalm:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_AuraSphere:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_RockPolish:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_PoisonJab:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_DarkPulse:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_NightSlash:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_AquaTail:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_SeedBomb:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_AirSlash:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_XScissor:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_BugBuzz:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_DragonPulse:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_DragonRush:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_PowerGem:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_DrainPunch:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_VacuumWave:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_FocusBlast:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_EnergyBall:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_BraveBird:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_EarthPower:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Switcheroo:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_GigaImpact:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_NastyPlot:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_BulletPunch:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Avalanche:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_IceShard:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_ShadowClaw:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_ThunderFang:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_IceFang:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_FireFang:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_ShadowSneak:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_MudBomb:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_PsychoCut:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_ZenHeadbutt:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_MirrorShot:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_FlashCannon:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_RockClimb:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Defog:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_TrickRoom:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_DracoMeteor:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Discharge:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_LavaPlume:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_LeafStorm:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_PowerWhip:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_RockWrecker:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_CrossPoison:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_GunkShot:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_IronHead:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_MagnetBomb:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_StoneEdge:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Captivate:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_StealthRock:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_GrassKnot:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Chatter:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Judgment:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_BugBite:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_ChargeBeam:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_WoodHammer:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_AquaJet:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_AttackOrder:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_DefendOrder:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_HealOrder:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_HeadSmash:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_DoubleHit:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_RoarOfTime:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_SpacialRend:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_LunarDance:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_CrushGrip:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_MagmaStorm:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_DarkVoid:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_SeedFlare:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_OminousWind:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_ShadowForce:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+;==========================
+;	New Moves End Here
+;==========================
 
 BattleAnim_TargetObj_1Row:
 	anim_battlergfx_2row
