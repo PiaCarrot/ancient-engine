@@ -272,8 +272,7 @@ Moves1:
 ;==========================
 ;	New Moves Start Here
 ;==========================
-	move EFFECT_NORMAL_HIT,         40, NORMAL,   PHYSICAL, 100, 35,   0
-	move EFFECT_NORMAL_HIT,         40, NORMAL,   PHYSICAL, 100, 35,   0
+	move EFFECT_FAKE_OUT,           40, NORMAL,   PHYSICAL, 100, 10, 100 ;FAKE_OUT	move EFFECT_NORMAL_HIT,         40, NORMAL,   PHYSICAL, 100, 35,   0
 	move EFFECT_NORMAL_HIT,         40, NORMAL,   PHYSICAL, 100, 35,   0
 	move EFFECT_NORMAL_HIT,         40, NORMAL,   PHYSICAL, 100, 35,   0
 	move EFFECT_NORMAL_HIT,         40, NORMAL,   PHYSICAL, 100, 35,   0

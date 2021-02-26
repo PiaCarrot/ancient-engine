@@ -1824,10 +1824,22 @@ FakeOut:
 	checkobedience
 	usedmovetext
 	doturn
-	checkhit
 	fakeout
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
 	moveanim
 	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	flinchtarget
 	endmove
 
 BellyDrum:

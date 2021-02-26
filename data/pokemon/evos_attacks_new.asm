@@ -922,7 +922,7 @@ DeoxysEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, FAKE_OUT
-	dbw 1, SHADOW_FORCE
+	dbw 1, FAKE_OUT
 	dbw 1, CHARGE
 	db 0 ; no more level-up moves
 

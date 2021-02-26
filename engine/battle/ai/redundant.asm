@@ -44,6 +44,7 @@ AI_Redundant:
 	dbw EFFECT_MOONLIGHT,    .Moonlight
 	dbw EFFECT_SWAGGER,      .Swagger
 	dbw EFFECT_FUTURE_SIGHT, .FutureSight
+	dbw EFFECT_FAKE_OUT,     .FakeOut
 	db -1
 
 .LightScreen:
@@ -178,6 +179,11 @@ AI_Redundant:
 .FutureSight:
 	ld a, [wEnemyScreens]
 	bit 5, a
+	ret
+
+.FakeOut:
+	ld a, [wEnemyTurnsTaken]
+	and a
 	ret
 
 .Heal:

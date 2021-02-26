@@ -275,7 +275,6 @@ BattleAnimations::
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_BeatUp
-	dw BattleAnim_SweetScent2
 ;==========================
 ;	New Moves Start Here
 ;==========================
@@ -5029,13 +5028,20 @@ BattleAnim_Synthesis_branch_cbc80:
 ;	New Moves Start Here
 ;==========================
 
+
 BattleAnim_FakeOut:
-	anim_1gfx ANIM_GFX_HIT
-	anim_sound 0, 1, SFX_POUND
-	anim_obj ANIM_OBJ_08, 136, 56, $0
-	anim_wait 6
-	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_1gfx ANIM_GFX_OBJECTS
+	anim_obj ANIM_OBJ_99, 136, 46, $e0
+	anim_obj ANIM_OBJ_99, 136, 46, $20
 	anim_wait 16
+	anim_sound 0, 0, SFX_CUT
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $2
+	anim_clearobjs
+	anim_wait 1
+	anim_sound 0, 0, SFX_RAGE
+	anim_bgeffect ANIM_BG_1F, $14, $2, $0
+	anim_wait 32
+	anim_ret
 	anim_ret
 
 BattleAnim_Uproar:
