@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "MOTH@" ; species name
+dw 211, 514 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "While it loves"
+next "floral honey, it"
+next "won’t gather any"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "itself. Instead,"
+next "it plots to steal"
+next "some from COMBEE.@"

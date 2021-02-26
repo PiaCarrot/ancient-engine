@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "WORM@" ; species name
+dw 100, 79 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Often targeted by"
+next "bird #MON, it"
+next "desperately re-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "sists by releasing"
+next "poison from its"
+next "tail spikes.@"

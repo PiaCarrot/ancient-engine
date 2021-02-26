@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "MUSHROOM@" ; species name
+dw 311, 864 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its short arms"
+next "stretch when it"
+next "throws punches."
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "Its technique is"
+next "equal to that of"
+next "pro boxers.@"

@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "ALPHA@" ; species name
+dw 1006, 7055 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It is said to have"
+next "emerged from an"
+next "egg in a place"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "where there was"
+next "nothing, then"
+next "shaped the world.@"

@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BUD@" ; species name
+dw 008, 26 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Sensitive to"
+next "changing tempera-"
+next "ture, the bud is"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "said to bloom when"
+next "it feels the sun’s"
+next "warm touch.@"

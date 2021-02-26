@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "SEA@" ; species name
+dw 100, 139 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Beware of pushing"
+next "strongly on its"
+next "squishy body, as"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "it makes a myste-"
+next "rious purple fluid"
+next "ooze out.@"

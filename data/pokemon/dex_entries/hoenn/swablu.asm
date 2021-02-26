@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "COTTON@" ; species name
+dw 104, 26 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It can’t relax if"
+next "it or its sur-"
+next "roundings are not"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "clean. It wipes"
+next "off dirt with its"
+next "wings.@"

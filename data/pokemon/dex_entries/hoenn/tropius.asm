@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "FRUIT@" ; species name
+dw 607, 2205 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Delicious fruits"
+next "grew out from"
+next "around its neck"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "because it always"
+next "ate the same kind"
+next "of fruit.@"

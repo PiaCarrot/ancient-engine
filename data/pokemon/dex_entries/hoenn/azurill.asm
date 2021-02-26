@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "POLKA@" ; species name
+dw 008, 44 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its tail bounces"
+next "like a rubber"
+next "ball. It flings"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "its tail around to"
+next "fight opponents"
+next "bigger than it is.@"

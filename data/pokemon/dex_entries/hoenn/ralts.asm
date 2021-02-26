@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "FEELING@" ; species name
+dw 104, 146 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "If its horns cap-"
+next "ture the warm"
+next "feelings of people"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "or #MON, its"
+next "body warms up"
+next "slightly.@"

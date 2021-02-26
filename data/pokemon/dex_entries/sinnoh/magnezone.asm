@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "MAGNET@" ; species name
+dw 311, 3968 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "A group tried to"
+next "use scientific"
+next "means to make MAG-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "NEZONE evolve, but"
+next "their efforts"
+next "ended in failure.@"

@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "EMOTION@" ; species name
+dw 207, 445 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "If its Trainer be-"
+next "comes happy, it"
+next "overflows with en-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "ergy, dancing joy-"
+next "ously while spin-"
+next "ning about.@"

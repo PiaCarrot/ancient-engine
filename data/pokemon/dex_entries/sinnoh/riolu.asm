@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "EMANATION@" ; species name
+dw 204, 445 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It has the pecu-"
+next "liar power of be-"
+next "ing able to see"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "emotions such as"
+next "joy and rage in"
+next "the form of waves.@"

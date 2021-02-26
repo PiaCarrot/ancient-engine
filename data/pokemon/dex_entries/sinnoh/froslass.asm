@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "SNOW@" ; species name
+dw 403, 586 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It freezes prey by"
+next "blowing its -58"
+next "degrees F breath."
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "It is said to then"
+next "secretly display"
+next "its prey.@"

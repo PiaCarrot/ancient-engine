@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "VIRTUAL@" ; species name
+dw 211, 750 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its programming"
+next "was modified to"
+next "enable work in"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "alien dimensions."
+next "It did not work as"
+next "planned.@"

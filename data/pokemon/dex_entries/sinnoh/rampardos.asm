@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "HEAD@" ; species name
+dw 503, 2260 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "If two were to"
+next "smash their heads"
+next "together, their"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "foot-thick skulls"
+next "would keep them"
+next "from fainting.@"

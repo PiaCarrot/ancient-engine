@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "OGRE@" ; species name
+dw 603, 1135 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its jaw power is"
+next "incredible. It is"
+next "adept at biting"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "apart foes while"
+next "flying by at high"
+next "speed.@"

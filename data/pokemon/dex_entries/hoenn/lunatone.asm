@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "METEORITE@" ; species name
+dw 303, 3704 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Because it turns"
+next "active on nights"
+next "of the full moon,"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "it is said to have"
+next "some link to the"
+next "lunar phases.@"

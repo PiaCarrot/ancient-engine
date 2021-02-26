@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "TINYRACCOON@" ; species name
+dw 104, 386 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It walks in zigzag"
+next "fashion. It is"
+next "good at finding"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "items in the grass"
+next "and even in the"
+next "ground.@"

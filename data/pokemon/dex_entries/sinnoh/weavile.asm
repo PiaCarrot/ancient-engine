@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "SHARP@" ; species name
+dw 307, 750 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Evolution made it"
+next "even more devious."
+next "It communicates by"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "clawing signs in"
+next "boulders.@"

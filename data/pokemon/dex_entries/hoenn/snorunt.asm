@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "SNOW@" ; species name
+dw 204, 370 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It is said that"
+next "several SNORUNT"
+next "gather under giant"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "leaves and live"
+next "together in harmo-"
+next "ny.@"

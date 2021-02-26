@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "CAVE@" ; species name
+dw 407, 1235 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It loves sparkly"
+next "things. It seeks"
+next "treasures in caves"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "and hoards the"
+next "loot in its nest.@"

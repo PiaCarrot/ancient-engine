@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "SEA@" ; species name
+dw 204, 650 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It spins its two"
+next "tails like a screw"
+next "to propel itself"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "through water. The"
+next "tails also slice"
+next "clinging seaweed.@"

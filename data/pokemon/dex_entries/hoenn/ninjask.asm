@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "NINJA@" ; species name
+dw 207, 265 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Because it moves"
+next "so quickly, it"
+next "sometimes becomes"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "unseeable. It con-"
+next "gregates around"
+next "tree sap.@"

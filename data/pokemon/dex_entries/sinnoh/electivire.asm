@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "THUNDERBOLT@" ; species name
+dw 511, 3056 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Heedless of enemy"
+next "attacks, it closes"
+next "in, shoves its"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "tails onto the"
+next "foe, then looses"
+next "high voltage.@"

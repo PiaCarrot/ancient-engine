@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "WILY@" ; species name
+dw 303, 617 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "The sound of its"
+next "grass flute makes"
+next "its listeners un-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "easy. It lives"
+next "deep in forests.@"

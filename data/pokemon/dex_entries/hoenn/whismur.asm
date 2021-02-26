@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "WHISPER@" ; species name
+dw 200, 359 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Usually, its cries"
+next "are like quiet"
+next "murmurs. If"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "frightened, it"
+next "shrieks as loud as"
+next "a jet plane.@"

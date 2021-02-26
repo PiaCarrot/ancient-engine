@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "DRAGON@" ; species name
+dw 411, 2262 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "As a result of its"
+next "long-held dream"
+next "of flying, its"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "cellular structure"
+next "changed, and wings"
+next "grew out.@"

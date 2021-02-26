@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BRUTAL@" ; species name
+dw 511, 1958 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its fangs rip"
+next "through sheet"
+next "iron. It swims at"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "75 mph and is"
+next "known as “The"
+next "Bully of the Sea.”@"

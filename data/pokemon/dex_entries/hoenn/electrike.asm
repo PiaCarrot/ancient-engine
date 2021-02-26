@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "LIGHTNING@" ; species name
+dw 200, 335 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Using electricity"
+next "stored in its fur,"
+next "it stimulates its"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "muscles to"
+next "heighten its reac-"
+next "tion speed.@"

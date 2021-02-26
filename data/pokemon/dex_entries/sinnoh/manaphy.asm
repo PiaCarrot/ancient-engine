@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "SEAFARING@" ; species name
+dw 100, 31 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It is born with a"
+next "wondrous power"
+next "that lets it bond"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "with any kind of"
+next "#MON.@"

@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "DARKNESS@" ; species name
+dw 108, 243 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It hides in the"
+next "darkness of caves."
+next "Its diet of gems"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "has transformed"
+next "its eyes into gem-"
+next "stones.@"

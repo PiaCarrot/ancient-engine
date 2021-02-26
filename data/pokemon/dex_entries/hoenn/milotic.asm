@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "TENDER@" ; species name
+dw 2004, 3571 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its lovely scales"
+next "are described as"
+next "rainbow colored."
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "They change color"
+next "depending on the"
+next "viewing angle.@"

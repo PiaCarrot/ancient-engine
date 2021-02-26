@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "FANG@" ; species name
+dw 810, 1157 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "For many genera-"
+next "tions, it has"
+next "feuded with ZAN-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "GOOSE. It whets"
+next "its bladed tail on"
+next "rocks for battle.@"

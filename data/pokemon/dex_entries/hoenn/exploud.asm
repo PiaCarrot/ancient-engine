@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "LOUD@" ; species name
+dw 411, 1852 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its howls can be"
+next "heard over six"
+next "miles away. It"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "emits all sorts of"
+next "noises from the"
+next "ports on its body.@"

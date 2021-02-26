@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "HEAVYWEIGHT@" ; species name
+dw 607, 6614 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It is surprisingly"
+next "quick to anger. It"
+next "holds its mouth"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "agape as a display"
+next "of its strength.@"

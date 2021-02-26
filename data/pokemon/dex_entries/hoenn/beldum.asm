@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "IRON@" ; species name
+dw 200, 2099 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It converses with"
+next "others by using"
+next "magnetic pulses."
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "In a swarm, they"
+next "move in perfect"
+next "unison.@"

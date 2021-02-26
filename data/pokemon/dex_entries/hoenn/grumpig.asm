@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "MANIPULATE@" ; species name
+dw 211, 1576 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It uses black"
+next "pearls to amplify"
+next "its psycho-power."
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "It does an odd"
+next "dance to gain con-"
+next "trol over foes.@"

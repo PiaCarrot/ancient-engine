@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "POISON@" ; species name
+dw 311, 697 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Toxic powder is"
+next "scattered with"
+next "each flap. It is"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "known to strip"
+next "leaves off trees"
+next "lining boulevards.@"

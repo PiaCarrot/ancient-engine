@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "COLOSSAL@" ; species name
+dw 1202, 9259 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It is said to have"
+next "made #MON that"
+next "look like itself"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "from a special ice"
+next "mountain, rocks,"
+next "and magma.@"

@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "WISH@" ; species name
+dw 100, 24 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It is said to have"
+next "the ability to"
+next "grant any wish for"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "just one week ev-"
+next "ery thousand"
+next "years.@"

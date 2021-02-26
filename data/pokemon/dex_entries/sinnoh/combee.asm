@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "TINY@" ; species name
+dw 100, 121 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "The trio is to-"
+next "gether from birth."
+next "It constantly"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "gathers honey from"
+next "flowers to please"
+next "VESPIQUEN.@"

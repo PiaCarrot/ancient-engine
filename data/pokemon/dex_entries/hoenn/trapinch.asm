@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "ANT@" ; species name
+dw 204, 331 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It makes a conical"
+next "pit in desert sand"
+next "and lies in wait"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "at the bottom for"
+next "prey to come tum-"
+next "bling down.@"

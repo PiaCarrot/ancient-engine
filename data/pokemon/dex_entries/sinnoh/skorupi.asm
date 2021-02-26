@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "SCORPION@" ; species name
+dw 207, 265 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "As soon as the"
+next "tail claws close,"
+next "its needle tips"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "secrete poison. It"
+next "can survive a year"
+next "without food.@"

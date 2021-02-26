@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "METEORITE@" ; species name
+dw 311, 3395 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "A new #MON"
+next "species, rumored"
+next "to be from the"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "sun. It gives off"
+next "light while spin-"
+next "ning.@"

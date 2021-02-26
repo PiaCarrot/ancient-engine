@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "CHERRY@" ; species name
+dw 104, 73 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "The small ball is"
+next "not only filled"
+next "with nutrients, it"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "is also tasty."
+next "STARLY try to peck"
+next "it off.@"

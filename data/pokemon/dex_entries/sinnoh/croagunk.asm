@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "TOXIC@" ; species name
+dw 204, 507 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It rarely fights"
+next "fairly, but that"
+next "is strictly to en-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "sure survival. It"
+next "is popular as a"
+next "mascot.@"

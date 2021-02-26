@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "HEAD@" ; species name
+dw 211, 694 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "A lifelong jungle"
+next "dweller from 100"
+next "million years ago,"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "it would snap ob-"
+next "structing trees"
+next "with head butts.@"

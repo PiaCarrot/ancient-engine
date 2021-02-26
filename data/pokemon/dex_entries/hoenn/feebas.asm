@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "FISH@" ; species name
+dw 200, 163 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It is a shabby and"
+next "ugly #MON. How-"
+next "ever, it is very"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "hardy and can sur-"
+next "vive on little wa-"
+next "ter.@"

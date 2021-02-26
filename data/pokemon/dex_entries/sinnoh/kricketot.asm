@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "CRICKET@" ; species name
+dw 100, 49 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its legs are"
+next "short. Whenever it"
+next "stumbles, its"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "stiff antennae"
+next "clack with a xylo-"
+next "phone-like sound.@"

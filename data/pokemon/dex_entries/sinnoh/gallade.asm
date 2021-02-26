@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BLADE@" ; species name
+dw 503, 1146 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "When trying to"
+next "protect someone,"
+next "it extends its el-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "bows as if they"
+next "were swords and"
+next "fights savagely.@"

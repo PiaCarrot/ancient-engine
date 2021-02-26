@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "OLD@" ; species name
+dw 204, 276 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "A #MON ancestor"
+next "that was reani-"
+next "mated from a fos-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "sil. It lived in"
+next "the sea and hunted"
+next "with claws.@"

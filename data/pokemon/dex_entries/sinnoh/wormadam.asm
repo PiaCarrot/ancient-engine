@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BAGWORM@" ; species name
+dw 108, 143 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "When evolving, its"
+next "body takes in sur-"
+next "rounding materi-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "als. As a result,"
+next "there are many"
+next "body variations.@"

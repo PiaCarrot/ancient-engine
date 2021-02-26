@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "DRAGON@" ; species name
+dw 611, 4409 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Made of crystal-"
+next "lized DRAGON-type"
+next "energy, its said"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "to have the powers"
+next "of every DRAGON"
+next "#MON.@"

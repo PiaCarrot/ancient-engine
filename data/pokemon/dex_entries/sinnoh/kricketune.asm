@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "CRICKET@" ; species name
+dw 303, 562 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "There is a village"
+next "that hosts a con-"
+next "test based on the"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "amazingly variable"
+next "cries of this"
+next "#MON.@"

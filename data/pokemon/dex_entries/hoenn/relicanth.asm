@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "LONGEVITY@" ; species name
+dw 303, 516 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "A rare #MON"
+next "discovered during"
+next "a deep-sea explo-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "ration. It has not"
+next "changed in over"
+next "100 million years.@"

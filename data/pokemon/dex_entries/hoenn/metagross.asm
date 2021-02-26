@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "IRON@" ; species name
+dw 503, 12125 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "METANG combined to"
+next "form it. With four"
+next "brains, it has the"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "intelligence of a"
+next "supercomputer.@"

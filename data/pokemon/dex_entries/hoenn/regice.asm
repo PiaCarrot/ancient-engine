@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "ICEBERG@" ; species name
+dw 511, 3858 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its body is made"
+next "of ice from the"
+next "ice age. It con-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "trols frigid air"
+next "of -328 degrees"
+next "Fahrenheit.@"

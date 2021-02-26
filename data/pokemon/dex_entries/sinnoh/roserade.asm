@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BOUQUET@" ; species name
+dw 211, 320 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Each of its hands"
+next "contains different"
+next "toxins, but both"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "hands can jab with"
+next "near-fatal power.@"

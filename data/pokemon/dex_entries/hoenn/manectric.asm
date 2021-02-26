@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "DISCHARGE@" ; species name
+dw 411, 886 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It releases elec-"
+next "tricity from its"
+next "mane. It creates a"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "thundercloud over-"
+next "head to drop"
+next "lightning bolts.@"

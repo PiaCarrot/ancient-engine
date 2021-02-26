@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "RENDEZVOUS@" ; species name
+dw 200, 192 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It lives in warm"
+next "seas. A couple"
+next "finding this"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "#MON will"
+next "be blessed with"
+next "eternal love.@"

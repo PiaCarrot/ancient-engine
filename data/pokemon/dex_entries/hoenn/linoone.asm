@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "RUSHING@" ; species name
+dw 108, 717 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It charges prey at"
+next "speeds over 60"
+next "mph. However, be-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "cause it can only"
+next "run straight, it"
+next "often fails.@"

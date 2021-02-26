@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "TIGER@" ; species name
+dw 303, 966 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It binds its body"
+next "with its tails to"
+next "look  bigger. If"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "it locks eyes, it"
+next "will glare cease-"
+next "lessly.@"

@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "LICKING@" ; species name
+dw 507, 3086 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "The long tongue is"
+next "always soggy with"
+next "slobber. The"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "saliva contains a"
+next "solvent that"
+next "causes numbness.@"

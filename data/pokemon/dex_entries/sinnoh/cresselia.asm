@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "LUNAR@" ; species name
+dw 411, 1887 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "On nights around"
+next "the quarter moon,"
+next "the aurora from"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "its tail extends"
+next "and undulates"
+next "beautifully.@"

@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "FROST@" ; species name
+dw 703, 2987 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "They appear when"
+next "the snow flowers"
+next "bloom. When the"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "petals fall, they"
+next "retreat to places"
+next "unknown again.@"

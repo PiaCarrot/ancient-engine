@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "PENGUIN@" ; species name
+dw 104, 115 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "A poor walker, it"
+next "often falls down."
+next "However, its"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "pride makes it"
+next "puff up its chest"
+next "without a care.@"

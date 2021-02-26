@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "MUSHROOM@" ; species name
+dw 104, 99 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It spouts poison"
+next "spores from the"
+next "top of its head."
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "These spores cause"
+next "pain all over if"
+next "inhaled.@"

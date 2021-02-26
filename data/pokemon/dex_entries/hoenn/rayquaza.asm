@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "SKY@" ; species name
+dw 2300, 4553 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It lives in the"
+next "ozone layer far"
+next "above the clouds"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "and cannot be seen"
+next "from the ground.@"

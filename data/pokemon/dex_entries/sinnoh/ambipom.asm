@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "LONG@" ; species name
+dw 311, 448 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Split into two,"
+next "the tails are so"
+next "adept at handling"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "and doing things,"
+next "AMBIPOM rarely"
+next "uses its hands.@"

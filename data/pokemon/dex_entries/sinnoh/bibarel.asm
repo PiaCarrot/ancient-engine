@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BEAVER@" ; species name
+dw 303, 694 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "A river dammed by"
+next "BIBAREL will never"
+next "overflow its"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "banks, which is"
+next "appreciated by"
+next "people nearby.@"

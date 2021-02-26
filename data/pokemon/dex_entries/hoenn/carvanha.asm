@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "SAVAGE@" ; species name
+dw 207, 459 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "They swarm any foe"
+next "that invades their"
+next "territory. Their"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "sharp fangs can"
+next "tear out boat"
+next "hulls.@"

@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "SWALLOW@" ; species name
+dw 204, 437 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It circles the sky"
+next "in search of prey."
+next "When it spots one,"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "it dives steeply"
+next "to catch the prey.@"

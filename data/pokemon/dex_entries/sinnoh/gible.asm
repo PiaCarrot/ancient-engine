@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "LAND@" ; species name
+dw 204, 452 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It attacks using"
+next "its huge mouth."
+next "While its attacks"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "are powerful, it"
+next "hurts itself out"
+next "of clumsiness too.@"

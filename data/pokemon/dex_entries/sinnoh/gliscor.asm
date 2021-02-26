@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "FANG@" ; species name
+dw 607, 937 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "If it succeeds in"
+next "catching even a"
+next "faint breeze, it"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "can circle the"
+next "globe without"
+next "flapping once.@"

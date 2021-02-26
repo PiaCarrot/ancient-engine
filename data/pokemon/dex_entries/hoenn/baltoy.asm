@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "CLAY@" ; species name
+dw 108, 474 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It moves by spin-"
+next "ning on its foot."
+next "It is a rare"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "#MON that was"
+next "discovered in an-"
+next "cient ruins.@"

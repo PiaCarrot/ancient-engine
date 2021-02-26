@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "COCOON@" ; species name
+dw 200, 220 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It wraps silk"
+next "around treebranch-"
+next "es. It drinks"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "rainwater on its"
+next "silk while await-"
+next "ing evolution.@"

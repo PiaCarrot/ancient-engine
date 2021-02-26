@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "DECEIVER@" ; species name
+dw 200, 254 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Attached to its"
+next "head is a huge set"
+next "of jaws formed by"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "horns. It can chew"
+next "through iron"
+next "beams.@"

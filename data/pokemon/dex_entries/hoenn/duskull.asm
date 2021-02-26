@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "REQUIEM@" ; species name
+dw 207, 331 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It loves the cry-"
+next "ing of children."
+next "It startles bad"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "kids by passing"
+next "through walls and"
+next "making them cry.@"

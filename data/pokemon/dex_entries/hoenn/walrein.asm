@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "ICE@" ; species name
+dw 407, 3320 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It shatters ice"
+next "with its tusks."
+next "Its thick blubber"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "repels not only"
+next "the cold, but also"
+next "enemy attacks.@"

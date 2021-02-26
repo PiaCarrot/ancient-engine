@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "WHISKERS@" ; species name
+dw 211, 520 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It is extremely"
+next "protective of its"
+next "territory. If any"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "foe approaches, it"
+next "attacks using vi-"
+next "cious tremors.@"

@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "ROCK@" ; species name
+dw 200, 928 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Dreaming of one"
+next "day flying, it"
+next "practices by leap-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "ing off cliffs ev-"
+next "ery day.@"

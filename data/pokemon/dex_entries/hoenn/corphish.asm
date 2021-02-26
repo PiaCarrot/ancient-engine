@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "RUFFIAN@" ; species name
+dw 200, 254 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its hardy vitality"
+next "enables it to"
+next "adapt to any envi-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "ronment. Its pin-"
+next "cers will never"
+next "release prey.@"

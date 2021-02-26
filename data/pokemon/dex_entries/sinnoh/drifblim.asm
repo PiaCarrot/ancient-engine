@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BLIMP@" ; species name
+dw 311, 331 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "At dusk, swarms of"
+next "them are carried"
+next "aloft on winds."
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "When noticed, they"
+next "suddenly vanish.@"

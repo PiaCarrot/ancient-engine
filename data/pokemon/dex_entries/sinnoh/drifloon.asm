@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BALLOON@" ; species name
+dw 104, 26 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Because of the way"
+next "it floats aimless-"
+next "ly, an old folk-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "tale calls it a"
+next "“Signpost for Wan-"
+next "dering Spirits.”@"

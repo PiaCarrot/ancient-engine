@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "TEMPORAL@" ; species name
+dw 1709, 15058 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "A legendary"
+next "#MON of Sinnoh."
+next "It is said that"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "time flows when"
+next "DIALGA’s heart"
+next "beats.@"

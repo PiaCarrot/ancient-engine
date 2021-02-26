@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "TINY@" ; species name
+dw 104, 225 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "The shell on its"
+next "back is made of"
+next "soil. On a very"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "healthy TURTWIG,"
+next "the shell should"
+next "feel moist.@"

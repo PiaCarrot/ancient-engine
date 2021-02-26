@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "CHIMP@" ; species name
+dw 108, 137 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It is very agile."
+next "Before going to"
+next "sleep, it extin-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "guishes the flame"
+next "on its tail to"
+next "prevent fires.@"

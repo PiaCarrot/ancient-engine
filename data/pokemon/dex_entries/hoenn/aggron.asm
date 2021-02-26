@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "IRON@" ; species name
+dw 611, 7937 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "While seeking iron"
+next "for food, it digs"
+next "tunnels by break-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "ing through"
+next "bedrock with its"
+next "steel horns.@"

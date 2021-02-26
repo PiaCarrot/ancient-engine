@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "COCOON@" ; species name
+dw 204, 254 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It never forgets"
+next "any attack it en-"
+next "dured while in the"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "cocoon. After evo-"
+next "lution, it seeks"
+next "payback.@"

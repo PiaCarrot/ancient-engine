@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "GLEAM@" ; species name
+dw 407, 926 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It can see clearly"
+next "through walls to"
+next "track down its"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "prey and seek its"
+next "lost young.@"

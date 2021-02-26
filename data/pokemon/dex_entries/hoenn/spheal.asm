@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "CLAP@" ; species name
+dw 207, 871 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It rolls across"
+next "ice floes to reach"
+next "shore because its"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "body is poorly"
+next "shaped for swim-"
+next "ming.@"
