@@ -492,6 +492,7 @@ BattleAnimations::
 	dw BattleAnim_SeedFlare
 	dw BattleAnim_OminousWind
 	dw BattleAnim_ShadowForce
+	dw BattleAnim_SweetScent2
 
 BattleAnim_0:
 BattleAnim_MirrorMove:

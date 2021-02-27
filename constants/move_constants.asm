@@ -297,7 +297,7 @@
 	const GRUDGE       ; 31e
 	const SNATCH       ; 31f
 	const SECRET_POWER ; 320
-	const DEWATER      ; 321
+	const DIVE         ; 321
 	const ARM_THRUST   ; 322
 	const CAMOUFLAGE   ; 323
 	const TAIL_GLOW    ; 324
@@ -455,7 +455,7 @@
 	const STEALTH_ROCK ; 3bc
 	const GRASS_KNOT   ; 3bd
 	const CHATTER      ; 3be
-	const JUDGMENT     ; 3bf
+	const JUDGEMENT    ; 3bf
 	const BUG_BITE     ; 3c0
 	const CHARGE_BEAM  ; 3c1
 	const WOOD_HAMMER  ; 3c2
