@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "EYEBALL@" ; species name
+dw 207, 79 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its antennae have"
+next "eye patterns on"
+next "them. Its four"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "wings enable it to"
+next "hover and fly in"
+next "any direction.@"

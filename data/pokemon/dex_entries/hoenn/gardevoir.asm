@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "EMBRACE@" ; species name
+dw 503, 1067 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "To protect its"
+next "Trainer, it will"
+next "expend all its"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "psychic power to"
+next "create a small"
+next "black hole.@"

@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "JOLLY@" ; species name
+dw 311, 717 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It has a mis-"
+next "chievous spirit."
+next "If it spots an an-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "gler, it will tug"
+next "on the fishing"
+next "line to interfere.@"

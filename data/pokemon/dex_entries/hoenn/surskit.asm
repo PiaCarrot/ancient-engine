@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "POND@" ; species name
+dw 108, 37 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It appears as if"
+next "it is skating on"
+next "water. It draws"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "prey with a sweet"
+next "scent from the tip"
+next "of its head.@"

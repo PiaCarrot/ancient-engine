@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "WHISKERS@" ; species name
+dw 104, 42 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its slimy body is"
+next "hard to grasp. In"
+next "one region, it is"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "said to have been"
+next "born from hardened"
+next "mud.@"

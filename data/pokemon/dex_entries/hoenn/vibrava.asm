@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "VIBRATION@" ; species name
+dw 307, 337 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It violently shud-"
+next "ders its wings,"
+next "generating ultra-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "sonic waves to in-"
+next "duce headaches in"
+next "people.@"

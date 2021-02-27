@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "FLOAT@" ; species name
+dw 4707, 8774 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "The biggest of all"
+next "#MON. It can"
+next "dive to a depth of"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "almost 10,000 feet"
+next "on only one"
+next "breath.@"

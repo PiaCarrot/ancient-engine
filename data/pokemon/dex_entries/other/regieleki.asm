@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "ELECTRON@" ; species name
+dw 311, 3197 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It's made entirely"
+next "of electricity. It"
+next "is said that re-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "moving the rings"
+next "on its body will"
+next "unlock its power.@"

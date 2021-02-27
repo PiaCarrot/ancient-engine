@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "COLOR@" ; species name
+dw 303, 485 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It can freely"
+next "change its body’s"
+next "color. The zigzag"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "pattern on its"
+next "belly doesn’t"
+next "change, however.@"

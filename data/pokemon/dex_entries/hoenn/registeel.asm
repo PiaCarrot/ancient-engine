@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "IRON@" ; species name
+dw 603, 4519 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Tempered by pres-"
+next "sure underground"
+next "over tens of thou-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "sands of years,"
+next "its body cannot be"
+next "scratched.@"

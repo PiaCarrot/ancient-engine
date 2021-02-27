@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "THORN@" ; species name
+dw 100, 44 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "The more healthy"
+next "the ROSELIA, the"
+next "more pleasant its"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "flowers’ aroma."
+next "Its scent deeply"
+next "relaxes people.@"

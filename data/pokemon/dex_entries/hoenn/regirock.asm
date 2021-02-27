@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "ROCK@" ; species name
+dw 507, 5071 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its entire body is"
+next "made of rock. If"
+next "any part chips off"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "in battle, it at-"
+next "taches rocks to"
+next "repair itself.@"

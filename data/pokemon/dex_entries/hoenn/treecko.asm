@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "WOOD@" ; species name
+dw 108, 110 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "The soles of its"
+next "feet are covered"
+next "by tiny spikes,"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "enabling it to"
+next "walk on walls and"
+next "ceilings.@"

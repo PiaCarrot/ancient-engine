@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "PENGUIN@" ; species name
+dw 207, 507 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Because every"
+next "PRINPLUP considers"
+next "itself to be the"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "most important,"
+next "they can never"
+next "form a group.@"

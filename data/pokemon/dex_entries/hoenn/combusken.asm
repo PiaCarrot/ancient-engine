@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "YOUNG@" ; species name
+dw 211, 430 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its kicking mas-"
+next "tery lets it loose"
+next "10 kicks per sec-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "ond. It emits"
+next "sharp cries to in-"
+next "timidate foes.@"

@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "EON@" ; species name
+dw 407, 882 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its body is cov-"
+next "ered with a down"
+next "that can refract"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "light in such a"
+next "way that it be-"
+next "comes invisible.@"

@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "GRATITUDE@" ; species name
+dw 008, 46 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "The flowers all"
+next "over its body"
+next "burst into bloom"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "if it is lovingly"
+next "hugged and senses"
+next "gratitude.@"

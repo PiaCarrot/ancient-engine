@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "SOUTH@" ; species name
+dw 511, 498 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It lives at the"
+next "bottom of the sea."
+next "In the springtime,"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "its pink body"
+next "turns more vivid"
+next "for some reason.@"

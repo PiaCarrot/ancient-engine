@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BLOSSOM@" ; species name
+dw 108, 205 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "If it senses"
+next "strong sunlight,"
+next "it opens its"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "petals to absorb"
+next "the sun’s rays"
+next "with its body."

@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "HIPPO@" ; species name
+dw 207, 1091 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It shuts its nos-"
+next "trils tight then"
+next "traverses sand as"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "if walking. They"
+next "form colonies of"
+next "around ten.@"

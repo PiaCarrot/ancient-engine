@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "AURA@" ; species name
+dw 311, 1190 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "A well-trained one"
+next "can sense auras to"
+next "identify  and take"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "in the feelings of"
+next "creatures over"
+next "half a mile away.@"

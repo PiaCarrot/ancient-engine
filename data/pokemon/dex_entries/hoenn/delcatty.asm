@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "PRIM@" ; species name
+dw 307, 719 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It is highly popu-"
+next "lar among female"
+next "Trainers for its"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "sublime fur. It"
+next "does not keep a"
+next "nest.@"

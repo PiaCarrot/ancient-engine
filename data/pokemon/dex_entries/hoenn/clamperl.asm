@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BIVALVE@" ; species name
+dw 104, 1157 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It makes a single"
+next "pearl during its"
+next "lifetime. The"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "pearl is said to"
+next "amplify psychic"
+next "power.@"

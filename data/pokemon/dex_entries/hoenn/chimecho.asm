@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "WIND@" ; species name
+dw 200, 22 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its cries echo in-"
+next "side its hollow"
+next "body to emerge as"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "beautiful notes"
+next "for startling and"
+next "repelling foes.@"

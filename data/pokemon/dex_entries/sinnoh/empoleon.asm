@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "EMPEROR@" ; species name
+dw 507, 1863 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "If anyone were to"
+next "hurt its pride, it"
+next "would slash them"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "with wings that"
+next "can cleave through"
+next "an ice floe.@"

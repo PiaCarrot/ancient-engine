@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "WILD@" ; species name
+dw 407, 1025 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its heart beats at"
+next "a tenfold tempo,"
+next "so it cannot sit"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "still for even a"
+next "moment.@"

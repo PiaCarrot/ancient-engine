@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "KITTEN@" ; species name
+dw 200, 243 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It can’t stop it-"
+next "self from chasing"
+next "moving things, and"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "it runs in a cir-"
+next "cle, chasing its"
+next "own tail.@"

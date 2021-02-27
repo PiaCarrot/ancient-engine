@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "WATER@" ; species name
+dw 108, 57 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It looks like an"
+next "aquatic plant and"
+next "serves as a ferry"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "to #MON that"
+next "can’t swim.@"

@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "MUSIC@" ; species name
+dw 108, 42 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its tongue is just"
+next "like a human’s. As"
+next "a result, it can"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "cleverly mimic hu-"
+next "man speech.@"

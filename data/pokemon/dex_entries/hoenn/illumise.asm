@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "FIREFLY@" ; species name
+dw 200, 390 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "With its sweet"
+next "aroma, it guides"
+next "VOLBEAT to draw"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "signs with light"
+next "in the night sky.@"

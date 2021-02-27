@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "PUPPET@" ; species name
+dw 200, 51 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It loves vengeful"
+next "emotions and hangs"
+next "in rows under the"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "eaves of houses"
+next "where vengeful"
+next "people live.@"

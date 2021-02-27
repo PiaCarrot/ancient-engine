@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "WEATHER@" ; species name
+dw 100, 18 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its appearance"
+next "changes with the"
+next "weather. Recently,"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "its molecules were"
+next "found to be just"
+next "like water.@"

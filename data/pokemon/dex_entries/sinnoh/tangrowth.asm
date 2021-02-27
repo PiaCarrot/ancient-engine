@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "VINE@" ; species name
+dw 607, 2835 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its arms are made"
+next "of plants that"
+next "bind themselves to"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "things. They grow"
+next "back right away if"
+next "cut.@"

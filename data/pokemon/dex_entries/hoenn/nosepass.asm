@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "COMPASS@" ; species name
+dw 303, 2138 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "When endangered,"
+next "it may protect it-"
+next "self by raising"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "its magnetism and"
+next "drawing iron ob-"
+next "jects to its body.@"

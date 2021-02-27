@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "CACTUS@" ; species name
+dw 104, 1131 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "By storing water"
+next "in its body, this"
+next "desert dweller can"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "survive for 30"
+next "days without wa-"
+next "ter.@"

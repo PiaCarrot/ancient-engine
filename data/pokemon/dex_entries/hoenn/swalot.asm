@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "POISON@" ; species name
+dw 507, 1764 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It swallows any-"
+next "thing whole. It"
+next "sweats toxic flu-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "ids from its fol-"
+next "licles to douse"
+next "foes.@"

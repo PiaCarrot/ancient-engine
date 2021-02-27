@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "MARIONETTE@" ; species name
+dw 307, 276 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "A doll that became"
+next "a #MON over its"
+next "grudge from being"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "junked. It seeks"
+next "the child that"
+next "disowned it.@"

@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "SEAGULL@" ; species name
+dw 200, 209 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It soars high in"
+next "the sky, riding on"
+next "updrafts like a"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "glider. It carries"
+next "food tucked in its"
+next "bill.@"

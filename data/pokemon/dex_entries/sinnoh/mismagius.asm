@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "MAGICAL@" ; species name
+dw 211, 97 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its cry sounds"
+next "like an incanta-"
+next "tion. It is said"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "the cry may be im-"
+next "bued with happi-"
+next "ness-giving power.@"

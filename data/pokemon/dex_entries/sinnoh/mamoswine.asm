@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "TWIN@" ; species name
+dw 802, 6415 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "A frozen one was"
+next "dug up from soil"
+next "dating back 10,000"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "years. It woke up"
+next "to much amazement.@"

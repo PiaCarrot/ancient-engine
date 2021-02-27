@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BIG@" ; species name
+dw 303, 893 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "The shock waves"
+next "from its cries can"
+next "tip over trucks."
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "It stamps its feet"
+next "to power up.@"

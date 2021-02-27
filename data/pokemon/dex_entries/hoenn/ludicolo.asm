@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "CAREFREE@" ; species name
+dw 411, 1213 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "If it hears fes-"
+next "tive music, its"
+next "muscles fill with"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "energy. It can’t"
+next "help breaking out"
+next "into a dance.@"

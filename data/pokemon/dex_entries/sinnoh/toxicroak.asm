@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "TOXIC@" ; species name
+dw 403, 979 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It has a poison"
+next "sac at its throat."
+next "When it croaks,"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "the stored poison"
+next "is churned for"
+next "greater potency.@"

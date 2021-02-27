@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BUG@" ; species name
+dw 407, 595 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It binds itself to"
+next "trees in marshes."
+next "It attracts prey"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "with its sweet-"
+next "smelling drool and"
+next "gulps them down.@"

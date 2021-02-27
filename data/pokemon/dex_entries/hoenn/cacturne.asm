@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "SCARECROW@" ; species name
+dw 403, 1706 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It becomes active"
+next "at night, seeking"
+next "prey that is ex-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "hausted from the"
+next "day’s desert heat.@"

@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BONSAI@" ; species name
+dw 108, 331 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It prefers an arid"
+next "atmosphere. It"
+next "leaks water that"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "looks like tears"
+next "when adjusting its"
+next "moisture level.@"

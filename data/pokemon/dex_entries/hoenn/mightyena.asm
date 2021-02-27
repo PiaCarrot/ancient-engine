@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BITE@" ; species name
+dw 303, 816 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It chases down"
+next "prey in a pack. It"
+next "will never disobey"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "the commands of a"
+next "skilled Trainer.@"

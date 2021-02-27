@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "PLASMA@" ; species name
+dw 100, 07 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its electric-like"
+next "body can enter"
+next "some kinds of ma-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "chines and take"
+next "control in order"
+next "to make mischief.@"

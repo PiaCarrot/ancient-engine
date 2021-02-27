@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "VERDANT@" ; species name
+dw 303, 562 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It basically does"
+next "not fight. With"
+next "cells similar to"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "those of plants,"
+next "it can perform"
+next "photosynthesis.@"

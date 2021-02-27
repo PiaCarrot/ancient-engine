@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "KNOWLEDGE@" ; species name
+dw 100, 07 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "When UXIE flew,"
+next "people gained the"
+next "ability to solve"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "problems. It was"
+next "the birth of"
+next "knowledge.@"

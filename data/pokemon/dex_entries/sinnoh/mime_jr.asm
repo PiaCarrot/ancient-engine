@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "MIME@" ; species name
+dw 200, 287 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It mimics the ex-"
+next "pressions and mo-"
+next "tions of those it"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "sees to understand"
+next "the feelings of"
+next "others.@"

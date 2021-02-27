@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "EMOTION@" ; species name
+dw 100, 07 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "When MESPRIT flew,"
+next "people learned the"
+next "joy and sadness of"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "living. It was the"
+next "birth of emotions.@"

@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "MUD@" ; species name
+dw 204, 617 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its sturdy legs"
+next "give it sure foot-"
+next "ing, even in mud."
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "It burrows into"
+next "dirt to sleep.@"

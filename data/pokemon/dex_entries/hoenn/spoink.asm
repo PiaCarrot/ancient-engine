@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BOUNCE@" ; species name
+dw 204, 675 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It bounces con-"
+next "stantly, using its"
+next "tail like a"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "spring. The shock"
+next "of bouncing keeps"
+next "its heart beating.@"

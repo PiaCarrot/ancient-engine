@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "NEON@" ; species name
+dw 311, 529 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It crawls along"
+next "the seafloor using"
+next "its long front"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "fins like legs. It"
+next "competes for food"
+next "with LANTURN.@"

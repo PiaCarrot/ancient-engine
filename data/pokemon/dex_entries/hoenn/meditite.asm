@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "MEDITATE@" ; species name
+dw 200, 247 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It always trains"
+next "deep in mountains."
+next "It levitates when"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "it heightens its"
+next "spiritual power"
+next "with meditation.@"

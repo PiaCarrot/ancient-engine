@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "SEA@" ; species name
+dw 104, 68 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It drifts in warm"
+next "seas. It always"
+next "returns to where"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "it was born, no"
+next "matter how far it"
+next "may have drifted.@"

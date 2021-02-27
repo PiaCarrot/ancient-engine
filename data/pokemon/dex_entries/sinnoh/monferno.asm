@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "PLAYFUL@" ; species name
+dw 211, 485 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It skillfully con-"
+next "trols the inten-"
+next "sity of the fire"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "on its tail to"
+next "keep its foes at"
+next "an ideal distance.@"

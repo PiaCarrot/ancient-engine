@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "LAVA@" ; species name
+dw 507, 9480 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its body is made"
+next "of rugged steel."
+next "However, it is"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "partially melted"
+next "in spots because"
+next "of its own heat.@"

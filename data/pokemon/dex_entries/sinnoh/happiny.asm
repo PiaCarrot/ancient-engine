@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "PLAYHOUSE@" ; species name
+dw 200, 538 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It likes to carry"
+next "around a small"
+next "rock. It may wan-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "der around others’"
+next "feet and cause"
+next "them to stumble.@"

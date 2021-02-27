@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BIG@" ; species name
+dw 211, 602 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "If one utters a"
+next "deep cry, many"
+next "MURKROW gather"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "quickly. For this,"
+next "it is called “Sum-"
+next "moner of Night.”@"

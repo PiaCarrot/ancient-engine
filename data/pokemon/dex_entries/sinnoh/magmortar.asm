@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BLAST@" ; species name
+dw 503, 1499 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "When launching"
+next "3,600 degrees F"
+next "fireballs, its"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "body takes on a"
+next "whitish hue from"
+next "the intense heat.@"

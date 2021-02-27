@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "SHED@" ; species name
+dw 207, 26 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "A discarded bug"
+next "shell that came to"
+next "life. Peering into"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "the crack on its"
+next "back will steal"
+next "one’s spirit.@"

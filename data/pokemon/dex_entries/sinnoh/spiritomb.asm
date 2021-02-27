@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "FORBIDDEN@" ; species name
+dw 303, 2381 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Its constant mis-"
+next "chief and misdeeds"
+next "resulted in it be-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "ing bound to an"
+next "Odd Keystone by a"
+next "mysterious spell.@"

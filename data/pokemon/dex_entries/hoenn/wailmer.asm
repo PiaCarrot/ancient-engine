@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BALL@" ; species name
+dw 607, 2866 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "On sunny days, it"
+next "lands on beaches"
+next "to bounce like a"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "ball and play. It"
+next "spouts water from"
+next "its nose.@"

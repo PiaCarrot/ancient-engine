@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "SPOT@" ; species name
+dw 307, 110 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "No two SPINDA have"
+next "the same pattern"
+next "of spots. Its tot-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "tering step fouls"
+next "the aim of foes.@"

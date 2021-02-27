@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "PLUMP@" ; species name
+dw 108, 441 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "A comparison re-"
+next "vealed that"
+next "BIDOOF’s front"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "teeth grow at the"
+next "same rate as"
+next "RATTATA’s.@"

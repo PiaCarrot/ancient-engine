@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BRIGHT@" ; species name
+dw 200, 309 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It grows strong by"
+next "pushing up against"
+next "others en masse."
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "It loves eating"
+next "sweet fruit.@"

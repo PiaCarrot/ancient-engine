@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "MUD@" ; species name
+dw 104, 168 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "To alert it, the"
+next "fin on its head"
+next "senses the flow of"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "water. It has the"
+next "strength to heft"
+next "boulders.@"

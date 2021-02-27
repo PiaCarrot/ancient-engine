@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "ERUPTION@" ; species name
+dw 603, 4850 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It has volcanoes"
+next "on its back. If"
+next "magma builds up in"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "its body, it shud-"
+next "ders, then erupts"
+next "violently.@"

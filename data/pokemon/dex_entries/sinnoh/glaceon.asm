@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "FRESH@" ; species name
+dw 207, 571 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "By controlling its"
+next "body heat, it can"
+next "freeze the atmos-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "phere around it to"
+next "make a diamond-"
+next "dust flurry.@"

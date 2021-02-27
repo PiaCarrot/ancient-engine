@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "CHEERING@" ; species name
+dw 104, 93 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It cheers on"
+next "friends. If its"
+next "friends are los-"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "ing, its body lets"
+next "off more and more"
+next "sparks.@"

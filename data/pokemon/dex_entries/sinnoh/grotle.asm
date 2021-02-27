@@ -1,10 +1,9 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "GROVE@" ; species name
+dw 307, 2138 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "It knows where"
+next "pure water wells"
+next "up. It carries"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "fellow #MON"
+next "there on its back.@"

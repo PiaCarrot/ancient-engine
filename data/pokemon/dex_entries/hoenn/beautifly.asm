@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "BUTTERFLY@" ; species name
+dw 303, 626 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "Despite its looks,"
+next "it is aggressive."
+next "It jabs with its"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "long, thin mouth"
+next "if disturbed while"
+next "collecting pollen.@"

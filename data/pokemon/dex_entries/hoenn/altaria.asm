@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+db "HUMMING@" ; species name
+dw 307, 454 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+db   "If it bonds with a"
+next "person, it will"
+next "gently envelop the"
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+page "friend with its"
+next "soft wings, then"
+next "hum.@"
