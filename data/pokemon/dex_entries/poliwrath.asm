@@ -5,6 +5,6 @@ db   "With its extremely"
 next "tough muscles, it"
 next "can keep swimming"
 
-page "in the Pacific"
-next "Ocean without"
+page "in the PACIFIC"
+next "OCEAN without"
 next "resting.@"

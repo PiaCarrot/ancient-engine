@@ -7,4 +7,4 @@ next "tries consider it"
 
 page "to be a wise"
 next "friend, versed in"
-next "the world’s ways.@"
+next "the world's ways.@"

@@ -5,6 +5,6 @@ db   "It is often seen"
 next "when shooting"
 next "stars fill the"
 
-page "night skies. It’s"
+page "night skies. It's"
 next "said to arrive on"
 next "a shooting star.@"

@@ -6,5 +6,5 @@ next "can see both the"
 next "past and the fu-"
 
 page "ture. It eyes the"
-next "sun’s movement all"
+next "sun's movement all"
 next "day.@"

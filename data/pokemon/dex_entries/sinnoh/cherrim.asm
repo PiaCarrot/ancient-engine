@@ -6,5 +6,5 @@ next "strong sunlight,"
 next "it opens its"
 
 page "petals to absorb"
-next "the sun’s rays"
+next "the sun's rays"
 next "with its body."

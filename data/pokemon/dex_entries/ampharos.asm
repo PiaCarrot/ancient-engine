@@ -7,4 +7,4 @@ next "brightly. In the"
 
 page "olden days, people"
 next "sent signals using"
-next "the tail’s light.@"
+next "the tail's light.@"
