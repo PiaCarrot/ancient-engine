@@ -7,4 +7,4 @@ next "life. Peering into"
 
 page "the crack on its"
 next "back will steal"
-next "one’s spirit.@"
+next "one's spirit.@"

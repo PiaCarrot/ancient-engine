@@ -7,4 +7,4 @@ next "all the barbs on"
 
 page "its body. These"
 next "barbs grow slower"
-next "than NIDORINO’s.@"
+next "than NIDORINO's.@"

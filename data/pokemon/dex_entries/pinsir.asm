@@ -6,5 +6,5 @@ next "its pincers until"
 next "the prey is torn"
 
 page "in half. What it"
-next "can’t tear, it"
+next "can't tear, it"
 next "tosses far.@"

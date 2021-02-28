@@ -5,6 +5,6 @@ db   "It was born when"
 next "sludge in a dirty"
 next "stream was exposed"
 
-page "to the moon’s X-"
+page "to the moon's X-"
 next "rays. It appears"
 next "among filth.@"

@@ -6,4 +6,4 @@ next "at night, seeking"
 next "prey that is ex-"
 
 page "hausted from the"
-next "day’s desert heat.@"
+next "day's desert heat.@"

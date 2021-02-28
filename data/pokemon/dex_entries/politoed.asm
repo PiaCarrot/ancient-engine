@@ -5,4 +5,4 @@ db   "It gathers groups"
 next "of others as their"
 next "leader. Its cries"
 
-page "make POLIWAG obey."
+page "make POLIWAG obey.@"

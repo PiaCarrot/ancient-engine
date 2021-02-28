@@ -6,5 +6,5 @@ next "changing tempera-"
 next "ture, the bud is"
 
 page "said to bloom when"
-next "it feels the sun’s"
+next "it feels the sun's"
 next "warm touch.@"

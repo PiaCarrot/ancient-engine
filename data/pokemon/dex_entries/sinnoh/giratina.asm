@@ -6,5 +6,5 @@ next "for its violence."
 next "It silently gazed"
 
 page "upon the old world"
-next "from the Distor-"
-next "tion World.@"
+next "from the DISTOR-"
+next "TION WORLD.@"
