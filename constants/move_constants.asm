@@ -326,7 +326,7 @@
 	const ROCK_TOMB    ; 33b
 	const SILVER_WIND  ; 33c
 	const METAL_SOUND  ; 33d
-	const GRASS_WHISTLE ; 33e
+	const GRASSWHISTLE ; 33e
 	const TICKLE       ; 33f
 	const COSMIC_POWER ; 340
 	const WATER_SPOUT  ; 341
