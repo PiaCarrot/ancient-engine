@@ -3098,6 +3098,7 @@ wLastAnimObjectIndex:: db ; d40e
 
 wBattleAnimFlags:: db ; d40f
 wBattleAnimAddress:: dw ; d410
+wBattleAnimBank:: db ; d412
 wBattleAnimDelay:: db ; d412
 wBattleAnimParent:: dw ; d413
 wBattleAnimLoops:: db ; d415
