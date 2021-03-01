@@ -1126,7 +1126,7 @@ DrifloonEvosAttacks:
 
 DrifblimEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TEETER_DANCE
+	dbw 1, DRACO_METEOR
 	dbw 1, ARM_THRUST
 	dbw 1, SUPERPOWER
 	dbw 1, REVENGE

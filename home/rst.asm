@@ -3,6 +3,9 @@
 SECTION "rst0", ROM0
 	di
 	jp Start
+	
+GenericDummyFunction::
+	ret
 
 SECTION "rst8", ROM0 ; rst FarCall
 	jp FarCall_hl
