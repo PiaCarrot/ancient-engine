@@ -920,10 +920,10 @@ JirachiEvosAttacks:
 
 DeoxysEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
-	dbw 1, FAKE_OUT
-	dbw 1, FAKE_OUT
-	dbw 1, CHARGE
+	dbw 1, METEOR_MASH
+	dbw 1, POISON_FANG
+	dbw 1, ICE_BALL
+	dbw 1, BLAZE_KICK
 	db 0 ; no more level-up moves
 
 TurtwigEvosAttacks:
@@ -1118,12 +1118,18 @@ AmbipomEvosAttacks:
 
 DrifloonEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, ENDEAVOR
+	dbw 1, ASSIST
+	dbw 1, TAUNT
+	dbw 1, WILL_O_WISP
 	db 0 ; no more level-up moves
 
 DrifblimEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, TEETER_DANCE
+	dbw 1, ARM_THRUST
+	dbw 1, SUPERPOWER
+	dbw 1, REVENGE
 	db 0 ; no more level-up moves
 
 BunearyEvosAttacks:
