@@ -84,15 +84,8 @@ PlayersHouseBookshelfScript:
 ;	jumpstd picturebookshelf
 	opentext
 	setflag ENGINE_POKEDEX
-	givepoke MEWTWO, 1
-	givepoke SNEASEL, 1
+	givepoke DRIFLOON, 99
 
-	giveitem RARE_CANDY
-	giveitem RARE_CANDY
-	giveitem RARE_CANDY
-	giveitem RARE_CANDY
-	giveitem RARE_CANDY
-	giveitem RARE_CANDY
 	giveitem RARE_CANDY
 
 	callasm CheatFillPokedex
