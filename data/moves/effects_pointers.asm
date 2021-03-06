@@ -158,3 +158,5 @@ MoveEffectsPointers:
 	dw Fly
 	dw DefenseCurl
 	dw FakeOut
+
+	dw DoBurn

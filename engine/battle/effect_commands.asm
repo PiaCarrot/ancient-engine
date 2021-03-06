@@ -1264,11 +1264,11 @@ BattleCommand_Critical:
 	ld [wCriticalHit], a
 	ret
 
-INCLUDE "data/moves/critical_hit_moves.asm"
 
-INCLUDE "data/battle/critical_hit_chances.asm"
 
-INCLUDE "engine/battle/move_effects/triple_kick.asm"
+
+
+
 
 BattleCommand_Stab:
 ; STAB = Same Type Attack Bonus
@@ -1556,9 +1556,9 @@ BattleCommand_ResetTypeMatchup:
 	ld [wTypeMatchup], a
 	ret
 
-INCLUDE "engine/battle/ai/switch.asm"
 
-INCLUDE "data/types/type_matchups.asm"
+
+
 
 BattleCommand_DamageVariation:
 ; damagevariation
@@ -1906,7 +1906,7 @@ BattleCommand_CheckHit:
 	ld [hl], a
 	ret
 
-INCLUDE "data/battle/accuracy_multipliers.asm"
+
 
 BattleCommand_EffectChance:
 ; effectchance
@@ -2971,7 +2971,7 @@ EnemyAttackDamage:
 	and a
 	ret
 
-INCLUDE "engine/battle/move_effects/beat_up.asm"
+
 
 BattleCommand_ClearMissDamage:
 ; clearmissdamage
@@ -3247,7 +3247,7 @@ BattleCommand_DamageCalc:
 
 	ret
 
-INCLUDE "data/types/type_boost_items.asm"
+
 
 BattleCommand_ConstantDamage:
 ; constantdamage
@@ -3407,21 +3407,21 @@ BattleCommand_ConstantDamage:
 	ld [hl], 1
 	ret
 
-INCLUDE "data/moves/flail_reversal_power.asm"
 
-INCLUDE "engine/battle/move_effects/counter.asm"
 
-INCLUDE "engine/battle/move_effects/encore.asm"
 
-INCLUDE "engine/battle/move_effects/pain_split.asm"
 
-INCLUDE "engine/battle/move_effects/snore.asm"
 
-INCLUDE "engine/battle/move_effects/conversion2.asm"
 
-INCLUDE "engine/battle/move_effects/lock_on.asm"
 
-INCLUDE "engine/battle/move_effects/sketch.asm"
+
+
+
+
+
+
+
+
 
 BattleCommand_DefrostOpponent:
 ; defrostopponent
@@ -3449,15 +3449,15 @@ BattleCommand_DefrostOpponent:
 	ld [hl], a
 	ret
 
-INCLUDE "engine/battle/move_effects/sleep_talk.asm"
 
-INCLUDE "engine/battle/move_effects/destiny_bond.asm"
 
-INCLUDE "engine/battle/move_effects/spite.asm"
 
-INCLUDE "engine/battle/move_effects/false_swipe.asm"
 
-INCLUDE "engine/battle/move_effects/heal_bell.asm"
+
+
+
+
+
 
 FarPlayBattleAnimation:
 ; play animation de
@@ -4074,8 +4074,7 @@ BattleCommand_BurnTarget:
 	call PlayOpponentBattleAnim
 	call RefreshBattleHuds
 
-	ld hl, WasBurnedText
-	call StdBattleTextbox
+	call PrintBurn
 
 	farcall UseHeldStatusHealingItem
 	ret
@@ -4772,9 +4771,9 @@ GetStatName:
 	ld bc, wStringBuffer3 - wStringBuffer2
 	jp CopyBytes
 
-INCLUDE "data/battle/stat_names.asm"
 
-INCLUDE "data/battle/stat_multipliers.asm"
+
+
 
 BattleCommand_AllStatsUp:
 ; allstatsup
@@ -5040,7 +5039,7 @@ CalcBattleStats:
 
 	ret
 
-INCLUDE "engine/battle/move_effects/bide.asm"
+
 
 BattleCommand_CheckRampage:
 ; checkrampage
@@ -5106,7 +5105,7 @@ BattleCommand_Rampage:
 	ld [wSomeoneIsRampaging], a
 	ret
 
-INCLUDE "engine/battle/move_effects/teleport.asm"
+
 
 SetBattleDraw:
 	ld a, [wBattleResult]
@@ -5857,9 +5856,9 @@ BattleCommand_TrapTarget:
 	dw CLAMP,     ClampedByText     ; 'was CLAMPED by'
 	dw WHIRLPOOL, WhirlpoolTrapText ; 'was trapped!'
 
-INCLUDE "engine/battle/move_effects/mist.asm"
 
-INCLUDE "engine/battle/move_effects/focus_energy.asm"
+
+
 
 BattleCommand_Recoil:
 ; recoil
@@ -6108,6 +6107,63 @@ BattleCommand_Paralyze:
 	call AnimateFailedMove
 	jp PrintDoesntAffect
 
+BattleCommand_Burn:
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVar
+	bit BRN, a
+	jr nz, .burned
+	ld a, [wTypeModifier]
+	and $7f
+	jr z, .didnt_affect
+	call GetOpponentItem
+	ld a, b
+	cp HELD_PREVENT_BURN
+	jr nz, .no_item_protection
+	ld a, [hl]
+	ld [wNamedObjectIndexBuffer], a
+	call GetItemName
+	call AnimateFailedMove
+	ld hl, ProtectedByText
+	jp StdBattleTextbox
+
+.no_item_protection
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVarAddr
+	and a
+	jr nz, .failed
+	ld a, [wAttackMissed]
+	and a
+	jr nz, .failed
+	call CheckSubstituteOpp
+	jr nz, .failed
+	ld c, 30
+	call DelayFrames
+	call AnimateCurrentMove
+	ld a, $1
+	ldh [hBGMapMode], a
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVarAddr
+	set BRN, [hl]
+	call UpdateOpponentInParty
+	ld hl, ApplyBrnEffectOnAttack
+	call CallBattleCore
+	call UpdateBattleHuds
+	call PrintBurn
+	ld hl, UseHeldStatusHealingItem
+	jp CallBattleCore
+
+.burned
+	call AnimateFailedMove
+	ld hl, AlreadyBurnedText
+	jp StdBattleTextbox
+
+.failed
+	jp PrintDidntAffect2
+
+.didnt_affect
+	call AnimateFailedMove
+	jp PrintDoesntAffect
+
 CheckMoveTypeMatchesTarget:
 ; Compare move type to opponent type.
 ; Return z if matching the opponent type,
@@ -6144,7 +6200,7 @@ CheckMoveTypeMatchesTarget:
 	pop hl
 	ret
 
-INCLUDE "engine/battle/move_effects/substitute.asm"
+
 
 BattleCommand_RechargeNextTurn:
 ; rechargenextturn
@@ -6161,7 +6217,7 @@ EndRechargeOpp:
 	pop hl
 	ret
 
-INCLUDE "engine/battle/move_effects/rage.asm"
+
 
 BattleCommand_DoubleFlyingDamage:
 ; doubleflyingdamage
@@ -6193,17 +6249,17 @@ DoubleDamage:
 .quit
 	ret
 
-INCLUDE "engine/battle/move_effects/mimic.asm"
 
-INCLUDE "engine/battle/move_effects/leech_seed.asm"
 
-INCLUDE "engine/battle/move_effects/splash.asm"
 
-INCLUDE "engine/battle/move_effects/disable.asm"
 
-INCLUDE "engine/battle/move_effects/pay_day.asm"
 
-INCLUDE "engine/battle/move_effects/conversion.asm"
+
+
+
+
+
+
 
 BattleCommand_ResetStats:
 ; resetstats
@@ -6321,7 +6377,7 @@ BattleCommand_Heal:
 	ld hl, HPIsFullText
 	jp StdBattleTextbox
 
-INCLUDE "engine/battle/move_effects/transform.asm"
+
 
 BattleEffect_ButItFailed:
 	call AnimateFailedMove
@@ -6447,17 +6503,21 @@ PrintParalyze:
 	ld hl, ParalyzedText
 	jp StdBattleTextbox
 
+PrintBurn:
+	ld hl, WasBurnedText
+	jp StdBattleTextbox
+
 CheckSubstituteOpp:
 	ld a, BATTLE_VARS_SUBSTATUS4_OPP
 	call GetBattleVar
 	bit SUBSTATUS_SUBSTITUTE, a
 	ret
 
-INCLUDE "engine/battle/move_effects/selfdestruct.asm"
 
-INCLUDE "engine/battle/move_effects/mirror_move.asm"
 
-INCLUDE "engine/battle/move_effects/metronome.asm"
+
+
+
 
 CheckUserMove:
 ; Return z if the user has move a.
@@ -6497,7 +6557,7 @@ ResetTurn:
 	call DoMove
 	jp EndMoveEffect
 
-INCLUDE "engine/battle/move_effects/thief.asm"
+
 
 BattleCommand_ArenaTrap:
 ; arenatrap
@@ -6525,7 +6585,7 @@ BattleCommand_ArenaTrap:
 	call AnimateFailedMove
 	jp PrintButItFailed
 
-INCLUDE "engine/battle/move_effects/nightmare.asm"
+
 
 BattleCommand_Defrost:
 ; defrost
@@ -6558,37 +6618,37 @@ BattleCommand_Defrost:
 	ld hl, WasDefrostedText
 	jp StdBattleTextbox
 
-INCLUDE "engine/battle/move_effects/curse.asm"
 
-INCLUDE "engine/battle/move_effects/protect.asm"
 
-INCLUDE "engine/battle/move_effects/endure.asm"
 
-INCLUDE "engine/battle/move_effects/spikes.asm"
 
-INCLUDE "engine/battle/move_effects/foresight.asm"
 
-INCLUDE "engine/battle/move_effects/perish_song.asm"
 
-INCLUDE "engine/battle/move_effects/sandstorm.asm"
 
-INCLUDE "engine/battle/move_effects/rollout.asm"
+
+
+
+
+
+
+
+
 
 BattleCommand5d:
 ; unused
 	ret
 
-INCLUDE "engine/battle/move_effects/fury_cutter.asm"
 
-INCLUDE "engine/battle/move_effects/attract.asm"
 
-INCLUDE "engine/battle/move_effects/return.asm"
 
-INCLUDE "engine/battle/move_effects/present.asm"
 
-INCLUDE "engine/battle/move_effects/frustration.asm"
 
-INCLUDE "engine/battle/move_effects/safeguard.asm"
+
+
+
+
+
+
 
 SafeCheckSafeguard:
 	push hl
@@ -6620,13 +6680,13 @@ BattleCommand_CheckSafeguard:
 	call StdBattleTextbox
 	jp EndMoveEffect
 
-INCLUDE "engine/battle/move_effects/magnitude.asm"
 
-INCLUDE "engine/battle/move_effects/baton_pass.asm"
 
-INCLUDE "engine/battle/move_effects/pursuit.asm"
 
-INCLUDE "engine/battle/move_effects/rapid_spin.asm"
+
+
+
+
 
 BattleCommand_HealMorn:
 ; healmorn
@@ -6725,17 +6785,17 @@ BattleCommand_TimeBasedHealContinue:
 	dw GetHalfMaxHP
 	dw GetMaxHP
 
-INCLUDE "engine/battle/move_effects/hidden_power.asm"
 
-INCLUDE "engine/battle/move_effects/rain_dance.asm"
 
-INCLUDE "engine/battle/move_effects/sunny_day.asm"
 
-INCLUDE "engine/battle/move_effects/belly_drum.asm"
 
-INCLUDE "engine/battle/move_effects/psych_up.asm"
 
-INCLUDE "engine/battle/move_effects/mirror_coat.asm"
+
+
+
+
+
+
 
 BattleCommand_DoubleMinimizeDamage:
 ; doubleminimizedamage
@@ -6767,9 +6827,9 @@ BattleCommand_SkipSunCharge:
 	ld b, charge_command
 	jp SkipToBattleCommand
 
-INCLUDE "engine/battle/move_effects/future_sight.asm"
 
-INCLUDE "engine/battle/move_effects/thunder.asm"
+
+
 
 CheckHiddenOpponent:
 ; BUG: This routine is completely redundant and introduces a bug, since BattleCommand_CheckHit does these checks properly.
