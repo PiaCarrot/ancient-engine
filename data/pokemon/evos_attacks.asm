@@ -4,6 +4,14 @@ INCLUDE "constants.asm"
 
 SECTION "Evolutions and Attacks Pointers", ROMX
 
+; How many "parameters" each evolution type has
+EvoTypeSizes::
+	db 2 ; EVOLVE_LEVEL
+	db 3 ; EVOLVE_ITEM
+	db 2 ; EVOLVE_TRADE
+	db 2 ; EVOLVE_HAPPINESS
+	db 3 ; EVOLVE_STAT
+
 ; Evos+attacks data structure:
 ; - Evolution methods:
 ;    * dbbw EVOLVE_LEVEL, level, species

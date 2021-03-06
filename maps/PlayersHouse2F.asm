@@ -84,12 +84,17 @@ PlayersHouseBookshelfScript:
 ;	jumpstd picturebookshelf
 	opentext
 	setflag ENGINE_POKEDEX
-	givepoke TOTODILE, 100
-	givepoke DRIFBLIM, 100
-	givepoke DEOXYS, 100
-	givepoke CELEBI, 100
-	givepoke ARCEUS, 100
-	givepoke DRIFLOON, 100
+	givepoke MEWTWO, 1
+	givepoke SNEASEL, 1
+
+	giveitem RARE_CANDY
+	giveitem RARE_CANDY
+	giveitem RARE_CANDY
+	giveitem RARE_CANDY
+	giveitem RARE_CANDY
+	giveitem RARE_CANDY
+	giveitem RARE_CANDY
+
 	callasm CheatFillPokedex
 	closetext
 	end

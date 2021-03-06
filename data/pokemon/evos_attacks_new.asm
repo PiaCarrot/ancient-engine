@@ -394,7 +394,8 @@ RaltsEvosAttacks:
 	db 0 ; no more level-up moves
 
 KirliaEvosAttacks:
-	db 0 ; no more evolutions
+	dbbw EVOLVE_LEVEL, 1, GARDEVOIR
+	dbbw EVOLVE_ITEM_MALE, WATER_STONE, GALLADE
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
 
@@ -794,7 +795,8 @@ WynautEvosAttacks:
 	db 0 ; no more level-up moves
 
 SnoruntEvosAttacks:
-	db 0 ; no more evolutions
+	dbbw EVOLVE_LEVEL, 1, GLALIE
+	dbbw EVOLVE_ITEM_FEMALE, WATER_STONE, FROSLASS
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
 
@@ -1052,7 +1054,8 @@ BastiodonEvosAttacks:
 	db 0 ; no more level-up moves
 
 BurmyEvosAttacks:
-	db 0 ; no more evolutions
+	dbbbw EVOLVE_LEVEL, 1, MALE, MOTHIM
+	dbbbw EVOLVE_LEVEL, 1, FEMALE, WORMADAM
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
 
