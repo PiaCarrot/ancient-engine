@@ -1684,8 +1684,10 @@ ChanseyEvosAttacks:
 	db 0 ; no more level-up moves
 
 TangelaEvosAttacks:
+	dbww EVOLVE_MOVE, ANCIENTPOWER, TANGROWTH
 	db 0 ; no more evolutions
 	dbw 1, CONSTRICT
+	dbw 3, ANCIENTPOWER
 	dbw 4, SLEEP_POWDER
 	dbw 10, ABSORB
 	dbw 13, POISONPOWDER
@@ -1933,6 +1935,7 @@ EeveeEvosAttacks:
 	dbbw EVOLVE_ITEM, THUNDERSTONE, JOLTEON
 	dbbw EVOLVE_ITEM, WATER_STONE, VAPOREON
 	dbbw EVOLVE_ITEM, FIRE_STONE, FLAREON
+	dbbw EVOLVE_HAPPINESS_MOVE_TYPE, NORMAL, SYLVEON
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, ESPEON
 	dbbw EVOLVE_HAPPINESS, TR_NITE, UMBREON
 	db 0 ; no more evolutions
@@ -2169,6 +2172,7 @@ DragoniteEvosAttacks:
 	db 0 ; no more level-up moves
 
 MewtwoEvosAttacks:
+	dbww EVOLVE_PARTY, WEAVILE, MEW
 	db 0 ; no more evolutions
 	dbw 1, CONFUSION
 	dbw 1, DISABLE

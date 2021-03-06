@@ -64,13 +64,19 @@ EvolveAfterBattle_MasterLoop:
 	ld b, a
 
 	cp EVOLVE_TRADE
-	jr z, .trade
+	jp z, .trade
 
 	ld a, [wLinkMode]
 	and a
 	jp nz, .dont_evolve_check
 
 	ld a, b
+	cp EVOLVE_ITEM_MALE
+	jp z, .item_male
+
+	cp EVOLVE_ITEM_FEMALE
+	jp z, .item_female
+
 	cp EVOLVE_ITEM
 	jp z, .item
 
@@ -81,6 +87,18 @@ EvolveAfterBattle_MasterLoop:
 	ld a, b
 	cp EVOLVE_LEVEL
 	jp z, .level
+
+	cp EVOLVE_MOVE
+	jp z, .move
+
+	cp EVOLVE_HOLD
+	jp z, .hold
+
+	cp EVOLVE_PARTY
+	jp z, .party
+
+	cp EVOLVE_HAPPINESS_MOVE_TYPE
+	jr z, .happiness_move_type
 
 	cp EVOLVE_HAPPINESS
 	jr z, .happiness
@@ -123,7 +141,7 @@ EvolveAfterBattle_MasterLoop:
 
 	call GetNextEvoAttackByte
 	cp TR_ANYTIME
-	jr z, .proceed
+	jp z, .proceed
 	cp TR_MORNDAY
 	jr z, .happiness_daylight
 
@@ -131,13 +149,74 @@ EvolveAfterBattle_MasterLoop:
 	ld a, [wTimeOfDay]
 	cp NITE_F
 	jp nz, .skip_evolution_species
-	jr .proceed
+	jp .proceed
 
 .happiness_daylight
 	ld a, [wTimeOfDay]
 	cp NITE_F
 	jp z, .skip_evolution_species
-	jr .proceed
+	jp .proceed
+	
+.happiness_move_type
+	ld a, [wTempMonHappiness]
+	cp HAPPINESS_TO_EVOLVE
+	jp c, .skip_evolution_species_parameter
+
+	call IsMonHoldingEverstone
+	jp z, .skip_evolution_species_parameter
+
+	call GetNextEvoAttackByte
+	ld b, a
+	ld de, wTempMonMoves
+	ld c, NUM_MOVES
+	
+.move_type_loop
+	ld a, [de]
+
+	push hl
+    ld l, a
+    ld a, MOVE_TYPE
+    call GetMoveAttribute
+	pop hl
+
+	cp b
+	jp z, .proceed
+
+	inc de
+	dec c
+	jp nz, .move_type_loop
+
+	jp .skip_evolution_species
+
+.move
+	call IsMonHoldingEverstone
+	jp z, .skip_evolution_species_parameter
+
+	call GetNextEvoAttackByte
+	ld c, a
+	call GetNextEvoAttackByte
+	ld b, a
+
+	push hl
+	ld h, b
+	ld l, c
+	call GetMoveIDFromIndex
+	pop hl
+
+	ld b, a
+	ld de, wTempMonMoves
+	ld c, NUM_MOVES
+
+.move_loop
+	ld a, [de]
+	cp b
+	jp z, .proceed
+
+	inc de
+	dec c
+	jp nz, .move_loop
+
+	jp .skip_evolution_species
 
 .trade
 	ld a, [wLinkMode]
@@ -150,7 +229,7 @@ EvolveAfterBattle_MasterLoop:
 	call GetNextEvoAttackByte
 	ld b, a
 	inc a
-	jr z, .proceed
+	jp z, .proceed
 
 	ld a, [wLinkMode]
 	cp LINK_TIMECAPSULE
@@ -162,7 +241,25 @@ EvolveAfterBattle_MasterLoop:
 
 	xor a
 	ld [wTempMonItem], a
-	jr .proceed
+	jp .proceed
+
+.item_male
+	xor a
+	ld [wMonType], a ; PartyMon
+	push hl
+	farcall GetGender
+	pop hl
+	jp z, .skip_evolution_species
+	jr .item
+
+.item_female
+	xor a
+	ld [wMonType], a ; PartyMon
+	push hl
+	farcall GetGender
+	pop hl
+	jp nz, .skip_evolution_species
+	jr .item
 
 .item
 	call GetNextEvoAttackByte
@@ -177,7 +274,66 @@ EvolveAfterBattle_MasterLoop:
 	ld a, [wLinkMode]
 	and a
 	jp nz, .skip_evolution_species
-	jr .proceed
+	jp .proceed
+
+.hold
+	; Get current item
+	push hl
+	ld a, [wCurPartyMon]
+	ld hl, wPartyMon1Item
+	ld bc, PARTYMON_STRUCT_LENGTH
+	call AddNTimes
+	ld a, [hl]
+	ld b, a
+	pop hl
+
+	; Check the item
+	call GetNextEvoAttackByte
+	cp b
+	jp nz, .skip_evolution_species_parameter
+
+	; Check the time
+	call GetNextEvoAttackByte
+	cp TR_ANYTIME
+	jp z, .proceed
+	cp TR_MORNDAY
+	jr z, .hold_daylight
+
+; TR_NITE
+	ld a, [wTimeOfDay]
+	cp NITE
+	jp nz, .skip_evolution_species
+	jp .proceed
+
+.hold_daylight
+	ld a, [wTimeOfDay]
+	cp NITE
+	jp z, .skip_evolution_species
+	jp .proceed
+
+.party
+	call IsMonHoldingEverstone
+	jp z, .skip_evolution_species_parameter
+	
+	; Check if any of the party mons are the requested one
+	
+	call GetNextEvoAttackByte
+	ld c, a
+	call GetNextEvoAttackByte
+	ld b, a
+
+	push hl
+	ld h, b
+	ld l, c
+	call GetPokemonIDFromIndex
+	pop hl
+
+	ld b, a
+	push hl
+	farcall FindThatSpecies
+	pop hl
+	jp z, .skip_evolution_species
+	jp .proceed
 
 .level
 	call GetNextEvoAttackByte
@@ -185,8 +341,33 @@ EvolveAfterBattle_MasterLoop:
 	ld a, [wTempMonLevel]
 	cp b
 	jp c, .skip_evolution_species
+
 	call IsMonHoldingEverstone
+	jp z, .skip_evolution_species_parameter
+
+	call GetNextEvoAttackByte
+	cp ANY
+	jp z, .proceed
+	cp FEMALE
+	jr z, .level_female
+
+.level_male
+	xor a
+	ld [wMonType], a ; PartyMon
+	push hl
+	farcall GetGender
+	pop hl
 	jp z, .skip_evolution_species
+	jp .proceed
+
+.level_female
+	xor a
+	ld [wMonType], a ; PartyMon
+	push hl
+	farcall GetGender
+	pop hl
+	jp nz, .skip_evolution_species
+	jp .proceed
 
 .proceed
 	ld a, [wTempMonLevel]
@@ -639,9 +820,20 @@ SkipEvolutions::
 	and a
 	ret z
 	cp EVOLVE_STAT
-	jr nz, .no_extra_skip
+	jr z, .4_byte_skip
+	cp EVOLVE_MOVE
+	jr z, .4_byte_skip
+	cp EVOLVE_HOLD
+	jr z, .4_byte_skip
+	cp EVOLVE_PARTY
+	jr z, .4_byte_skip
+
+	jr .3_byte_skip
+	
+.4_byte_skip
 	inc hl
-.no_extra_skip
+
+.3_byte_skip
 	inc hl
 	inc hl
 	inc hl
@@ -659,15 +851,46 @@ DetermineEvolutionItemResults::
 	call GetNextEvoAttackByte
 	and a
 	ret z
-	cp EVOLVE_STAT
-	jr z, .skip_species_two_parameters
+
+	cp EVOLVE_ITEM_MALE
+	jr z, .item_male
+	cp EVOLVE_ITEM_FEMALE
+	jr z, .item_female
 	cp EVOLVE_ITEM
-	jr nz, .skip_species_parameter
+	jr z, .item
+
+
+	jr .loop
+
+.item_male
+	xor a
+	ld [wMonType], a ; PartyMon
+	push hl
+	farcall GetGender
+	pop hl
+
+	jr z, .skip_species
+
+	jr .item
+
+.item_female
+	xor a
+	ld [wMonType], a ; PartyMon
+	push hl
+	farcall GetGender
+	pop hl
+
+	jr nz, .skip_species
+
+	jr .item
+
+.item
 	call GetNextEvoAttackByte
 	ld b, a	
 	ld a, [wCurItem]
 	cp b
 	jr nz, .skip_species
+
 	ldh a, [hTemp]
 	call GetFarHalfword
 	ld d, h
