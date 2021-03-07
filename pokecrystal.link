@@ -73,11 +73,11 @@ ROMX $11
 ROMX $12
 	"Crystal Features 1"
 	"Egg Moves 2"
-	"Evolutions and Attacks 2"
 ROMX $13
 	"bank13"
 ROMX $14
 	"bank14"
+	"Evolutions and Attacks 2"
 ROMX $15
 	"Map Scripts 1"
 ROMX $16

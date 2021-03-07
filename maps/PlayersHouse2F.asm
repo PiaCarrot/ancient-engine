@@ -85,8 +85,10 @@ PlayersHouseBookshelfScript:
 	opentext
 	setflag ENGINE_POKEDEX
 	givepoke DRIFLOON, 99
+	givepoke BULBASAUR, 5
+	givepoke ZAPDOS, 40
 
-	giveitem RARE_CANDY
+	giveitem RARE_CANDY, 99
 
 	callasm CheatFillPokedex
 	closetext

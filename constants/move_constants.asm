@@ -368,7 +368,7 @@
 	const HAMMER_ARM   ; 365
 	const GYRO_BALL    ; 366
 	const HEALING_WISH ; 367
-	const BRINEWATER   ; 368
+	const BRINE        ; 368
 	const NATURAL_GIFT ; 369
 	const FEINT        ; 36a
 	const PLUCK        ; 36b

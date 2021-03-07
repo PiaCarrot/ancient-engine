@@ -1122,7 +1122,7 @@ AmbipomEvosAttacks:
 DrifloonEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, ENDEAVOR
-	dbw 1, ASSIST
+	dbw 1, EARTHQUAKE
 	dbw 1, TAUNT
 	dbw 1, WILL_O_WISP
 	db 0 ; no more level-up moves
