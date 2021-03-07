@@ -1,6 +1,8 @@
 SECTION "Evolutions and Attacks 2", ROMX
 
 EvosAttacksPointers2::
+	dw MoltresEvosAttacks
+	dw DratiniEvosAttacks
 	dw DragonairEvosAttacks
 	dw DragoniteEvosAttacks
 	dw MewtwoEvosAttacks
@@ -105,6 +107,42 @@ EvosAttacksPointers2::
 	dw LugiaEvosAttacks
 	dw HoOhEvosAttacks
 	dw CelebiEvosAttacks
+
+MoltresEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, WING_ATTACK
+	dbw 1, EMBER
+	dbw 8, FIRE_SPIN
+	dbw 15, AGILITY
+	dbw 22, ENDURE
+	dbw 29, ANCIENTPOWER
+	dbw 36, FLAMETHROWER
+	dbw 43, SAFEGUARD
+	dbw 50, AIR_SLASH
+	dbw 57, ROOST
+	dbw 64, HEAT_WAVE
+	dbw 71, SOLARBEAM
+	dbw 78, SKY_ATTACK
+	dbw 85, SUNNY_DAY
+	db 0 ; no more level-up moves
+	
+DratiniEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 30, ANY, DRAGONAIR
+	db 0 ; no more evolutions
+	dbw 1, WRAP
+	dbw 1, LEER
+	dbw 5, THUNDER_WAVE
+	dbw 11, TWISTER
+	dbw 15, DRAGON_RAGE
+	dbw 21, SLAM
+	dbw 25, AGILITY
+	dbw 31, AQUA_TAIL
+	dbw 35, DRAGON_RUSH
+	dbw 41, SAFEGUARD
+	dbw 45, DRAGON_DANCE
+	dbw 51, OUTRAGE
+	dbw 55, HYPER_BEAM
+	db 0 ; no more level-up moves
 
 DragonairEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 55, ANY, DRAGONITE

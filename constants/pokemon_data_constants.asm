@@ -140,6 +140,8 @@ const_value set 1
 	const EVOLVE_HAPPINESS_MOVE_TYPE
 	const EVOLVE_HOLD
 	const EVOLVE_PARTY
+	const EVOLVE_MAP
+	const EVOLVE_GROUP
 	const EVOLVE_STAT
 EVOLVE_TYPES EQU const_value
 
