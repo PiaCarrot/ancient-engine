@@ -819,6 +819,8 @@ SkipEvolutions::
 	inc hl
 	and a
 	ret z
+	cp EVOLVE_LEVEL
+	jr z, .4_byte_skip
 	cp EVOLVE_STAT
 	jr z, .4_byte_skip
 	cp EVOLVE_MOVE
