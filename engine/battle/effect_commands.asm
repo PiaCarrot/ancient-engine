@@ -1274,7 +1274,6 @@ BattleCommand_Stab:
 ; STAB = Same Type Attack Bonus
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
-	and TYPE_MASK
 	ld bc, STRUGGLE
 	call CompareMove
 	ret z
@@ -1352,6 +1351,7 @@ BattleCommand_Stab:
 .SkipStab:
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	and TYPE_MASK
 	ld b, a
 	ld hl, TypeMatchups
 
@@ -3026,7 +3026,6 @@ BattleCommand_DamageCalc:
 
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
-	and TYPE_MASK
 
 ; Selfdestruct and Explosion halve defense.
 	cp EFFECT_SELFDESTRUCT
@@ -3127,6 +3126,7 @@ BattleCommand_DamageCalc:
 	ld b, a
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	and TYPE_MASK
 	cp b
 	jr nz, .DoneItem
 
