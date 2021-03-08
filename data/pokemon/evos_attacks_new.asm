@@ -498,8 +498,8 @@ LinooneEvosAttacks:
 	db 0 ; no more level-up moves
 
 WurmpleEvosAttacks:
-;	dbbw EVOLVE_RANDOM, 7, 0, SILCOON
-;	dbbw EVOLVE_RANDOM, 7, 1, CASCOON
+	dbbbw EVOLVE_DV, 7, 0, SILCOON
+	dbbbw EVOLVE_DV, 7, 1, CASCOON
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, STRING_SHOT

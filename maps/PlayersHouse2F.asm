@@ -84,7 +84,12 @@ PlayersHouseBookshelfScript:
 ;	jumpstd picturebookshelf
 	opentext
 	setflag ENGINE_POKEDEX
-	givepoke MAGNETON, 1
+	givepoke WURMPLE, 7
+	givepoke WURMPLE, 7
+	givepoke WURMPLE, 7
+	givepoke WURMPLE, 7
+	givepoke WURMPLE, 7
+	givepoke WURMPLE, 7
 
 	giveitem RARE_CANDY, 99
 
