@@ -142,6 +142,7 @@ const_value set 1
 	const EVOLVE_PARTY
 	const EVOLVE_MAP
 	const EVOLVE_GROUP
+	const EVOLVE_DV
 	const EVOLVE_STAT
 EVOLVE_TYPES EQU const_value
 

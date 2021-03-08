@@ -1,6 +1,8 @@
 SECTION "Evolutions and Attacks 2", ROMX
 
 EvosAttacksPointers2::
+	dw ArticunoEvosAttacks
+	dw ZapdosEvosAttacks
 	dw MoltresEvosAttacks
 	dw DratiniEvosAttacks
 	dw DragonairEvosAttacks
@@ -107,6 +109,42 @@ EvosAttacksPointers2::
 	dw LugiaEvosAttacks
 	dw HoOhEvosAttacks
 	dw CelebiEvosAttacks
+	
+ArticunoEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, GUST
+	dbw 1, POWDER_SNOW
+	dbw 8, MIST
+	dbw 15, ICE_SHARD
+	dbw 22, MIND_READER
+	dbw 29, ANCIENTPOWER
+	dbw 36, AGILITY
+	dbw 43, ICE_BEAM
+	dbw 50, REFLECT
+	dbw 57, ROOST
+	dbw 64, TAILWIND
+	dbw 71, BLIZZARD
+	dbw 78, SHEER_COLD
+	dbw 85, HAIL
+	db 0 ; no more level-up moves
+
+ZapdosEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, PECK
+	dbw 1, THUNDERSHOCK
+	dbw 8, THUNDER_WAVE
+	dbw 15, DETECT
+	dbw 22, PLUCK
+	dbw 29, ANCIENTPOWER
+	dbw 36, CHARGE
+	dbw 43, AGILITY
+	dbw 50, DISCHARGE
+	dbw 57, ROOST
+	dbw 64, LIGHT_SCREEN
+	dbw 71, DRILL_PECK
+	dbw 78, THUNDER
+	dbw 85, RAIN_DANCE
+	db 0 ; no more level-up moves
 
 MoltresEvosAttacks:
 	db 0 ; no more evolutions

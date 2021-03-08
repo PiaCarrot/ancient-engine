@@ -100,6 +100,9 @@ EvolveAfterBattle_MasterLoop:
 	cp EVOLVE_GROUP
 	jp z, .group
 
+	cp EVOLVE_DV
+	jp z, .dv
+
 	cp EVOLVE_PARTY
 	jp z, .party
 
@@ -364,6 +367,69 @@ EvolveAfterBattle_MasterLoop:
 	jp z, .skip_evolution_species_parameter
 
 	jp .proceed
+
+.dv
+	call GetNextEvoAttackByte
+	ld b, a
+	ld a, [wTempMonLevel]
+	cp b
+	jp c, .skip_evolution_species
+
+	call IsMonHoldingEverstone
+	jp z, .skip_evolution_species_parameter
+
+	call GetNextEvoAttackByte
+	ld c, a
+
+	push hl
+
+	ld hl, wTempMonDVs
+
+	; atk
+	ld a, [hl]
+	and %11110000
+	sla a
+	ld b, a
+	; def
+	ld a, [hli]
+	and %00001111
+	swap a
+	srl a
+	or b
+	ld b, a
+
+	; spd
+	ld a, [hl]
+	and %11110000
+	swap a
+	sla a
+	or b
+	ld b, a
+	; spc
+	ld a, [hl]
+	and %00001111
+	srl a
+	or b
+
+	pop hl
+
+	and %00000001
+
+	cp 0
+	
+	jp z, .setZero
+	ld a, 1
+	jr .checkValid
+	
+	jp .skip_evolution_species
+
+.setZero
+	ld a, 0
+
+.checkValid
+	cp c
+	jp z, .proceed
+	jp .skip_evolution_species
 
 .level
 	call GetNextEvoAttackByte
@@ -858,6 +924,8 @@ SkipEvolutions::
 	cp EVOLVE_HOLD
 	jr z, .4_byte_skip
 	cp EVOLVE_PARTY
+	jr z, .4_byte_skip
+	cp EVOLVE_DV
 	jr z, .4_byte_skip
 
 	jr .3_byte_skip
