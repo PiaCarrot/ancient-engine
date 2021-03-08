@@ -1047,6 +1047,7 @@ AzurillEvosAttacks:
 	db 0 ; no more level-up moves
 
 NosepassEvosAttacks:
+	dbbw EVOLVE_GROUP, GROUP_PLAYERS_HOUSE_1F, PROBOPASS
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 7, HARDEN
