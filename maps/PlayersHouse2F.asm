@@ -84,14 +84,11 @@ PlayersHouseBookshelfScript:
 ;	jumpstd picturebookshelf
 	opentext
 	setflag ENGINE_POKEDEX
-	givepoke WURMPLE, 7
-	givepoke WURMPLE, 7
-	givepoke WURMPLE, 7
-	givepoke WURMPLE, 7
-	givepoke WURMPLE, 7
-	givepoke WURMPLE, 7
+	givepoke NINCADA, 19
+	givepoke SHEDINJA, 19
 
-	giveitem RARE_CANDY, 99
+	giveitem RARE_CANDY, 2
+	giveitem POKE_BALL
 
 	callasm CheatFillPokedex
 	closetext

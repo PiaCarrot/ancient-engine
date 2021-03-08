@@ -880,7 +880,8 @@ SlakingEvosAttacks:
 	db 0 ; no more level-up moves
 
 NincadaEvosAttacks:
-	dbbbw EVOLVE_LEVEL, 20, ANY, NINJASK ;TODO EVOLVE_NINCADA
+	dbbw EVOLVE_SHEDINJA, 20, SHEDINJA
+	dbbbw EVOLVE_LEVEL, 20, ANY, SHEDINJA
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, HARDEN

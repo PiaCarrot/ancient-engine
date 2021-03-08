@@ -103,6 +103,9 @@ EvolveAfterBattle_MasterLoop:
 	cp EVOLVE_DV
 	jp z, .dv
 
+	cp EVOLVE_SHEDINJA
+	jp z, .shedinja
+
 	cp EVOLVE_PARTY
 	jp z, .party
 
@@ -430,6 +433,86 @@ EvolveAfterBattle_MasterLoop:
 	cp c
 	jp z, .proceed
 	jp .skip_evolution_species
+
+.shedinja
+	call GetNextEvoAttackByte
+	ld b, a
+	ld a, [wTempMonLevel]
+	cp b
+	jp c, .skip_evolution_species
+
+	call IsMonHoldingEverstone
+	jp z, .skip_evolution_species_parameter
+
+	push hl
+
+	ld a, [wCurItem]
+	ld b, a
+	
+	ld a, POKE_BALL
+	ld [wCurItem], a
+	ld hl, wNumItems
+	call CheckItem
+
+	jr c, .takeBall
+
+	ld a, b
+	ld [wCurItem], a
+
+	pop hl
+
+	jp .skip_evolution_species
+
+.takeBall
+
+	ld a, POKE_BALL
+	ld [wCurItem], a
+	ld hl, wNumItems
+	ld a, 1
+	ld [wItemQuantityChangeBuffer], a
+	call TossItem
+
+	ld a, b
+	ld [wCurItem], a
+
+	pop hl
+
+	ld a, [wPartyCount]
+	cp 6
+
+	jp z, .skip_evolution_species
+
+
+
+
+	push hl
+
+
+	ld hl, SHEDINJA
+	call GetPokemonIDFromIndex
+	ld [wCurPartySpecies], a
+
+;	ld a, 30
+;	ld [wCurPartyLevel], a
+
+;	ld [wCurItem], a
+;	call GetScriptByte
+
+	ld a, [wCurPartySpecies]
+	push af
+	callfar GetLowestEvolutionStage
+	ld a, [wCurPartySpecies]
+
+
+	;farcall GiveEgg
+
+	pop hl
+
+
+
+	
+
+	jp .proceed
 
 .level
 	call GetNextEvoAttackByte
