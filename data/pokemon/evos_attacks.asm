@@ -26,7 +26,7 @@ EvoTypeSizes::
 
 EvosAttacksPointers::
 	indirect_table 2, 1
-	indirect_entries DRATINI, EvosAttacksPointers1
+	indirect_entries PORYGON, EvosAttacksPointers1
 	indirect_entries CELEBI, EvosAttacksPointers2
 	indirect_entries NUM_POKEMON, EvosAttacksPointers3
 	indirect_table_end

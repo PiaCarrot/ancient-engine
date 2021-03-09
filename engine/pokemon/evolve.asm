@@ -441,6 +441,12 @@ EvolveAfterBattle_MasterLoop:
 	cp b
 	jp c, .skip_evolution_species
 
+	ld a, [wTempMon]
+
+	cp 1
+
+	jp z, .skip_evolution_species
+
 	call IsMonHoldingEverstone
 	jp z, .skip_evolution_species_parameter
 
@@ -481,33 +487,6 @@ EvolveAfterBattle_MasterLoop:
 	cp 6
 
 	jp z, .skip_evolution_species
-
-
-
-
-	push hl
-
-
-	ld hl, SHEDINJA
-	call GetPokemonIDFromIndex
-	ld [wCurPartySpecies], a
-
-;	ld a, 30
-;	ld [wCurPartyLevel], a
-
-;	ld [wCurItem], a
-;	call GetScriptByte
-
-	ld a, [wCurPartySpecies]
-	push af
-	callfar GetLowestEvolutionStage
-	ld a, [wCurPartySpecies]
-
-
-	;farcall GiveEgg
-
-	pop hl
-
 
 
 	
@@ -654,6 +633,10 @@ EvolveAfterBattle_MasterLoop:
 	call LearnLevelMoves
 	ld a, [wTempSpecies]
 	call SetSeenAndCaughtMon
+
+;	call AddShedinjaToParty
+;	callfar GiveShuckle
+	call GiveShedinja
 
 	ld a, [wTempSpecies]
 	call GetPokemonIndexFromID
@@ -1094,3 +1077,49 @@ GetNextEvoAttackByte:
 	call GetFarByte
 	inc hl
 	ret
+
+GiveShedinja:
+; Adding to the party.
+	ld a, 0
+	ld [wMonType], a
+
+; Level 15 Shuckle.
+;	ld hl, SHEDINJA
+;	call GetPokemonIDFromIndex
+;	ld [wCurPartySpecies], a
+	predef TryAddMonToParty
+
+
+
+	; OT.
+
+	ld a, [wPartyCount]
+	dec a
+	ld hl, wPartyMonOT
+	call SkipNames
+	ld de, wPartyMonOT
+	call CopyName2
+
+
+
+
+
+
+;	ld a, [wPartyCount]
+;	dec a
+;	ld hl, wPartyMon1Item
+;	ld a, [wTempMonItem]
+;	ld [hl], a
+
+;	ld bc, PARTYMON_STRUCT_LENGTH
+;	ld a, [wPartyCount]
+;	dec a
+;	ld hl, wPartyMon1Item
+;	call AddNTimes
+;	ld a, [wTempMonItem]
+;	ld [hl], a
+
+ret
+
+ShedOT:
+	db "DEV@"

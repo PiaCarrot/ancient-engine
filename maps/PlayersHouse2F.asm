@@ -84,13 +84,13 @@ PlayersHouseBookshelfScript:
 ;	jumpstd picturebookshelf
 	opentext
 	setflag ENGINE_POKEDEX
-	givepoke NINCADA, 19
-	givepoke SHEDINJA, 19
+	special GiveShuckle
+	givepoke NINCADA, 56
 
-	giveitem RARE_CANDY, 2
-	giveitem POKE_BALL
+	giveitem RARE_CANDY, 99
+	giveitem POKE_BALL, 99
 
-	callasm CheatFillPokedex
+	;callasm CheatFillPokedex
 	closetext
 	end
 
