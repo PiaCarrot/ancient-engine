@@ -88,6 +88,7 @@ PlayersHouseBookshelfScript:
 
 	giveitem RARE_CANDY, 99
 	giveitem POKE_BALL
+	giveitem HP_UP, 99
 
 	;callasm CheatFillPokedex
 	closetext
