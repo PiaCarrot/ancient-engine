@@ -1516,7 +1516,6 @@ ScizorEvosAttacks:
 	db 0 ; no more level-up moves
 
 ShuckleEvosAttacks:
-	dbbbw EVOLVE_LEVEL, 20, ANY, GRANBULL
 	db 0 ; no more evolutions
 	dbw 1, WITHDRAW
 	dbw 1, CONSTRICT
