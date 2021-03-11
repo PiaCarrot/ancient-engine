@@ -1152,6 +1152,11 @@ VitaminEffect:
 	ld a, MON_STAT_EXP
 	call GetPartyParamLocation
 
+	ld a, [wBaseStats]
+	cp 1
+
+	jr z, NoEffectMessage
+
 	add hl, bc
 	ld a, [hl]
 	cp 100

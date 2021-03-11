@@ -1193,29 +1193,29 @@ JohtoGrassWildMons:
 	map_id ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, PIDGEY
-	dbw 2, SENTRET
-	dbw 3, PIDGEY
-	dbw 3, SENTRET
-	dbw 2, RATTATA
-	dbw 3, HOPPIP
-	dbw 3, HOPPIP
+	dbw 2, SHEDINJA
+	dbw 2, SHEDINJA
+	dbw 3, SHEDINJA
+	dbw 3, SHEDINJA
+	dbw 2, SHEDINJA
+	dbw 3, SHEDINJA
+	dbw 3, SHEDINJA
 	; day
-	dbw 2, PIDGEY
-	dbw 2, SENTRET
-	dbw 3, PIDGEY
-	dbw 3, SENTRET
-	dbw 2, RATTATA
-	dbw 3, HOPPIP
-	dbw 3, HOPPIP
+	dbw 2, SHEDINJA
+	dbw 2, SHEDINJA
+	dbw 3, SHEDINJA
+	dbw 3, SHEDINJA
+	dbw 2, SHEDINJA
+	dbw 3, SHEDINJA
+	dbw 3, SHEDINJA
 	; nite
-	dbw 2, HOOTHOOT
-	dbw 2, RATTATA
-	dbw 3, HOOTHOOT
-	dbw 3, RATTATA
-	dbw 2, RATTATA
-	dbw 3, HOOTHOOT
-	dbw 3, HOOTHOOT
+	dbw 2, SHEDINJA
+	dbw 2, SHEDINJA
+	dbw 3, SHEDINJA
+	dbw 3, SHEDINJA
+	dbw 2, SHEDINJA
+	dbw 3, SHEDINJA
+	dbw 3, SHEDINJA
 
 	map_id ROUTE_30
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

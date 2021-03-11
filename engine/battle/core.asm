@@ -7692,65 +7692,65 @@ AnimateExpBar:
 	ret
 
 SendOutMonText:
-	ld a, [wLinkMode]
-	and a
-	jr z, .not_linked
+ ; ... snip ...
+ .not_linked
+ ; Depending on the HP of the enemy mon, the game prints a different text
+     ld hl, wEnemyMonHP
+     ld a, [hli]
+     or [hl]
+     ld hl, JumpText_GoMon
+     jr z, .skip_to_textbox
+     
+    ; multiply the remaining health by 10...
+    ld hl, wEnemyMonHP
+    ld a, [hli]
+    ld b, a
+    ld c, [hl]
+    ld hl, wEnemyHPAtTimeOfPlayerSwitch
+    ld [hli], a
+    ld [hl], c
+    ld h, b
+    ld l, c
+    add hl, hl
+    add hl, hl
+    add hl, hl
+    add hl, bc
+    add hl, bc
+    ; ...and divide by total HP
+    ; (bc = -wEnemyMonMaxHP and divide by repeated subtraction)
+    ld a, [wEnemyMonMaxHP]
+    cpl
+    ld b, a
+    ld a, [wEnemyMonMaxHP + 1]
+    cpl
+    ld c, a
+    inc bc
+    ld a, -1
+.division_loop
+    inc a
+    add hl, bc
+    jr c, .division_loop
+ 
+    ; a now contains the enemy's HP as a fraction (a/10)
 
-	ld hl, JumpText_GoMon ; If we're in a LinkBattle print just "Go <PlayerMon>"
+     ld hl, JumpText_GoMon
+    cp 7
+     jr nc, .skip_to_textbox
+ 
+     ld hl, JumpText_DoItMon
+    cp 4
+     jr nc, .skip_to_textbox
+ 
+     ld hl, JumpText_GoForItMon
+    cp 1
+     jr nc, .skip_to_textbox
+ 
+     ld hl, JumpText_YourFoesWeakGetmMon
 
-	ld a, [wBattleHasJustStarted] ; unless this (unidentified) variable is set
-	and a
-	jr nz, .skip_to_textbox
+ .skip_to_textbox
+     jp BattleTextbox
 
-.not_linked
-; Depending on the HP of the enemy mon, the game prints a different text
-	ld hl, wEnemyMonHP
-	ld a, [hli]
-	or [hl]
-	ld hl, JumpText_GoMon
-	jr z, .skip_to_textbox
 
-	; compute enemy helth remaining as a percentage
-	xor a
-	ldh [hMultiplicand + 0], a
-	ld hl, wEnemyMonHP
-	ld a, [hli]
-	ld [wEnemyHPAtTimeOfPlayerSwitch], a
-	ldh [hMultiplicand + 1], a
-	ld a, [hl]
-	ld [wEnemyHPAtTimeOfPlayerSwitch + 1], a
-	ldh [hMultiplicand + 2], a
-	ld a, 25
-	ldh [hMultiplier], a
-	call Multiply
-	ld hl, wEnemyMonMaxHP
-	ld a, [hli]
-	ld b, [hl]
-	srl a
-	rr b
-	srl a
-	rr b
-	ld a, b
-	ld b, 4
-	ldh [hDivisor], a
-	call Divide
-
-	ldh a, [hQuotient + 3]
-	ld hl, JumpText_GoMon
-	cp 70
-	jr nc, .skip_to_textbox
-
-	ld hl, JumpText_DoItMon
-	cp 40
-	jr nc, .skip_to_textbox
-
-	ld hl, JumpText_GoForItMon
-	cp 10
-	jr nc, .skip_to_textbox
-
-	ld hl, JumpText_YourFoesWeakGetmMon
-.skip_to_textbox
-	jp BattleTextbox
 
 JumpText_GoMon:
 	text_far Text_GoMon

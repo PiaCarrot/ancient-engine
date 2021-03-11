@@ -143,6 +143,8 @@ const_value set 1
 	const EVOLVE_MAP
 	const EVOLVE_GROUP
 	const EVOLVE_DV
+	const EVOLVE_CREATE_NEW
+	const CREATE_POKE
 	const EVOLVE_STAT
 EVOLVE_TYPES EQU const_value
 
