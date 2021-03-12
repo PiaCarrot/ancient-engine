@@ -445,6 +445,9 @@ EvolveAfterBattle_MasterLoop:
 	cp b
 	jp c, .skip_evolution_species
 
+	call IsMonHoldingEverstone
+	jp z, .skip_evolution_species_parameter
+
 	jp .proceed
 
 .level
@@ -584,7 +587,11 @@ EvolveAfterBattle_MasterLoop:
 	ld [wTempSpecies], a
 	xor a
 	ld [wMonType], a
+	ld a, [wEvolutionOldSpecies]
+	push af
 	call LearnLevelMoves
+	pop af
+	ld [wEvolutionOldSpecies], a
 	ld a, [wTempSpecies]
 	call SetSeenAndCaughtMon
 
@@ -1066,16 +1073,17 @@ GiveShedinja:
 
 ; Set Mon to be generated as SHEDINJA
 ; Add to Party
-	call GetNextEvoAttackByte
-	ld c, a
-	call GetNextEvoAttackByte
-	ld b, a
-
-	push hl
-	ld h, b
-	ld l, c
+;	call GetNextEvoAttackByte
+;	ld c, a
+;	call GetNextEvoAttackByte
+;	ld b, a
+;
+;	push hl
+;	ld h, b
+;	ld l, c
+	ld hl, SHEDINJA
 	call GetPokemonIDFromIndex
-	pop hl
+;	pop hl
 	ld [wCurPartySpecies], a
 	predef TryAddMonToParty
 
@@ -1102,9 +1110,19 @@ GiveShedinja:
 	ld hl, wPartyMon1Moves
 	call AddNTimes
 
-	ld b, 0
+	push hl
 
-	ld de, wTempMonMoves
+	ld bc, PARTYMON_STRUCT_LENGTH
+	ld a, [wCurPartyMon]
+
+	ld hl, wPartyMon1Moves
+	call AddNTimes
+
+	ld e, l
+	ld d, h
+	
+	pop hl
+	ld b, 0
 
 .loop
 
