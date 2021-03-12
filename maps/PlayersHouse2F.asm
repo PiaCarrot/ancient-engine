@@ -84,7 +84,7 @@ PlayersHouseBookshelfScript:
 ;	jumpstd picturebookshelf
 	opentext
 	setflag ENGINE_POKEDEX
-	givepoke NINCADA, 34
+	givepoke UNOWN, 24
 
 	giveitem RARE_CANDY, 99
 	giveitem POKE_BALL

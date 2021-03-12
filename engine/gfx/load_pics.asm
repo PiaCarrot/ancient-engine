@@ -31,22 +31,27 @@ GetUnownLetter:
 	srl a
 	or b
 
-; Divide by 10 to get 0-25
-	ldh [hDividend + 3], a
-	xor a
-	ldh [hDividend], a
-	ldh [hDividend + 1], a
-	ldh [hDividend + 2], a
-	ld a, $ff / NUM_UNOWN + 1
-	ldh [hDivisor], a
-	ld b, 4
-	call Divide
+; Divide by 9 to get 0-28
+ 	ldh [hDividend + 3], a
+ 	xor a
+ 	ldh [hDividend], a
+ 	ldh [hDividend + 1], a
+ 	ldh [hDividend + 2], a
+	ld a, 9
+ 	ldh [hDivisor], a
+ 	ld b, 4
+ 	call Divide
 
-; Increment to get 1-26
-	ldh a, [hQuotient + 3]
-	inc a
-	ld [wUnownLetter], a
-	ret
+; Increment to get 1-29
+ 	ldh a, [hQuotient + 3]
+ 	inc a
+; The valid range is 1-28, so use UNOWN_E (5) instead of 29
+	cp NUM_UNOWN + 1
+	jr c, .valid
+	ld a, UNOWN_F
+.valid
+ 	ld [wUnownLetter], a
+ 	ret
 
 GetMonFrontpic:
 	ld a, [wCurPartySpecies]
