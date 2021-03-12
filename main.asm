@@ -734,6 +734,10 @@ SECTION "16-bit ID stuff", ROMX
 
 INCLUDE "engine/16/table_functions.asm"
 
+; Natures
+INCLUDE "engine/natures/nature_print.asm"
+INCLUDE "engine/natures/natures.asm"
+
 ; own section
 INCLUDE "data/trainers/parties.asm"
 INCLUDE "engine/battle/effect_command_files.asm"
