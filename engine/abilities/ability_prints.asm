@@ -2,14 +2,14 @@ PrintAbility:
 	ld de, .AbilityString1
 	hlcoord 0, 8
 	call PlaceString
-    call CalcAbility
+    call CalcPlayerAbility
     ld hl, AbilityNames
     call GetNthString
     ld d, h
     ld e, l
     hlcoord 4, 9
     call PlaceString
-    call CalcAbility
+    call CalcPlayerAbility
     ; Rangi's implementation
     ld l, a
     ld h, 0
