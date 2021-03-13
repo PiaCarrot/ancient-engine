@@ -738,6 +738,10 @@ INCLUDE "engine/16/table_functions.asm"
 INCLUDE "engine/natures/nature_print.asm"
 INCLUDE "engine/natures/natures.asm"
 
+; Abilities
+INCLUDE "engine/abilities/ability.asm"
+INCLUDE "engine/abilities/ability_prints.asm"
+
 ; own section
 INCLUDE "data/trainers/parties.asm"
 INCLUDE "engine/battle/effect_command_files.asm"

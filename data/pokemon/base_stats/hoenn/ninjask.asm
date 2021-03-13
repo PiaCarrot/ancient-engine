@@ -12,7 +12,8 @@
 	db 15 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/hoenn/ninjask/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	db SPEED_BOOST, SPEED_BOOST ; wBaseAbility1, wBaseAbility2
+	db 0, 0 ; padding
 	db GROWTH_ERRATIC ; growth rate
 	dn EGG_BUG, EGG_BUG ; egg groups
 

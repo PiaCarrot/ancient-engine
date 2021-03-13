@@ -12,7 +12,8 @@
 	db 25 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/hoenn/castform/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	db FORECAST, FORECAST ; wBaseAbility1, wBaseAbility2
+	db 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_FAIRY, EGG_INDETERMINATE ; egg groups
 

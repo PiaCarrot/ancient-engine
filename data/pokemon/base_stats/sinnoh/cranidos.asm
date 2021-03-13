@@ -12,7 +12,8 @@
 	db 30 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/sinnoh/cranidos/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	db MOLD_BREAKER, MOLD_BREAKER ; wBaseAbility1, wBaseAbility2
+	db 0, 0 ; padding
 	db GROWTH_ERRATIC ; growth rate
 	dn EGG_MONSTER, EGG_MONSTER ; egg groups
 

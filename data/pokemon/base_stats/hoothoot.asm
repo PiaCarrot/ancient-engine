@@ -12,7 +12,8 @@
 	db 15 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/hoothoot/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	db KEEN_EYE, INSOMNIA ; wBaseAbility1, wBaseAbility2
+	db 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_FLYING, EGG_FLYING ; egg groups
 

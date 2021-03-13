@@ -775,13 +775,8 @@ StatsScreen_LoadGFX:
 	dw wBufferMonOT
 
 .OrangePage:
-	ld de, PVString
-	hlcoord 1, 9
-	call PlaceString
+	farcall PrintAbility
 	ret
-
-PVString:
-	db "PV: TODO@"
 
 IDNoString:
 	db "<ID>№.@"

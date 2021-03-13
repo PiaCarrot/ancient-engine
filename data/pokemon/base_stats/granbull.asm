@@ -12,7 +12,8 @@
 	db 20 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/granbull/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	db QUICK_FEET, INTIMIDATE ; wBaseAbility1, wBaseAbility2
+	db 0, 0 ; padding
 	db GROWTH_FAST ; growth rate
 	dn EGG_GROUND, EGG_FAIRY ; egg groups
 

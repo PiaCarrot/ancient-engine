@@ -12,7 +12,8 @@
 	db 40 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/hoenn/wailord/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	db WATER_VEIL, OBLIVIOUS ; wBaseAbility1, wBaseAbility2
+	db 0, 0 ; padding
 	db GROWTH_FLUCTUATING ; growth rate
 	dn EGG_GROUND, EGG_WATER_2 ; egg groups
 

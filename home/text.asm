@@ -213,6 +213,7 @@ ENDM
 
 	dict "<MOBILE>",  MobileScriptChar
 	dict "<LINE>",    LineChar
+	dict "<LNBRK>",   LineBreak
 	dict "<NEXT>",    NextLineChar
 	dict "<CR>",      CarriageReturnChar
 	dict "<NULL>",    NullChar
@@ -411,6 +412,14 @@ ChanSuffixText::  db "@"
 NextLineChar::
 	pop hl
 	ld bc, SCREEN_WIDTH * 2
+	add hl, bc
+	push hl
+	jp NextChar
+
+; Goes down only 2 coordinate square, as opposed to 2!
+LineBreak::
+	ld bc, SCREEN_WIDTH
+	pop hl
 	add hl, bc
 	push hl
 	jp NextChar
