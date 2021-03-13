@@ -1860,3 +1860,47 @@ InitNickname:
 	ld hl, ExitAllMenus
 	rst FarCall
 	ret
+
+
+GiveShinyPoke::
+	push de
+	push bc
+	xor a ; PARTYMON
+	ld [wMonType], a
+	call TryAddMonToParty
+	jp nc, GivePoke.failed
+	ld hl, wPartyMonNicknames
+	ld a, [wPartyCount]
+	dec a
+	ld [wCurPartyMon], a
+	call SkipNames
+	ld d, h
+	ld e, l
+	pop bc
+	ld a, b
+	ld b, 0
+	push bc
+	push de
+	push af
+
+	ld a, [wCurPartyMon]
+	ld hl, wPartyMon1DVs
+	ld bc, PARTYMON_STRUCT_LENGTH
+	call AddNTimes
+
+	ld a, ATKDEFDV_SHINY
+	ld [hl], a
+	inc hl
+	ld a, SPDSPCDV_SHINY
+	ld [hl], a
+
+	ld a, [wCurItem]
+	and a
+	jp z, GivePoke.done
+	ld a, [wCurPartyMon]
+	ld hl, wPartyMon1Item
+	ld bc, PARTYMON_STRUCT_LENGTH
+	call AddNTimes
+	ld a, [wCurItem]
+	ld [hl], a
+	jp GivePoke.done
