@@ -1,32 +1,38 @@
-; Currently runs on DV parity.
-; Like Prism.
+; Decides ability based on the 1st bit of the DV
 ; It will eventually run on the PV
 
-CalcAbility:
+CalcPlayerAbility:
   push hl
   push bc
   ld a, [wCurPartyMon]
   ld bc, PARTYMON_STRUCT_LENGTH
   ld hl, wPartyMon1DVs
   call AddNTimes
-  pop bc
-  ld a, [hli]
-  xor [hl]
-  ld l, a
-  swap a
-  xor l
-  ld l, a
-  rrca
-  rrca
-  xor l
-  ld l, a
-  rrca
-  xor l
-  ld hl, wBaseAbility1
-  inc a
-  ld a, [hli]
-  jr z, .done
+  inc hl
   ld a, [hl]
+  ld bc, wBaseAbility1
+  cp %1
+  jr z, .done
+  inc bc
 .done
+  ld a, [bc]
+  pop bc
+  pop hl
+  ret
+
+; Calcs the enemy ability the same way the players is
+; again, we will eventually switch this to be the PV. Somehow.
+CalcEnemyAbility:
+  ld a, [wEnemyMon]
+  ld hl, wEnemyMonDVs
+  inc hl
+  ld a, [hl]
+  ld bc, wBaseAbility1
+  cp %1
+  jr z, .done
+  inc bc
+.done
+  ld a, [bc]
+  pop bc
   pop hl
   ret
