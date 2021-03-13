@@ -12,7 +12,8 @@
 	db 20 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/hoenn/swablu/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	db NATURAL_CURE, NATURAL_CURE ; wBaseAbility1, wBaseAbility2
+	db 0, 0 ; padding
 	db GROWTH_ERRATIC ; growth rate
 	dn EGG_FLYING, EGG_DRAGON ; egg groups
 

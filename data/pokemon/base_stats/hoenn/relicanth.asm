@@ -12,7 +12,8 @@
 	db 40 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/hoenn/relicanth/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	db ROCK_HEAD, SWIFT_SWIM ; wBaseAbility1, wBaseAbility2
+	db 0, 0 ; padding
 	db GROWTH_SLOW ; growth rate
 	dn EGG_WATER_1, EGG_WATER_2 ; egg groups
 

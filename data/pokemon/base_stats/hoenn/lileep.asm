@@ -12,7 +12,8 @@
 	db 30 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/hoenn/lileep/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	db SUCTION_CUPS, SUCTION_CUPS ; wBaseAbility1, wBaseAbility2
+	db 0, 0 ; padding
 	db GROWTH_ERRATIC ; growth rate
 	dn EGG_WATER_3, EGG_WATER_3 ; egg groups
 

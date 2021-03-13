@@ -556,7 +556,7 @@ wPlayerSAtkLevel:: db ; c6cf
 wPlayerSDefLevel:: db ; c6d0
 wPlayerAccLevel:: db ; c6d1
 wPlayerEvaLevel:: db ; c6d2
-	ds 1 ; c6d3
+wPlayerAbility:: db ; c6d3
 wPlayerStatLevelsEnd::
 
 wEnemyStatLevels:: ; c6d4
@@ -568,7 +568,7 @@ wEnemySAtkLevel:: db ; c6d7
 wEnemySDefLevel:: db ; c6d8
 wEnemyAccLevel:: db ; c6d9
 wEnemyEvaLevel:: db ; c6da
-	ds 1
+wEnemyAbility:: db ; c6db
 
 wEnemyTurnsTaken:: db ; c6dc
 wPlayerTurnsTaken:: db ; c6dd
@@ -639,7 +639,8 @@ wPlayerReflectCount:: db ; c703
 wEnemySafeguardCount:: db ; c705
 wEnemyLightScreenCount:: db ; c706
 wEnemyReflectCount:: db ; c707
-	ds 2
+wTempAIAbility:: db ; c708
+	ds 1 ; c709
 
 wBattleWeather:: ; c70a
 ; 00 normal
@@ -2225,7 +2226,10 @@ wBaseUnknown1:: db ; d244
 wBaseEggSteps:: db ; d245
 wBaseUnknown2:: db ; d246
 wBasePicSize:: db ; d247
-wBasePadding:: ds 4 ; d248
+wBaseAbilities::
+wBaseAbility1:: db ; d248
+wBaseAbility2:: db ; d249
+wBasePadding:: ds 2 ; d24a
 wBaseGrowthRate:: db ; d24c
 wBaseEggGroups:: db ; d24d
 wBaseTMHM:: flag_array NUM_TM_HM_TUTOR ; d24e

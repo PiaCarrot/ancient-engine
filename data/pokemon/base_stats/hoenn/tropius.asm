@@ -12,7 +12,8 @@
 	db 25 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/hoenn/tropius/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	db CHLOROPHYLL, SOLAR_POWER ; wBaseAbility1, wBaseAbility2
+	db 0, 0 ; padding
 	db GROWTH_SLOW ; growth rate
 	dn EGG_MONSTER, EGG_PLANT ; egg groups
 

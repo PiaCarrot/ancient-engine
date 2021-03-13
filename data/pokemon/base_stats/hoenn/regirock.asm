@@ -12,7 +12,8 @@
 	db 80 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/hoenn/regirock/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	db CLEAR_BODY, CLEAR_BODY ; wBaseAbility1, wBaseAbility2
+	db 0, 0 ; padding
 	db GROWTH_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 

@@ -12,7 +12,8 @@
 	db 20 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/hoenn/clamperl/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	db SHELL_ARMOR, SHELL_ARMOR ; wBaseAbility1, wBaseAbility2
+	db 0, 0 ; padding
 	db GROWTH_ERRATIC ; growth rate
 	dn EGG_WATER_1, EGG_WATER_1 ; egg groups
 

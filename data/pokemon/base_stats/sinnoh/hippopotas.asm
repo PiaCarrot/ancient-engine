@@ -12,7 +12,8 @@
 	db 30 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/sinnoh/hippopotas/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	db SAND_STREAM, SAND_STREAM ; wBaseAbility1, wBaseAbility2
+	db 0, 0 ; padding
 	db GROWTH_SLOW ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

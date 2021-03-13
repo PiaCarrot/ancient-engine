@@ -12,7 +12,8 @@
 	db 20 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/sinnoh/bronzong/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	db HEATPROOF, LEVITATE ; wBaseAbility1, wBaseAbility2
+	db 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_MINERAL, EGG_MINERAL ; egg groups
 
