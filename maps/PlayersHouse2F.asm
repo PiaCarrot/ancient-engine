@@ -91,6 +91,9 @@ PlayersHouseBookshelfScript:
 	opentext
 	setflag ENGINE_POKEDEX
 	giveshinypoke CHARIZARD, 24, RARE_CANDY
+	givepoke NINCADA, 5
+	givepoke NINJASK, 5
+	givepoke SHEDINJA, 5
 
 	giveitem RARE_CANDY, 99
 	giveitem POKE_BALL

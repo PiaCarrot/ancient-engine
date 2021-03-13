@@ -1,11 +1,10 @@
-	frame 1, 07
+	frame 1, 08
 	setrepeat 2
-	frame 2, 07
-	frame 3, 07
+	frame 2, 04
+	frame 1, 04
 	dorepeat 2
-	frame 2, 26
-	setrepeat 2
-	frame 0, 05
-	frame 4, 05
-	dorepeat 7
+	setrepeat 3
+	frame 2, 03
+	frame 1, 03
+	dorepeat 6
 	endanim
