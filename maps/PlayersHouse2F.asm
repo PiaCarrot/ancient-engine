@@ -90,12 +90,11 @@ PlayersHouseBookshelfScript:
 ;	jumpstd picturebookshelf
 	opentext
 	setflag ENGINE_POKEDEX
-	giveshinypoke HITMONTOP, 19, RARE_CANDY
-	givepoke NINCADA, 19
-	giveshinypoke NINCADA, 19
+	giveshinypoke NINETALES, 24
 
 	giveitem RARE_CANDY, 99
 	giveitem POKE_BALL,2
+	giveitem FIRE_STONE
 	giveitem HP_UP, 99
 
 	;callasm CheatFillPokedex

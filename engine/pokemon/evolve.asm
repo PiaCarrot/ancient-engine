@@ -749,9 +749,14 @@ LearnLevelMoves:
 	and a
 	jr z, .done
 
+	cp LEARN_EVO_MOVE
+	jr z, .get_move
+
 	ld b, a
 	ld a, [wCurPartyLevel]
 	cp b
+
+.get_move
 	call GetNextEvoAttackByte
 	ld e, a
 	call GetNextEvoAttackByte
@@ -790,6 +795,7 @@ LearnLevelMoves:
 	predef LearnMove
 	pop hl
 	jr .find_move
+
 
 .done
 	ld a, [wCurPartySpecies]

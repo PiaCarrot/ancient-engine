@@ -901,6 +901,7 @@ NinjaskEvosAttacks:
 	dbw 1, HARDEN
 	dbw 1, LEECH_LIFE
 	dbw 1, SAND_ATTACK
+	dbw 4, SPACIAL_REND
 	dbw 5, LEECH_LIFE
 	dbw 9, SAND_ATTACK
 	dbw 14, FURY_SWIPES

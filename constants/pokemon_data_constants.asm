@@ -160,6 +160,10 @@ EVOLVE_TYPES EQU const_value
 	const ATK_LT_DEF
 	const ATK_EQ_DEF
 
+; Learn move upon evo trigger
+	const_def MAX_LEVEL + 1
+	const LEARN_EVO_MOVE
+
 ; wild data
 
 NUM_GRASSMON EQU 7 ; data/wild/*_grass.asm table size
