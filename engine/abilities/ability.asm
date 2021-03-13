@@ -1,6 +1,5 @@
 ; Decides ability based on the 1st bit of the DV
 ; It will eventually run on the PV
-
 CalcPlayerAbility:
   push hl
   push bc
