@@ -84,7 +84,7 @@ PlayersHouseBookshelfScript:
 ;	jumpstd picturebookshelf
 	opentext
 	setflag ENGINE_POKEDEX
-	givepoke UNOWN, 24
+	giveshinypoke CHARIZARD, 24, RARE_CANDY
 
 	giveitem RARE_CANDY, 99
 	giveitem POKE_BALL

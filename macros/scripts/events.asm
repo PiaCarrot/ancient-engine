@@ -313,6 +313,25 @@ endc
 endc
 ENDM
 
+	enum giveshinypoke_command ; $2d
+giveshinypoke: MACRO
+if _NARG == 2
+	giveshinypoke \1, \2, NO_ITEM, FALSE
+elif _NARG == 3
+	giveshinypoke \1, \2, \3, FALSE
+else
+	db giveshinypoke_command
+	dw \1 ; pokemon
+	db \2 ; level
+	db \3 ; item
+	db \4 ; trainer
+if \4
+	dw \5 ; trainer_name_pointer
+	dw \6 ; pkmn_nickname
+endc
+endc
+ENDM
+
 	enum giveegg_command ; $2e
 giveegg: MACRO
 	db giveegg_command
