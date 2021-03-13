@@ -1,6 +1,6 @@
 INCLUDE "constants.asm"
 
-SECTION "Events1", ROMX
+SECTION "Events", ROMX
 
 OverworldLoop::
 	xor a ; MAPSTATUS_START
