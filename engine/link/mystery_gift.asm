@@ -1425,7 +1425,6 @@ Function105688:
 	ld hl, Text_ReceivedCard
 	call PrintText
 	ld de, wMysteryGiftTrainerData
-	farcall Function8ac70
 	ld a, c
 	ld [wDeciramBuffer], a
 	ld hl, Text_CardNotRegistered
