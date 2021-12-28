@@ -242,8 +242,6 @@ ROMX $5e
 	"UpdateBattleHUDs"
 	"Songs 5"
 	"Crystal Sound Effects"
-ROMX $5f
-	"Mobile 5F"
 ROMX $60
 	"Map Scripts 13"
 	"Pokedex Entries 001-064"

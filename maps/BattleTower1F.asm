@@ -87,7 +87,6 @@ Script_ChooseChallenge:
 	special BattleTowerAction
 	special BattleTowerRoomMenu
 	ifequal $a, Script_Menu_ChallengeExplanationCancel
-	ifnotequal $0, Script_MobileError
 	setval BATTLETOWERACTION_11
 	special BattleTowerAction
 	writetext Text_RightThisWayToYourBattleRoom
@@ -154,11 +153,6 @@ Script_BattleTowerHopeToServeYouAgain:
 	closetext
 	end
 
-UnreferencedScript_0x9e4b6:
-	special BattleTowerMobileError
-	closetext
-	end
-
 Script_WaitButton:
 	waitbutton
 	closetext
@@ -174,7 +168,6 @@ UnreferencedScript_0x9e4be:
 	special BattleTowerAction
 	special Function1700ba
 	ifequal $a, Script_Menu_ChallengeExplanationCancel
-	ifnotequal $0, Script_MobileError
 	writetext Text_ReceivedAListOfLeadersOnTheHonorRoll
 	turnobject BATTLETOWER1F_RECEPTIONIST, LEFT
 	writetext Text_PleaseConfirmOnThisMonitor
@@ -232,11 +225,6 @@ Script_MayNotEnterABattleRoomUnderL70:
 	writetext Text_MayNotEnterABattleRoomUnderL70
 	waitbutton
 	sjump Script_Menu_ChallengeExplanationCancel
-
-Script_MobileError:
-	special BattleTowerMobileError
-	closetext
-	end
 
 BattleTower_LeftWithoutSaving:
 	opentext

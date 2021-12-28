@@ -607,11 +607,6 @@ SECTION "UpdateBattleHUDs", ROMX
 INCLUDE "engine/battle/update_battle_huds.asm"
 
 
-SECTION "Mobile 5F", ROMX
-
-INCLUDE "mobile/mobile_5f.asm"
-
-
 SECTION "Phone Text 2", ROMX
 
 INCLUDE "data/text/std_text.asm"

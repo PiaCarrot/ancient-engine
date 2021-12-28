@@ -199,12 +199,10 @@ Function118180:
 
 	ld de, w3_d202
 	ld c, $96
-	farcall CheckStringForErrors_IgnoreTerminator
 	jr c, .return_d3
 
 	ld de, w3_d202
 	lb bc, 1, $96
-	farcall CheckStringContainsLessThanBNextCharacters
 	jr c, .return_d3
 
 	ld hl, w3_d202
@@ -4252,7 +4250,6 @@ Function11a0ca:
 	ld [wMenuBorderBottomCoord], a
 	call PushWindow
 	farcall Function11765d
-	farcall Function17d3f6
 	farcall Stubbed_Function106462
 	farcall Function106464
 	call ExitMenu
@@ -5514,7 +5511,6 @@ Function11ad1b:
 	call ClearBGPalettes
 	call ClearSprites
 	call ClearTileMap
-	farcall Function17c000
 	ld a, [wMenuCursorY]
 	ld [wcd82], a
 	dec a
@@ -7092,61 +7088,49 @@ Function11b6b4:
 	ld c, 5
 	farcall CheckStringForErrors
 	jr nc, .length_check_OT
-	farcall Mobile_CopyDefaultOTName
 
 .length_check_OT
 	ld de, $c63d
 	lb bc, 1, 5
-	farcall CheckStringContainsLessThanBNextCharacters
 	jr nc, .error_check_nick
-	farcall Mobile_CopyDefaultOTName
 
 .error_check_nick
 	ld de, $c642
 	ld c, 5
 	farcall CheckStringForErrors
 	jr nc, .length_check_nick
-	farcall Mobile_CopyDefaultNickname
-
 .length_check_nick
 	ld de, $c642
 	lb bc, 1, 5
-	farcall CheckStringContainsLessThanBNextCharacters
 	jr nc, .error_check_mail
-	farcall Mobile_CopyDefaultNickname
 
 .error_check_mail
 	ld de, $c647
 	ld c, MAIL_MSG_LENGTH + 1
 	farcall CheckStringForErrors
 	jr nc, .length_check_mail
-	farcall Mobile_CopyDefaultMail
 
 .length_check_mail
 	ld de, $c647
 	lb bc, 2, MAIL_MSG_LENGTH + 1
-	farcall CheckStringContainsLessThanBNextCharacters
 	jr c, .fix_mail
 	ld a, b
 	cp $2
 	jr nz, .mail_ok
 
 .fix_mail
-	farcall Mobile_CopyDefaultMail
 
 .mail_ok
 	ld de, $c668
 	ld c, $5
 	farcall CheckStringForErrors
 	jr nc, .length_check_author
-	farcall Mobile_CopyDefaultMailAuthor
 
 .length_check_author
 	ld de, $c668
 	lb bc, 1, 5
-	farcall CheckStringContainsLessThanBNextCharacters
 	jr nc, .author_okay
-	farcall Mobile_CopyDefaultMailAuthor
+
 
 .author_okay
 	ld a, [$c60e]

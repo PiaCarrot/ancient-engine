@@ -311,7 +311,7 @@ ReadBTTrainerParty:
 ; with their species names.
 	ld de, wBT_OTTempMon1Name
 	ld c, MON_NAME_LENGTH
-	farcall CheckStringForErrors
+	call CheckStringForErrors
 	jr nc, .skip_mon_1
 
 	ld a, [wBT_OTTempMon1]
@@ -326,7 +326,7 @@ ReadBTTrainerParty:
 .skip_mon_1
 	ld de, wBT_OTTempMon2Name
 	ld c, MON_NAME_LENGTH
-	farcall CheckStringForErrors
+	call CheckStringForErrors
 	jr nc, .skip_mon_2
 	ld a, [wBT_OTTempMon2]
 	ld [wNamedObjectIndexBuffer], a
@@ -340,7 +340,7 @@ ReadBTTrainerParty:
 .skip_mon_2
 	ld de, wBT_OTTempMon3Name
 	ld c, MON_NAME_LENGTH
-	farcall CheckStringForErrors
+	call CheckStringForErrors
 	jr nc, .skip_mon_3
 	ld a, [wBT_OTTempMon3]
 	ld [wNamedObjectIndexBuffer], a
@@ -362,7 +362,7 @@ ReadBTTrainerParty:
 ; Repair the trainer name if needed, then copy it to wOTPlayerName
 	ld de, wBT_OTTempName
 	ld c, NAME_LENGTH - 1
-	farcall CheckStringForErrors
+	call CheckStringForErrors
 	jr nc, .trainer_name_okay
 	ld hl, BT_ChrisName
 	jr .done_trainer_name
@@ -1444,7 +1444,7 @@ Function1709bb: ; BattleTowerAction $10
 	ld [wcd31], a
 	call CloseSRAM
 	farcall Function11b6b4
-	farcall Function17d0f3
+	call Function17d0f3
 	ld a, TRUE
 	ld [wScriptVar], a
 	ret
@@ -1702,3 +1702,188 @@ CheckBTMonMovesForErrors:
 	dec c
 	jr nz, .loop
 	ret
+
+CheckStringForErrors:
+; Valid character ranges:
+; $0, $5 - $13, $19 - $1c, $26 - $34, $3a - $3e, $40 - $48, $60 - $ff
+.loop
+	ld a, [de]
+	inc de
+	and a ; "<NULL>"
+	jr z, .NextChar
+	cp FIRST_REGULAR_TEXT_CHAR
+	jr nc, .NextChar
+	cp "<NEXT>"
+	jr z, .NextChar
+	cp "@"
+	jr z, .Done
+	cp "ガ"
+	jr c, .Fail
+	cp "<PLAY_G>"
+	jr c, .NextChar
+	cp "<JP_18>" + 1
+	jr c, .Fail
+	cp "<NI>"
+	jr c, .NextChar
+	cp "<NO>" + 1
+	jr c, .Fail
+	cp "<ROUTE>"
+	jr c, .NextChar
+	cp "<GREEN>" + 1
+	jr c, .Fail
+	cp "<ENEMY>"
+	jr c, .NextChar
+	cp "<ENEMY>" + 1
+	jr c, .Fail
+	cp "<MOM>"
+	jr c, .NextChar
+
+.Fail:
+	scf
+	ret
+
+.NextChar:
+	dec c
+	jr nz, .loop
+
+.Done:
+	and a
+	ret
+
+
+Function17d0f3:
+	ld a, [wc608 + 5]
+	ld [wOTTrademonSpecies], a
+	ld [wCurPartySpecies], a
+	ld a, [wcd81]
+	ld [wc74e], a
+	ld hl, wc608 + 53
+	ld de, wOTTrademonOTName
+	ld bc, 5
+	call CopyBytes
+	ld a, "@"
+	ld [de], a
+	ld a, [wc608 + 11]
+	ld [wOTTrademonID], a
+	ld a, [wc608 + 12]
+	ld [wOTTrademonID + 1], a
+	ld hl, wc608 + 26
+	ld a, [hli]
+	ld [wOTTrademonDVs], a
+	ld a, [hl]
+	ld [wOTTrademonDVs + 1], a
+	ld bc, wc608 + 5
+	farcall GetCaughtGender
+	ld a, c
+	ld [wOTTrademonCaughtData], a
+	call SpeechTextbox
+	call FadeToMenu
+	farcall Function10804d
+	call Function17d1f1
+	ld a, $1
+	ld [wForceEvolution], a
+	ld a, $2
+	ld [wLinkMode], a
+	farcall EvolvePokemon
+	xor a
+	ld [wLinkMode], a
+	farcall SaveAfterLinkTrade
+	ld a, $5
+	call GetSRAMBank
+	ld a, $5
+	ld [$a800], a
+	call CloseSRAM
+	ld a, [wMapGroup]
+	ld b, a
+	ld a, [wMapNumber]
+	ld c, a
+	call GetMapSceneID
+	ld a, d
+	or e
+	jr z, .asm_17d180
+	ld a, $1
+	ld [de], a
+
+.asm_17d180
+	call CloseSubmenu
+	call RestartMapMusic
+	ret
+
+Function17d1f1:
+	ld a, [wCurPartySpecies]
+	call SetSeenAndCaughtMon
+
+	ld a, [wCurPartySpecies]
+	call GetPokemonIndexFromID
+	sub LOW(UNOWN)
+	if HIGH(UNOWN) == 0
+		or h
+	else
+		ret nz
+		if HIGH(UNOWN) == 1
+			dec h
+		else
+			ld a, h
+			cp HIGH(UNOWN)
+		endc
+	endc
+	ret nz
+
+	ld hl, wPartyMon1DVs
+	ld a, [wPartyCount]
+	dec a
+	ld bc, PARTYMON_STRUCT_LENGTH
+	call AddNTimes
+	predef GetUnownLetter
+	callfar UpdateUnownDex
+	ld a, [wFirstUnownSeen]
+	and a
+	ret nz
+
+	ld a, [wUnownLetter]
+	ld [wFirstUnownSeen], a
+	ret
+
+Menu_ChallengeExplanationCancel:
+	ld a, $4
+	ld [wScriptVar], a
+	ld hl, MenuHeader_ChallengeExplanationCancel ; English Menu
+	ret
+
+Function17d246:
+	call VerticalMenu
+	jr c, .Exit
+	ld a, [wScriptVar]
+	cp $5
+	jr nz, .UsewMenuCursorY
+	ld a, [wMenuCursorY]
+	cp $3
+	ret z
+	jr c, .UsewMenuCursorY
+	dec a
+	jr .LoadToScriptVar
+
+.UsewMenuCursorY:
+	ld a, [wMenuCursorY]
+
+.LoadToScriptVar:
+	ld [wScriptVar], a
+	ret
+
+.Exit:
+	ld a, $4
+	ld [wScriptVar], a
+	ret
+
+MenuHeader_ChallengeExplanationCancel:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 0, 14, 7
+	dw MenuData_ChallengeExplanationCancel
+	db 1 ; default option
+
+MenuData_ChallengeExplanationCancel:
+	db STATICMENU_CURSOR | STATICMENU_WRAP ; flags
+	db 3
+	db "Challenge@"
+	db "Explanation@"
+	db "Cancel@"

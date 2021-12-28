@@ -672,7 +672,6 @@ Function1163c0:
 	ret
 
 Function116441:
-	farcall Function17d405
 	ld a, $90
 	ldh [hWY], a
 	farcall ReloadMapPart
