@@ -545,11 +545,6 @@ INCLUDE "engine/battle/used_move_text.asm"
 INCLUDE "engine/gfx/load_overworld_font.asm"
 
 
-SECTION "Mobile 42", ROMX
-
-INCLUDE "mobile/mobile_42.asm"
-
-
 SECTION "Intro Logo", ROMX
 
 IntroLogoGFX:

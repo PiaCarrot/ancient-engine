@@ -739,11 +739,30 @@ DoAnimFrame:
 	ret
 
 .MobileTradeSentPulse
-	farcall Function108bc7
+	ld a, [wcf64]
+	and a
+	ret z
+	ld hl, SPRITEANIMSTRUCT_YCOORD
+	add hl, bc
+	ld a, [hl]
+	cp -1 * 8 - 6
+	jr z, .delete_s
+	sub 1 * 8
+	ld [hl], a
+	ret
+
+.delete_s
+	farcall DeinitializeSprite
 	ret
 
 .MobileTradeOTPulse
-	farcall Function108be0
+	ld hl, SPRITEANIMSTRUCT_YCOORD
+	add hl, bc
+	ld a, [hl]
+	cp 9 * 8 + 2
+	ret z
+	add 1 * 8
+	ld [hl], a
 	ret
 
 .IntroSuicune

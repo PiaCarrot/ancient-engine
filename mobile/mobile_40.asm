@@ -6091,12 +6091,9 @@ Function102b12:
 	ld a, [wcd2f]
 	and a
 	jr nz, .asm_102b2b
-	farcall Function108026
 	jr .asm_102b31
 
 .asm_102b2b
-	farcall Function10802a
-
 .asm_102b31
 	ret
 
