@@ -532,8 +532,6 @@ INCLUDE "engine/events/mom_phone.asm"
 TownMapGFX:
 INCBIN "gfx/pokegear/town_map.2bpp.lz"
 
-INCLUDE "mobile/mobile_40.asm"
-
 
 SECTION "bank41", ROMX
 
