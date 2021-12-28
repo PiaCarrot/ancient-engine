@@ -6674,7 +6674,6 @@ Function117699:
 	call ByteFill
 	call ClearBGPalettes
 	call ClearSprites
-	farcall Function171c87
 	farcall ReloadMapPart
 	farcall ClearSpriteAnims
 	ret
@@ -6710,7 +6709,6 @@ Function117719:
 	jp hl
 
 Jumptable_117728:
-	dw Function117738
 	dw Function117764
 	dw Function1178aa
 	dw Function1178e8
@@ -6718,26 +6716,6 @@ Jumptable_117728:
 	dw Function117976
 	dw Function117984
 	dw Function1179a7
-
-Function117738:
-	farcall Function171ccd
-	depixel 6, 3
-	ld a, $1d
-	call _InitSpriteAnimStruct
-	ld hl, $c
-	add hl, bc
-	ld a, $6
-	ld [hl], a
-	depixel 9, 4
-	ld a, $1d
-	call _InitSpriteAnimStruct
-	ld hl, $c
-	add hl, bc
-	ld a, $7
-	ld [hl], a
-	ld a, $3
-	ld [wcd23], a
-	jp MobilePassword_IncrementJumptable
 
 Function117764:
 	ld a, [wcd4a]
@@ -6779,7 +6757,6 @@ Function117764:
 	ret
 
 Function117764_select:
-	farcall Function171cf0
 	ret
 
 Function117764_start:
@@ -7135,15 +7112,12 @@ Function117a94:
 	ld [wcf66], a
 	call ClearBGPalettes
 	call ClearSprites
-	farcall Function172e78
 	farcall HDMATransferAttrMapAndTileMapToWRAMBank3
 	ret
 
 Function117ab4:
 	call ClearBGPalettes
 	call ClearSprites
-	farcall Function172e78
-	farcall Function172eb9
 	farcall ReloadMapPart
 	ret
 
@@ -7183,7 +7157,6 @@ Function117ae9:
 	dw Function117c4a
 
 Function117b06:
-	farcall Function172eb9
 	ld a, $10
 	ld [wcf64], a
 	jp MobileStudium_JumptableIncrement
@@ -7332,7 +7305,6 @@ Function117bb6:
 .asm_117c20
 	pop af
 	ldh [rSVBK], a
-	farcall Function172eb9
 	ldh a, [rSVBK]
 	push af
 	ld a, $3

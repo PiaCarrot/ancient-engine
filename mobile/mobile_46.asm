@@ -569,7 +569,6 @@ Function1184a5:
 	dw Function118ded
 	dw Function118e6d
 	dw Function11878d
-	dw Function11984e
 	dw Function118e76
 	dw Function118e7e
 	dw Function11878d
@@ -1501,48 +1500,6 @@ MenuDownloadURL:
 
 IndexDownloadURL:
 	db "http://gameboy.datacenter.ne.jp/cgb/download?name=/01/CGB-BXTJ/tamago/index.txt", 0
-
-Unreferenced_Function118d35:
-	ld hl, $d200
-	ld a, [wcd38]
-	and a
-	jr nz, .asm_118d6e
-	ld a, [hli]
-	cp $94
-	jr nz, .asm_118d7b
-	ld a, [hl]
-	cp $5
-	jr nz, .asm_118d7b
-	ld a, [wcd4f]
-	sla a
-	ld b, a
-	sla a
-	sla a
-	add b
-	ld b, a
-	ld a, $5
-	call GetSRAMBank
-	ld a, b
-	ld [$b2fb], a
-	call CloseSRAM
-	farcall Function170be4
-	farcall Function1700c4
-	jr .asm_118d78
-
-.asm_118d6e
-	ld a, [hli]
-	cp $96
-	jr nz, .asm_118d7b
-	ld a, [hl]
-	cp $0
-	jr nz, .asm_118d7b
-
-.asm_118d78
-	jp BattleTowerRoomMenu_IncrementJumptable
-
-.asm_118d7b
-	ld a, $d3
-	jp Function118805
 
 Function118d80:
 	call Function118e06
@@ -3169,75 +3126,6 @@ Function119800:
 	ldh [rSVBK], a
 	call FadeToMenu
 	farcall Function10803d
-	call Function11a9ce
-	call RestartMapMusic
-	ld a, $3
-	ldh [rSVBK], a
-	pop af
-	ld [wcf66], a
-	pop af
-	ld [wcf65], a
-	pop af
-	ld [wcf64], a
-	pop af
-	ld [wJumptableIndex], a
-	farcall Function115dc3
-	jp BattleTowerRoomMenu_IncrementJumptable
-
-Function11984e:
-	ld a, [wcd80]
-	and a
-	jr nz, .asm_1198a0
-	ld a, [wcd38]
-	and a
-	jr nz, .asm_1198a8
-	farcall Function170000
-	ld a, [wJumptableIndex]
-	push af
-	ld a, [wcf64]
-	push af
-	ld a, [wcf65]
-	push af
-	ld a, [wcf66]
-	push af
-	ld a, $1
-	ldh [rSVBK], a
-	call FadeToMenu
-	farcall MobileTradeAnimation_SendGivemonToGTS
-	call Function11a9ce
-	call RestartMapMusic
-	ld a, $3
-	ldh [rSVBK], a
-	pop af
-	ld [wcf66], a
-	pop af
-	ld [wcf65], a
-	pop af
-	ld [wcf64], a
-	pop af
-	ld [wJumptableIndex], a
-	farcall Function115dc3
-	jp BattleTowerRoomMenu_IncrementJumptable
-
-.asm_1198a0
-	ld a, $a
-	ld [wc300], a
-	jp BattleTowerRoomMenu_IncrementJumptable
-
-.asm_1198a8
-	farcall Function17005a
-	ld a, [wJumptableIndex]
-	push af
-	ld a, [wcf64]
-	push af
-	ld a, [wcf65]
-	push af
-	ld a, [wcf66]
-	push af
-	ld a, $1
-	ldh [rSVBK], a
-	call FadeToMenu
-	farcall MobileTradeAnimation_RetrieveGivemonFromGTS
 	call Function11a9ce
 	call RestartMapMusic
 	ld a, $3

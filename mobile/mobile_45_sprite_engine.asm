@@ -367,8 +367,6 @@ Function1161b8:
 
 .Jumptable:
 	dw Function1161d5
-	dw Function116294
-	dw Function1162cb
 	dw Function1162f2
 	dw Function1163c0
 	dw Function11636e
@@ -489,48 +487,6 @@ MenuHeader_11628c:
 	menu_coords 0, 6, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
 	dw NULL
 	db 0 ; default option
-
-Function116294:
-	farcall Function170d02
-	ld a, [$c319]
-	inc a
-	ld [$c319], a
-	ldh a, [rSVBK]
-	push af
-	ld a, $5
-	ldh [rSVBK], a
-	ld hl, wBGPals1 palette 6
-	ld de, $c320
-	ld bc, 2 palettes
-	call CopyBytes
-	ld hl, Palette_11734e
-	ld de, wBGPals1 palette 7
-	ld bc, 1 palettes
-	call CopyBytes
-	call SetPalettes
-	pop af
-	ldh [rSVBK], a
-	ld a, $30
-	ldh [hWY], a
-	ret
-
-Function1162cb:
-	farcall Function170cc6
-	ld a, [$c319]
-	inc a
-	ld [$c319], a
-	ldh a, [rSVBK]
-	push af
-	ld a, $5
-	ldh [rSVBK], a
-	ld hl, Palette_11730e
-	ld de, wOBPals1 + 2 palettes
-	ld bc, 6 palettes
-	call CopyBytes
-	call SetPalettes
-	pop af
-	ldh [rSVBK], a
-	ret
 
 Function1162f2:
 	call Function11659d

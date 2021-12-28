@@ -295,7 +295,6 @@ asm_4a19d:
 	ld hl, wMenuCursorY
 	ld a, [hl]
 	cp $1
-	jp z, Function4a20e
 	cp $2
 	jp z, Function4a221
 	ld a, $1
@@ -332,14 +331,6 @@ String_4a1ef:
 	db   "モバイルセンター¯えらぶ"
 	next "ログインパスワード¯いれる"
 	next "もどる@"
-
-Function4a20e:
-	ld a, $1
-	call MenuClickSound
-	farcall Function1719c8
-	call ClearBGPalettes
-	call DelayFrame
-	jr Function4a239
 
 Function4a221:
 	ld a, $1

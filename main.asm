@@ -580,11 +580,7 @@ SECTION "bank5B", ROMX
 INCLUDE "engine/link/link_trade.asm"
 INCLUDE "engine/link/link.asm"
 INCLUDE "engine/battle/link_result.asm"
-
-
-SECTION "Mobile 5C", ROMX
-
-INCLUDE "mobile/mobile_5c.asm"
+INCLUDE "engine/events/battle_tower/battle_tower.asm"
 
 
 SECTION "Crystal Phone Text 2", ROMX
