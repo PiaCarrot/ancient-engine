@@ -69,7 +69,6 @@ SpecialsPointers::
 	add_special UpdateSprites ; bank 0
 	add_special ReplaceKrisSprite ; $38 ; bank 0
 	add_special GameCornerPrizeMonCheckDex
-	add_special UnusedSetSeenMon
 	add_special WaitSFX ; bank 0
 	add_special PlayMapMusic ; bank 0
 	add_special RestartMapMusic ; bank 0
@@ -79,7 +78,6 @@ SpecialsPointers::
 	add_special FindPartyMonAtLeastThatHappy
 	add_special FindPartyMonThatSpecies
 	add_special FindPartyMonThatSpeciesYourTrainerID
-	add_special UnusedCheckUnusedTwoDayTimer
 	add_special DayCareMon1
 	add_special DayCareMon2
 	add_special SelectRandomBugContestContestants
@@ -150,7 +148,6 @@ SpecialsPointers::
 	add_special RefreshSprites
 	add_special AskRememberPassword
 	add_special LoadMapPalettes
-	add_special UnusedFindItemInPCOrBag
 	add_special InitialSetDSTFlag
 	add_special InitialClearDSTFlag
 	add_special DummySpecial_c224 ; $a8
