@@ -39,8 +39,6 @@ Function100022:
 	ld a, b
 	ld [wcd24], a
 	farcall Function10127e
-	farcall Stubbed_Function106462
-	farcall Function106464 ; load broken gfx
 	 ; init RAM
 	ld hl, wVramState
 	set 1, [hl]
@@ -307,7 +305,6 @@ Function10020b:
 	xor a
 	ld [wc303], a
 	farcall FadeOutPalettes
-	farcall Function106464
 	call HideSprites
 	call DelayFrame
 
@@ -321,7 +318,6 @@ Function10020b:
 
 Function100232:
 	push de
-	farcall Function106464
 	call Function3f20
 	call UpdateSprites
 	hlcoord 1, 2
@@ -417,7 +413,6 @@ Function100301:
 	ld hl, wcd2a
 	bit 1, [hl]
 	ret z
-	farcall Function106464
 	farcall Function10202c
 	
 	call Function100320
@@ -2918,16 +2913,12 @@ Function10138b:
 Function1013aa:
 	call ClearBGPalettes
 	call ExitMenu
-	call ReloadTilesetAndPalettes
-	farcall Function106464
 	call UpdateSprites
 	call FinishExitMenu
 	ret
 
 Function1013c0:
 	farcall BlankScreen
-	farcall Stubbed_Function106462
-	farcall Function106464
 	call FinishExitMenu
 	ret
 
@@ -5145,8 +5136,6 @@ Function102423:
 	call Function102921
 	ret nc
 	farcall SaveAfterLinkTrade
-	farcall StubbedTrainerRankings_Trades
-	farcall BackupMobileEventIndex
 	ld hl, wcd4b
 	set 1, [hl]
 	ld a, 0
@@ -7364,7 +7353,6 @@ MenuData_103648:
 	db "ケーブル@"
 
 Function103654:
-	farcall Mobile_AlwaysReturnNotCarry
 	bit 7, c
 	jr nz, .asm_103666
 	ld hl, wcd2a
@@ -7379,7 +7367,6 @@ Function103654:
 	ret
 
 Mobile_SelectThreeMons:
-	farcall Mobile_AlwaysReturnNotCarry
 	bit 7, c
 	jr z, .asm_10369b
 	ld hl, UnknownText_0x10375d
@@ -7640,7 +7627,6 @@ UnknownText_0x10381e:
 	text_end
 
 Function103823:
-	farcall Mobile_AlwaysReturnNotCarry
 	bit 7, c
 	jr nz, .asm_103838
 	farcall Function1008a6
@@ -7688,7 +7674,6 @@ UnknownText_0x103876:
 	text_end
 
 Function10387b:
-	farcall Mobile_AlwaysReturnNotCarry
 	bit 7, c
 	ret nz
 	farcall Function1008a6

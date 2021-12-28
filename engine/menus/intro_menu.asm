@@ -77,13 +77,7 @@ NewGame:
 	jp FinishContinueFunction
 
 AreYouABoyOrAreYouAGirl:
-	farcall Mobile_AlwaysReturnNotCarry ; some mobile stuff
-	jr c, .ok
 	farcall InitGender
-	ret
-
-.ok
-	ld c, 0
 	ret
 
 ResetWRAM:
@@ -207,25 +201,17 @@ endc
 	ld [wMoney + 1], a
 	ld a, LOW(START_MONEY)
 	ld [wMoney + 2], a
-
 	xor a
 	ld [wWhichMomItem], a
-
 	ld hl, wMomItemTriggerBalance
 	ld [hl], HIGH(MOM_MONEY >> 8)
 	inc hl
 	ld [hl], HIGH(MOM_MONEY) ; mid
 	inc hl
 	ld [hl], LOW(MOM_MONEY)
-
 	call InitializeNPCNames
-
 	farcall InitDecorations
-
 	farcall DeletePartyMonMail
-
-	farcall DeleteMobileEventIndex
-
 	call ResetGameTime
 	ret
 
@@ -405,7 +391,6 @@ PostCreditsSpawn:
 	ret
 
 Continue_MobileAdapterMenu:
-	farcall Mobile_AlwaysReturnNotCarry ; mobile check
 	ret nc
 
 ; the rest of this stuff is never reached because

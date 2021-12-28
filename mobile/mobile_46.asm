@@ -470,9 +470,6 @@ BattleTowerRoomMenu_InitRAM:
 	ld a, $1
 	ldh [hMobileReceive], a
 	ldh [hMobile], a
-	ei
-	farcall Stubbed_Function106462
-	farcall Function106464
 	
 	ld a, $5
 	call GetSRAMBank
@@ -4222,8 +4219,6 @@ Function11a00e:
 	call PushWindow
 	farcall Function11765d
 	farcall Function117ab4
-	farcall Stubbed_Function106462
-	farcall Function106464
 	call ExitMenu
 	farcall ReloadMapPart
 	ld c, $0
@@ -4242,8 +4237,6 @@ Function11a0ca:
 	ld [wMenuBorderBottomCoord], a
 	call PushWindow
 	farcall Function11765d
-	farcall Stubbed_Function106462
-	farcall Function106464
 	call ExitMenu
 	farcall ReloadMapPart
 	ld c, $0
@@ -5260,8 +5253,6 @@ Function11a9ce:
 	call ClearBGPalettes
 	call ReloadTilesetAndPalettes
 	call ExitMenu
-	farcall Stubbed_Function106462
-	farcall Function106464
 	farcall FinishExitMenu
 	call UpdateSprites
 	ret
