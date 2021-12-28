@@ -33,8 +33,7 @@ asm_11800b:
 .skip
 	call Function1184a5
 	call BattleTowerRoomMenu_WriteMessage
-	farcall Function115dd3
-	farcall Function11619d
+	
 	call DelayFrame
 	ld a, [wcf66]
 	ld hl, wcd33
@@ -44,6 +43,7 @@ asm_11800b:
 	ldh [rSVBK], a
 	call BattleTowerRoomMenu_Cleanup
 	call ReturnToMapFromSubmenu
+
 BattleTowerRoomMenu_DoNothing:
 	ret
 
@@ -73,8 +73,7 @@ Function11805f:
 .asm_118090
 	call Function11857c
 	call BattleTowerRoomMenu_WriteMessage
-	farcall Function115dd3
-	farcall Function11619d
+	
 	call DelayFrame
 	ld a, [wcf66]
 	ld hl, wcd33
@@ -118,8 +117,7 @@ Function1180b8:
 .asm_1180f2
 	call Function1184ec
 	call BattleTowerRoomMenu_WriteMessage
-	farcall Function115dd3
-	farcall Function11619d
+	
 	call DelayFrame
 	ld a, [wcf66]
 	ld hl, wcd33
@@ -162,8 +160,8 @@ Function118125:
 .skip
 	call BattleTowerRoomMenu_Jumptable
 	call BattleTowerRoomMenu_WriteMessage
-	farcall Function115dd3
-	farcall Function11619d
+	
+	
 	call DelayFrame
 	ld a, [wcf66]
 	ld hl, wcd33
@@ -247,8 +245,8 @@ Function1181da:
 .asm_11820b
 	call Function1185c3
 	call BattleTowerRoomMenu_WriteMessage
-	farcall Function115dd3
-	farcall Function11619d
+	
+	
 	call DelayFrame
 	ld a, [wcf66]
 	ld hl, wcd33
@@ -284,8 +282,8 @@ Function118233:
 .asm_11825f
 	call Function118624
 	call BattleTowerRoomMenu_WriteMessage
-	farcall Function115dd3
-	farcall Function11619d
+	
+	
 	call DelayFrame
 	ld a, [wcf66]
 	ld hl, wcd33
@@ -319,8 +317,8 @@ Function118284:
 .asm_1182b0
 	call Function1186f5
 	call BattleTowerRoomMenu_WriteMessage
-	farcall Function115dd3
-	farcall Function11619d
+	
+	
 	call DelayFrame
 	ld a, [wcf66]
 	ld hl, wcd33
@@ -355,8 +353,8 @@ Function1182d5:
 .asm_118301
 	call Function118746
 	call BattleTowerRoomMenu_WriteMessage
-	farcall Function115dd3
-	farcall Function11619d
+	
+	
 	call DelayFrame
 	ld a, [wcf66]
 	ld hl, wcd33
@@ -392,8 +390,8 @@ Function118329:
 .asm_118355
 	call Function118671
 	call BattleTowerRoomMenu_WriteMessage
-	farcall Function115dd3
-	farcall Function11619d
+	
+	
 	call DelayFrame
 	ld a, [wcf66]
 	ld hl, wcd33
@@ -428,8 +426,8 @@ Function11837a:
 .asm_1183a6
 	call Function1186b2
 	call BattleTowerRoomMenu_WriteMessage
-	farcall Function115dd3
-	farcall Function11619d
+	
+	
 	call DelayFrame
 	ld a, [wcf66]
 	ld hl, wcd33
@@ -475,8 +473,7 @@ BattleTowerRoomMenu_InitRAM:
 	ei
 	farcall Stubbed_Function106462
 	farcall Function106464
-	farcall Function115d99
-	farcall Function11615a
+	
 	ld a, $5
 	call GetSRAMBank
 	xor a
@@ -1110,7 +1107,7 @@ Function118903:
 	ld a, [wc3f0]
 	ld [$c319], a
 	ld c, $1
-	farcall Function115e18
+	
 	ld a, $8
 	ld [wcd3c], a
 	call BattleTowerRoomMenu2
@@ -3136,7 +3133,6 @@ Function119800:
 	ld [wcf64], a
 	pop af
 	ld [wJumptableIndex], a
-	farcall Function115dc3
 	jp BattleTowerRoomMenu_IncrementJumptable
 
 Function1198ee:
@@ -4135,7 +4131,6 @@ Function119f98:
 	jr z, .asm_119fd4
 	call ExitMenu
 	farcall ReloadMapPart
-	farcall Function115dc3
 	ld a, [wcd33]
 	ld [wcf66], a
 	ld a, $a
@@ -4161,7 +4156,6 @@ Function119f98:
 	farcall ReloadMapPart
 	ld a, [wMobileInactivityTimerSeconds]
 	ld [wcf66], a
-	farcall Function115dc3
 	ld a, $a
 	ld [wc300], a
 	scf
@@ -4211,9 +4205,8 @@ Function11a00e:
 	call CopyBytes
 	ld a, $1
 	ldh [rSVBK], a
-	farcall Function115d99
 	ld c, $0
-	farcall Function115e18
+	
 	ld a, $1
 	ld [wc305], a
 	ret
@@ -4233,9 +4226,8 @@ Function11a00e:
 	farcall Function106464
 	call ExitMenu
 	farcall ReloadMapPart
-	farcall Function115d99
 	ld c, $0
-	farcall Function115e18
+	
 	ld a, $1
 	ld [wc305], a
 	ret
@@ -4254,9 +4246,8 @@ Function11a0ca:
 	farcall Function106464
 	call ExitMenu
 	farcall ReloadMapPart
-	farcall Function115d99
 	ld c, $0
-	farcall Function115e18
+	
 	ld a, $1
 	ld [wc305], a
 	ret
@@ -4264,7 +4255,7 @@ Function11a0ca:
 Function11a113:
 	call Function11a63c
 	ld c, $1
-	farcall Function115e18
+	
 	hlcoord 4, 2
 	ld de, String_11a6c8
 	call PlaceString
@@ -4522,7 +4513,7 @@ MenuHeader_11a2de:
 Function11a2e6:
 	call Function11a63c
 	ld c, $2
-	farcall Function115e18
+	
 	hlcoord 4, 2
 	ld de, String_11a71e
 	call PlaceString
@@ -4568,7 +4559,6 @@ Function11a33a:
 .asm_11a346
 	call ExitMenu
 	farcall ReloadMapPart
-	farcall Function115dc3
 	and a
 	ret
 
@@ -4904,7 +4894,7 @@ Function11a5b9:
 	farcall ReloadMapPart
 	call UpdateSprites
 	ld c, $0
-	farcall Function115e18
+	
 	ld a, $1
 	ld [wc305], a
 	ret

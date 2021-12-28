@@ -41,7 +41,7 @@ Function100022:
 	farcall Function10127e
 	farcall Stubbed_Function106462
 	farcall Function106464 ; load broken gfx
-	farcall Function11615a ; init RAM
+	 ; init RAM
 	ld hl, wVramState
 	set 1, [hl]
 	ret
@@ -137,7 +137,7 @@ Function1000e8:
 	ld hl, wcd29
 	bit 7, [hl]
 	ret z
-	farcall Function115dd3
+	
 	ld hl, wcd29
 	set 6, [hl]
 	ret
@@ -152,7 +152,7 @@ Function1000fa:
 	ld a, [wcd2b]
 	and a
 	jr nz, .asm_100117
-	farcall Function11619d
+	
 	ld hl, wcd29
 	set 6, [hl]
 	ret
@@ -175,7 +175,7 @@ Function1000fa:
 	ld [wLinkMode], a
 	ld a, $04
 	ld [wc314 + 5], a
-	farcall Function11619d
+	
 	ld hl, wcd29
 	set 6, [hl]
 	pop af
@@ -419,7 +419,7 @@ Function100301:
 	ret z
 	farcall Function106464
 	farcall Function10202c
-	farcall Function115dd3
+	
 	call Function100320
 	call JoyWaitAorB
 	ret
@@ -3019,7 +3019,7 @@ Function101418:
 Function10142c:
 	ld a, $01
 	ld [wc305], a
-	farcall Function115e18
+	
 	ret
 
 Function101438:
@@ -3894,7 +3894,6 @@ CopyOtherPlayersBattleMonSelection:
 	ret
 
 Function101a97:
-	farcall Function115d99
 	ld hl, wcd29
 	set 7, [hl]
 	ld c, $02
@@ -3917,7 +3916,6 @@ Function101ab4:
 	ret
 
 Function101ac6:
-	farcall Function115d99
 	ld hl, wcd29
 	set 7, [hl]
 	ld c, $02
@@ -3934,7 +3932,6 @@ Function101ac6:
 	ret
 
 Function101aed:
-	farcall Function115d99
 	ld hl, wcd29
 	set 7, [hl]
 	ld c, $02
@@ -4120,7 +4117,6 @@ Function101c50:
 	ret
 
 Function101c62:
-	farcall Function115d99
 	ld hl, wcd29
 	set 7, [hl]
 	ld c, $01
@@ -4480,7 +4476,6 @@ Function101ecc:
 
 Function101ed3:
 	call Function1013aa
-	farcall Function115d99
 	ld hl, wcd29
 	set 7, [hl]
 	ret
@@ -4571,7 +4566,6 @@ String_102014:
 	next "せっていを　してください@"
 
 Function10202c:
-	farcall Function115d99
 	ld hl, wcd29
 	set 7, [hl]
 	ld c, $02
