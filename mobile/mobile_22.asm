@@ -1638,7 +1638,6 @@ Function89b00:
 Function89b07:
 	call Mobile22_SetBGMapMode0
 	call DelayFrame
-	farcall Function4a3a7
 	ret
 
 Function89b14:
@@ -1648,7 +1647,6 @@ Function89b14:
 	ret
 
 Function89b1e:
-	farcall Function4a485
 	call Function89b00
 	ret
 
@@ -1663,7 +1661,6 @@ Function89b28:
 
 Function89b3b:
 	call Mobile22_SetBGMapMode0
-	farcall Function48cda
 	ret
 
 Function89b45:
@@ -2250,7 +2247,6 @@ Function89ee1:
 	call ClearBGPalettes
 	call Function893e2
 	call Mobile22_SetBGMapMode0
-	farcall Function4a3a7
 	farcall MG_Mobile_Layout_CreatePalBoxes
 	hlcoord 1, 0
 	call Function8a53d
@@ -2759,7 +2755,6 @@ Function8a262:
 	call ClearBGPalettes
 	call Function893e2
 	call Mobile22_SetBGMapMode0
-	farcall Function4a3a7
 	farcall MG_Mobile_Layout_CreatePalBoxes
 	hlcoord 1, 0
 	call Function8a53d
@@ -2848,7 +2843,6 @@ Function8a313:
 Function8a31c:
 	push bc
 	call Mobile22_SetBGMapMode0
-	farcall Function4a3a7
 	farcall MG_Mobile_Layout_CreatePalBoxes
 	hlcoord 1, 0
 	call Function8a53d

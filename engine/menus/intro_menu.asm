@@ -84,7 +84,6 @@ AreYouABoyOrAreYouAGirl:
 
 .ok
 	ld c, 0
-	farcall InitMobileProfile ; mobile
 	ret
 
 ResetWRAM:
@@ -423,7 +422,6 @@ Continue_MobileAdapterMenu:
 	ld c, 20
 	call DelayFrames
 	ld c, $1
-	farcall InitMobileProfile ; mobile
 	farcall _SaveData
 	ld a, 8
 	ld [wMusicFade], a

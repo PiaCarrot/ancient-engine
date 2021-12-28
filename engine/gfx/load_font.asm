@@ -121,6 +121,9 @@ LoadHPBar:
 	call Get2bpp_2
 	ret
 
+MobilePhoneTilesGFX:
+INCBIN "gfx/mobile/phone_tiles.2bpp"
+
 StatsScreen_LoadFont:
 	call _LoadFontsBattleExtra
 	ld de, EnemyHPBarBorderGFX

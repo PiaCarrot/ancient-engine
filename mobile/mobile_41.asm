@@ -1098,8 +1098,6 @@ asm_1064ed:
 	ret
 
 Function10650a:
-	ld de, MobilePhoneTilesGFX
-	lb bc, BANK(MobilePhoneTilesGFX), 17
 	call Get2bpp
 	ret
 
