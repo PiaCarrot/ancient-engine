@@ -477,8 +477,6 @@ Function893b3:
 	call LoadStandardFont
 	call LoadFontsExtra
 	call Function893ef
-	call Function8942b
-	call Function89455
 	call EnableLCD
 	ret
 
@@ -488,7 +486,6 @@ Function893cc:
 	call LoadStandardFont
 	call LoadFontsExtra
 	call Function893ef
-	call Function89464
 	call EnableLCD
 	ret
 
@@ -517,19 +514,6 @@ Function893fe:
 GFX_8940b:
 INCBIN "gfx/unknown/08940b.2bpp"
 
-Function8942b:
-	ld de, vTiles0 tile $02
-	ld hl, MobileAdapterGFX + $7d tiles
-	ld bc, 8 tiles
-	ld a, BANK(MobileAdapterGFX)
-	call FarCopyBytes
-	ld de, vTiles0 tile $0a
-	ld hl, MobileAdapterGFX + $c6 tiles
-	ld bc, 4 tiles
-	ld a, BANK(MobileAdapterGFX)
-	call FarCopyBytes
-	ret
-
 Function89448:
 ; Clears the sprite array
 	push af
@@ -541,27 +525,6 @@ Function89448:
 	dec d
 	jr nz, .loop
 	pop af
-	ret
-
-Function89455:
-	ld hl, MobileAdapterGFX + $7d tiles
-	ld de, vTiles2 tile $0c
-	ld bc, $49 tiles
-	ld a, BANK(MobileAdapterGFX)
-	call FarCopyBytes
-	ret
-
-Function89464:
-	ld hl, MobileAdapterGFX
-	ld de, vTiles2
-	ld bc, $20 tiles
-	ld a, BANK(MobileAdapterGFX)
-	call FarCopyBytes
-	ld hl, MobileAdapterGFX + $66 tiles
-	ld de, vTiles2 tile $20
-	ld bc, $17 tiles
-	ld a, BANK(MobileAdapterGFX)
-	call FarCopyBytes
 	ret
 
 Function89481:
@@ -1190,22 +1153,6 @@ Function897d5:
 	predef PlaceGraphic
 	call Function8963d
 	pop bc
-	ret
-
-Function89807:
-	ld hl, MobileAdapterGFX + $20 tiles
-	ld a, [wPlayerGender]
-	bit PLAYERGENDER_FEMALE_F, a
-	jr z, .asm_89814
-	ld hl, MobileAdapterGFX + $43 tiles
-.asm_89814
-	call DisableLCD
-	ld de, vTiles2 tile $37
-	ld bc, $23 tiles
-	ld a, BANK(MobileAdapterGFX)
-	call FarCopyBytes
-	call EnableLCD
-	call DelayFrame
 	ret
 
 Function89829:
@@ -2490,7 +2437,6 @@ Function89ff6:
 	call Function891fe
 	call ClearBGPalettes
 	call Function893cc
-	call Function89807
 	call Function89492
 	call Function894ca
 	call OpenSRAMBank4
@@ -3517,7 +3463,6 @@ Function8a7cb:
 	call Function891de
 	ld de, wd008
 	ld c, $0
-	farcall Function17a68f
 	jr c, .asm_8a7f4
 	ld hl, wd008
 	ld a, $ff
@@ -3802,7 +3747,6 @@ Function8aa0a:
 	call Function891fe
 	call ClearBGPalettes
 	call Function893cc
-	call Function89807
 	call Function89492
 	call Function894ca
 .asm_8aa3a
@@ -3844,7 +3788,6 @@ Function8aa73:
 	call Function891de
 	ld de, wd008
 	ld c, $0
-	farcall Function17a68f
 	jr c, .asm_8aa9d
 	ld hl, wd008
 	ld a, $ff
@@ -3859,7 +3802,6 @@ Function8aa73:
 	call Function891fe
 	call ClearBGPalettes
 	call Function893cc
-	call Function89807
 	call Function89492
 	call Function894ca
 	pop de
@@ -3932,7 +3874,6 @@ Function8ab3b:
 	call Function891fe
 	call ClearBGPalettes
 	call Function893cc
-	call Function89807
 	call Function89492
 	call Function894ca
 	call OpenSRAMBank4

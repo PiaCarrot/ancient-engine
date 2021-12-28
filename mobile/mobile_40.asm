@@ -4662,7 +4662,6 @@ Function1020a8:
 	call Function10209c
 	ld c, $01
 	ld de, wdc42
-	farcall Function17a68f
 	ret c
 	call Function10208e
 	call Function102068
