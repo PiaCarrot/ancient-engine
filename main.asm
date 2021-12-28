@@ -559,7 +559,6 @@ INCBIN "gfx/intro/logo.2bpp.lz"
 SECTION "Title", ROMX
 
 INCLUDE "engine/movie/title.asm"
-INCLUDE "mobile/mobile_45.asm"
 
 
 SECTION "Battle Tower", ROMX
