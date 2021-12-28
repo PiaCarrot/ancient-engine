@@ -122,21 +122,11 @@ SpecialsPointers::
 	add_special PrintDiploma
 
 ; Crystal only
-	add_special Function11ac3e
-	add_special Function11b444
-	add_special Function11b5e8
-	add_special Function11b7e5 ; $70
-	add_special Function11b879
-	add_special Function11b920
-	add_special Function11b93b
 	add_special BattleTowerRoomMenu
-	add_special Function1700ba
-	add_special Function170114
 	add_special BattleTowerBattle
 	add_special Function1704e1 ; $78
 	add_special DummySpecial_17021d
 	add_special LoadOpponentTrainerAndPokemonWithOTSprite
-	add_special Function11ba38
 	add_special CheckForBattleTowerRules
 	add_special GiveOddEgg
 	add_special Reset ; bank 0

@@ -1,12 +1,6 @@
 BattleTowerRoomMenu:
 ; special
 	call InitBattleTowerChallengeRAM
-	farcall _BattleTowerRoomMenu
-	ret
-
-Function1700ba:
-	call InitBattleTowerChallengeRAM
-	farcall Function11811a
 	ret
 
 Function1700c4:
@@ -48,12 +42,6 @@ Function1700c4:
 	call CloseSRAM
 	pop af
 	ldh [rSVBK], a
-	ret
-
-Function170114:
-	call InitBattleTowerChallengeRAM
-	call .Function170121
-	farcall Function11805f
 	ret
 
 .Function170121:
@@ -1417,7 +1405,6 @@ Function1709bb: ; BattleTowerAction $10
 	dw .NoAction
 	dw .DoAction1
 	dw .DoAction1
-	dw .Action4
 	dw .Action5
 
 .DoAction1:
@@ -1428,24 +1415,6 @@ Function1709bb: ; BattleTowerAction $10
 	call CloseSRAM
 
 .NoAction:
-	ret
-
-.Action4:
-	ld a, BANK(s5_b023) ; aka BANK(s5_a825) and BANK(s5_a826)
-	call GetSRAMBank
-	ld hl, s5_b023
-	ld de, wc608
-	ld bc, 105
-	call CopyBytes
-	ld a, [s5_a825]
-	ld [wcd30], a
-	ld a, [s5_a826]
-	ld [wcd31], a
-	call CloseSRAM
-	farcall Function11b6b4
-	call Function17d0f3
-	ld a, TRUE
-	ld [wScriptVar], a
 	ret
 
 .Action5:
@@ -1585,13 +1554,58 @@ BattleTowerAction_UbersCheck:
 	ld [wcd4f], a
 	xor a
 	ld [wScriptVar], a
-	farcall BattleTower_UbersCheck
+	call BattleTower_UbersCheck
 	ret nc
 	ld a, BANK(s5_b2fb)
 	call GetSRAMBank
 	ld a, [s5_b2fb]
 	call CloseSRAM
 	ld [wScriptVar], a
+	ret
+
+
+BattleTower_LevelCheck:
+	ldh a, [rSVBK]
+	push af
+	ld a, $1
+	ldh [rSVBK], a
+	ld a, [wcd4f]
+	ld c, 10
+	call SimpleMultiply
+	ld hl, wcd50
+	ld [hl], a
+	ld bc, PARTYMON_STRUCT_LENGTH
+	ld de, wPartyMon1Level
+	ld a, [wPartyCount]
+.party_loop
+	push af
+	ld a, [de]
+	push hl
+	push de
+	pop hl
+	add hl, bc
+	push hl
+	pop de
+	pop hl
+	cp [hl]
+	jr z, .equal
+	jr nc, .exceeds
+.equal
+	pop af
+	dec a
+	jr nz, .party_loop
+	pop af
+	ldh [rSVBK], a
+	and a
+	ret
+
+.exceeds
+	pop af
+	ld a, $4
+	ld [wcf66], a
+	pop af
+	ldh [rSVBK], a
+	scf
 	ret
 
 LoadOpponentTrainerAndPokemonWithOTSprite:
@@ -1886,3 +1900,69 @@ MenuData_ChallengeExplanationCancel:
 	db "Challenge@"
 	db "Explanation@"
 	db "Cancel@"
+
+
+BattleTower_UbersCheck:
+	ldh a, [rSVBK]
+	push af
+	ld a, [wcd4f]
+	cp 70 / 10
+	jr nc, .level_70_or_more
+	ld a, $1
+	ldh [rSVBK], a
+	ld hl, wPartyMon1Level
+	ld bc, PARTYMON_STRUCT_LENGTH
+	ld de, wPartySpecies
+	ld a, [wPartyCount]
+.loop
+	push af
+	ld a, [de]
+	push de
+	push bc
+	push hl
+	ld hl, .ubers
+	ld de, 2
+	call IsInHalfwordArray
+	pop hl
+	pop bc
+	pop de
+	jr nc, .next
+.uber
+	ld a, [hl]
+	cp 70
+	jr c, .uber_under_70
+.next
+	add hl, bc
+	inc de
+	pop af
+	dec a
+	jr nz, .loop
+.level_70_or_more
+	pop af
+	ldh [rSVBK], a
+	and a
+	ret
+
+.ubers
+	dw MEWTWO
+	dw MEW
+	dw LUGIA
+	dw HO_OH
+	dw CELEBI
+	dw -1
+
+.uber_under_70
+	pop af
+	ld a, [de]
+	ld [wNamedObjectIndexBuffer], a
+	call GetPokemonName
+	ld hl, wStringBuffer1
+	ld de, wcd49
+	ld bc, MON_NAME_LENGTH
+	call CopyBytes
+	ld a, $a
+	ld [wcf66], a
+	pop af
+	ldh [rSVBK], a
+	scf
+	ret

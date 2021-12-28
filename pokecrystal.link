@@ -188,9 +188,6 @@ ROMX $44
 ROMX $45
 	"Mobile 45"
 	"Mobile Stadium"
-ROMX $46
-	"Mobile 46"
-	"Mobile 46 ASCII"
 ROMX $47
 	"Battle Tower"
 ROMX $48

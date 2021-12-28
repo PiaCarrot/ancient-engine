@@ -166,7 +166,6 @@ UnreferencedScript_0x9e4be:
 	iffalse Script_Menu_ChallengeExplanationCancel
 	setval BATTLETOWERACTION_SET_EXPLANATION_READ
 	special BattleTowerAction
-	special Function1700ba
 	ifequal $a, Script_Menu_ChallengeExplanationCancel
 	writetext Text_ReceivedAListOfLeadersOnTheHonorRoll
 	turnobject BATTLETOWER1F_RECEPTIONIST, LEFT

@@ -6613,10 +6613,6 @@ Unknown_117356:
 
 SECTION "Mobile Stadium", ROMX
 
-GiveOddEgg:
-	farcall _GiveOddEgg
-	ret
-
 Function11765d:
 	ldh a, [hInMenu]
 	push af
@@ -7246,7 +7242,6 @@ Function117bb6:
 	call Function117c89
 	ld a, $1
 	ldh [hBGMapMode], a
-	farcall Function118284
 	call ClearSprites
 	ld a, [wc300]
 	and a
