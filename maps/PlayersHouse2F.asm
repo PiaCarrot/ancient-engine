@@ -92,13 +92,16 @@ PlayersHouseBookshelfScript:
 	setflag ENGINE_POKEDEX
 	giveshinypoke HITMONTOP, 19, RARE_CANDY
 	givepoke NINCADA, 19
+	givepoke TREECKO, 19
+	givepoke GROVYLE, 28
+	givepoke SCEPTILE, 36
 	giveshinypoke NINCADA, 19
 
 	giveitem RARE_CANDY, 99
 	giveitem POKE_BALL,2
 	giveitem HP_UP, 99
 
-	;callasm CheatFillPokedex
+	callasm CheatFillPokedex
 	closetext
 	end
 
@@ -162,7 +165,7 @@ CheatFillPokedex:
 	ld a, %11111111
 	ld bc, 62 ; 001-248
 	call ByteFill
-;	ld a, %11111111
-;	ld bc, 31 ; 249-496
+	ld a, %11111111
+	ld bc, 31 ; 249-496
 	ret
 	end

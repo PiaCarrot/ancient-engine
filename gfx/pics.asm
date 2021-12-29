@@ -736,9 +736,7 @@ LombreFrontpic:        INCBIN "gfx/pokemon/hoenn/lombre/front.animated.2bpp.lz"
 LudicoloFrontpic:      INCBIN "gfx/pokemon/hoenn/ludicolo/front.animated.2bpp.lz"
 SeedotFrontpic:        INCBIN "gfx/pokemon/hoenn/seedot/front.animated.2bpp.lz"
 NuzleafFrontpic:       INCBIN "gfx/pokemon/hoenn/nuzleaf/front.animated.2bpp.lz"
-ShiftryFrontpic:       INCBIN "gfx/pokemon/hoenn/shiftry/front.animated.2bpp.lz"
-TaillowFrontpic:       INCBIN "gfx/pokemon/hoenn/taillow/front.animated.2bpp.lz"
-SwellowFrontpic:       INCBIN "gfx/pokemon/hoenn/swellow/front.animated.2bpp.lz"
+
 
 SECTION "Pics 20", ROMX
 
@@ -765,9 +763,7 @@ HariyamaFrontpic:      INCBIN "gfx/pokemon/hoenn/hariyama/front.animated.2bpp.lz
 AzurillFrontpic:       INCBIN "gfx/pokemon/hoenn/azurill/front.animated.2bpp.lz"
 NosepassFrontpic:      INCBIN "gfx/pokemon/hoenn/nosepass/front.animated.2bpp.lz"
 SkittyFrontpic:        INCBIN "gfx/pokemon/hoenn/skitty/front.animated.2bpp.lz"
-DelcattyFrontpic:      INCBIN "gfx/pokemon/hoenn/delcatty/front.animated.2bpp.lz"
-SableyeFrontpic:       INCBIN "gfx/pokemon/hoenn/sableye/front.animated.2bpp.lz"
-MawileFrontpic:        INCBIN "gfx/pokemon/hoenn/mawile/front.animated.2bpp.lz"
+
 
 SECTION "Pics 21", ROMX
 
@@ -794,9 +790,7 @@ CameruptFrontpic:      INCBIN "gfx/pokemon/hoenn/camerupt/front.animated.2bpp.lz
 TorkoalFrontpic:       INCBIN "gfx/pokemon/hoenn/torkoal/front.animated.2bpp.lz"
 SpoinkFrontpic:        INCBIN "gfx/pokemon/hoenn/spoink/front.animated.2bpp.lz"
 GrumpigFrontpic:       INCBIN "gfx/pokemon/hoenn/grumpig/front.animated.2bpp.lz"
-SpindaFrontpic:        INCBIN "gfx/pokemon/hoenn/spinda/front.animated.2bpp.lz"
-TrapinchFrontpic:      INCBIN "gfx/pokemon/hoenn/trapinch/front.animated.2bpp.lz"
-VibravaFrontpic:       INCBIN "gfx/pokemon/hoenn/vibrava/front.animated.2bpp.lz"
+
 
 SECTION "Pics 22", ROMX
 
@@ -1120,13 +1114,13 @@ GiratinaFrontpic:      INCBIN "gfx/pokemon/sinnoh/giratina/front.animated.2bpp.l
 CresseliaFrontpic:     INCBIN "gfx/pokemon/sinnoh/cresselia/front.animated.2bpp.lz"
 PhioneFrontpic:        INCBIN "gfx/pokemon/sinnoh/phione/front.animated.2bpp.lz"
 ManaphyFrontpic:       INCBIN "gfx/pokemon/sinnoh/manaphy/front.animated.2bpp.lz"
+SylveonFrontpic:       INCBIN "gfx/pokemon/other/sylveon/front.animated.2bpp.lz"
 
 SECTION "Pics 31", ROMX
 
 DarkraiFrontpic:       INCBIN "gfx/pokemon/sinnoh/darkrai/front.animated.2bpp.lz"
 ShayminFrontpic:       INCBIN "gfx/pokemon/sinnoh/shaymin/front.animated.2bpp.lz"
 ArceusFrontpic:        INCBIN "gfx/pokemon/sinnoh/arceus/front.animated.2bpp.lz"
-SylveonFrontpic:       INCBIN "gfx/pokemon/other/sylveon/front.animated.2bpp.lz"
 RegielekiFrontpic:     INCBIN "gfx/pokemon/other/regieleki/front.animated.2bpp.lz"
 RegidragoFrontpic:     INCBIN "gfx/pokemon/other/regidrago/front.animated.2bpp.lz"
 TurtwigBackpic:        INCBIN "gfx/pokemon/sinnoh/turtwig/back.2bpp.lz"
@@ -1253,3 +1247,15 @@ UnownExclamationFrontpic: INCBIN "gfx/pokemon/unown_exclamation/front.animated.2
 UnownExclamationBackpic:  INCBIN "gfx/pokemon/unown_exclamation/back.2bpp.lz"
 UnownQuestionFrontpic: INCBIN "gfx/pokemon/unown_question/front.animated.2bpp.lz"
 UnownQuestionBackpic:  INCBIN "gfx/pokemon/unown_question/back.2bpp.lz"
+
+SECTION "Pics 34", ROMX
+
+SpindaFrontpic:        INCBIN "gfx/pokemon/hoenn/spinda/front.animated.2bpp.lz"
+TrapinchFrontpic:      INCBIN "gfx/pokemon/hoenn/trapinch/front.animated.2bpp.lz"
+VibravaFrontpic:       INCBIN "gfx/pokemon/hoenn/vibrava/front.animated.2bpp.lz"
+DelcattyFrontpic:      INCBIN "gfx/pokemon/hoenn/delcatty/front.animated.2bpp.lz"
+SableyeFrontpic:       INCBIN "gfx/pokemon/hoenn/sableye/front.animated.2bpp.lz"
+MawileFrontpic:        INCBIN "gfx/pokemon/hoenn/mawile/front.animated.2bpp.lz"
+ShiftryFrontpic:       INCBIN "gfx/pokemon/hoenn/shiftry/front.animated.2bpp.lz"
+TaillowFrontpic:       INCBIN "gfx/pokemon/hoenn/taillow/front.animated.2bpp.lz"
+SwellowFrontpic:       INCBIN "gfx/pokemon/hoenn/swellow/front.animated.2bpp.lz"
