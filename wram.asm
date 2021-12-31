@@ -873,32 +873,7 @@ wDiscardPile:: ds 24
 wDiscardPileEnd::
 wCardFlipEnd::
 
-NEXTU ; c6d0
-; mobile data
-wc6d0:: ds 56
-wc708:: db
-wc709:: db
-wc70a:: db
-wc70b:: db
-wc70c:: db
-wc70d:: db
-wc70e:: db
-wc70f:: db
-wc710:: db
-wc711:: db
-wc712:: ds 60
-wc74e:: ds 107
-wc7b9:: ds 1
-wc7ba:: ds 1
-wc7bb:: ds 2
-wc7bd:: ds 19
-wc7d0:: ds 1
-wc7d1:: ds 1
-wc7d2:: ds 1
-wc7d3:: ds 1
-wc7d4:: ds 1
-ENDU ; c7e8
-
+ENDU
 ENDU ; c7e8
 
 ; This was a buffer for map-related pointers in the 1997 G/S prototype.
