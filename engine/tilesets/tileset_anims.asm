@@ -258,7 +258,6 @@ TilesetTrainStationAnim:
 TilesetChampionsRoomAnim:
 TilesetLighthouseAnim:
 TilesetPlayersRoomAnim:
-TilesetPokeComCenterAnim:
 TilesetBattleTowerAnim:
 TilesetRuinsOfAlphAnim:
 TilesetRadioTowerAnim:
