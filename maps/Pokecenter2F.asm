@@ -2,10 +2,9 @@
 	const POKECENTER2F_TRADE_RECEPTIONIST
 	const POKECENTER2F_BATTLE_RECEPTIONIST
 	const POKECENTER2F_TIME_CAPSULE_RECEPTIONIST
-	const POKECENTER2F_OFFICER
 
 Pokecenter2F_MapScripts:
-	db 6 ; scene scripts
+	db 4 ; scene scripts
 	scene_script .Scene0 ; SCENE_DEFAULT
 	scene_script .Scene1 ; SCENE_POKECENTER2F_LEAVE_TRADE_CENTER
 	scene_script .Scene2 ; SCENE_POKECENTER2F_LEAVE_COLOSSEUM
@@ -14,14 +13,6 @@ Pokecenter2F_MapScripts:
 	db 0 ; callbacks
 
 .Scene0:
-	special CheckMysteryGift
-	ifequal $0, .Scene0Done
-	clearevent EVENT_MYSTERY_GIFT_DELIVERY_GUY
-	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-	iftrue .Scene0Done
-	prioritysjump Pokecenter2F_AppearMysteryGiftDeliveryGuy
-
-.Scene0Done:
 	end
 
 .Scene1:
@@ -34,11 +25,6 @@ Pokecenter2F_MapScripts:
 
 .Scene3:
 	prioritysjump Script_LeftTimeCapsule
-	end
-
-Pokecenter2F_AppearMysteryGiftDeliveryGuy:
-	appear POKECENTER2F_OFFICER
-	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 	end
 
 Script_TradeCenterClosed:
@@ -116,11 +102,6 @@ LinkReceptionistScript_Trade:
 	special WaitForOtherPlayerToExit
 .Cancel:
 	closetext
-	end
-
-BattleTradeMobile_WalkIn:
-	applymovementlasttalked Pokecenter2FMobileMobileMovementData_ReceptionistWalksUpAndLeft_LookDown
-	applymovement PLAYER, Pokecenter2FMobileMovementData_PlayerWalksIntoMobileBattleRoom
 	end
 
 LinkReceptionistScript_Battle:
@@ -496,12 +477,6 @@ Pokecenter2FMovementData_ReceptionistWalksUpAndLeft_LookRight:
 	turn_head RIGHT
 	step_end
 
-Pokecenter2FMobileMobileMovementData_ReceptionistWalksUpAndLeft_LookDown:
-	slow_step UP
-	slow_step LEFT
-	turn_head DOWN
-	step_end
-
 Pokecenter2FMovementData_ReceptionistStepsLeftLooksDown:
 	slow_step LEFT
 	turn_head DOWN
@@ -534,13 +509,6 @@ Pokecenter2FMovementData_PlayerTakesTwoStepsUp:
 	step_end
 
 Pokecenter2FMovementData_PlayerTakesOneStepUp:
-	step UP
-	step_end
-
-Pokecenter2FMobileMovementData_PlayerWalksIntoMobileBattleRoom:
-	step UP
-	step UP
-	step RIGHT
 	step UP
 	step_end
 
@@ -593,24 +561,6 @@ Pokecenter2FMovementData_ReceptionistStepsRightLooksDown_3:
 Pokecenter2FMovementData_ReceptionistStepsLeftLooksRight:
 	slow_step LEFT
 	turn_head RIGHT
-	step_end
-
-Pokecenter2FMobileMovementData_ReceptionistWalksUpAndLeft:
-	slow_step UP
-	slow_step LEFT
-	turn_head RIGHT
-	step_end
-
-Pokecenter2FMovementData_PlayerWalksOutOfMobileRoom:
-	step DOWN
-	step LEFT
-	step DOWN
-	step DOWN
-	step_end
-
-Pokecenter2FMobileMovementData_ReceptionistWalksRightAndDown:
-	slow_step RIGHT
-	slow_step DOWN
 	step_end
 
 Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingRight:
@@ -666,27 +616,6 @@ Pokecenter2FMovementData_ReceptionistStepsRightLooksLeft_2:
 	slow_step RIGHT
 	turn_head LEFT
 	step_end
-
-Text_BattleReceptionistMobile:
-	text "Would you like to"
-	line "battle over a GAME"
-
-	para "LINK cable or by"
-	line "mobile phone?"
-	done
-
-Text_TradeReceptionistMobile:
-	text "Would you like to"
-	line "trade over a GAME"
-
-	para "LINK cable or by"
-	line "mobile phone?"
-	done
-
-Text_ThisWayToMobileRoom:
-	text "This way to the"
-	line "MOBILE ROOM."
-	done
 
 Text_BattleReceptionistIntro:
 	text "Welcome to CABLE"
@@ -893,7 +822,7 @@ Text_BrokeStadiumRules:
 Pokecenter2F_MapEvents:
 	db 0, 0 ; filler
 
-	db 6 ; warp events
+	db 4 ; warp events
 	warp_event  0,  7, POKECENTER_2F, -1
 	warp_event  5,  0, TRADE_CENTER, 1
 	warp_event  9,  0, COLOSSEUM, 1
@@ -904,8 +833,7 @@ Pokecenter2F_MapEvents:
 	db 1 ; bg events
 	bg_event  7,  3, BGEVENT_READ, Pokecenter2FLinkRecordSign
 
-	db 4 ; object events
+	db 3 ; object events
 	object_event  5,  2, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LinkReceptionistScript_Trade, -1
 	object_event  9,  2, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LinkReceptionistScript_Battle, -1
 	object_event 13,  3, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LinkReceptionistScript_TimeCapsule, -1
-	object_event  1,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Pokecenter2FOfficerScript, EVENT_MYSTERY_GIFT_DELIVERY_GUY
