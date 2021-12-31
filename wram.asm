@@ -874,22 +874,6 @@ wDiscardPileEnd::
 wCardFlipEnd::
 
 NEXTU ; c6d0
-; dummy game
-wDummyGame:: ; c6d0
-wDummyGameCards:: ds 9 * 5
-wDummyGameCardsEnd::
-wDummyGameLastCardPicked:: db ; c6fd
-wDummyGameCard1:: db ; c6fe
-wDummyGameCard2:: db ; c6ff
-wDummyGameCard1Location:: db ; c700
-wDummyGameCard2Location:: db ; c701
-wDummyGameNumberTriesRemaining:: db ; c702
-wDummyGameLastMatches:: ds 5 ; c703
-wDummyGameCounter:: db ; c708
-wDummyGameNumCardsMatched:: db ; c709
-wDummyGameEnd::
-
-NEXTU ; c6d0
 ; mobile data
 wc6d0:: ds 56
 wc708:: db
