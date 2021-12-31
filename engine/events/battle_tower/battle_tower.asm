@@ -11,7 +11,6 @@ Function1700c4:
 
 	call Function17042c
 
-	ld a, BANK(s5_be45) ; aka BANK(s5_be46) and BANK(s5_aa41) and BANK(s5_aa5d)
 	call GetSRAMBank
 	ld a, 1
 	ld [s5_be45], a
@@ -25,7 +24,6 @@ Function1700c4:
 	ld de, s5_aa8e
 	ld bc, 7 * $cc ; length of battle tower struct from japanese games?
 	call CopyBytes
-	ld hl, s5_aa5d ; some sort of count
 	ld a, [hl]
 	inc [hl]
 	inc hl
@@ -1237,13 +1235,11 @@ CheckMobileEventIndex: ; BattleTowerAction $0b something to do with GS Ball
 
 Function1708c8: ; BattleTowerAction $0c
 	call UpdateTime
-	ld a, BANK(s5_aa8b) ; aka BANK(s5_aa8c) and BANK(s5_aa5d) and BANK(s5_aa48) and BANK(s5_aa47)
 	call GetSRAMBank
 	ld a, [wCurDay]
 	ld [s5_aa8b], a
 	xor a
 	ld [s5_aa8c], a
-	ld a, [s5_aa5d]
 	cp 2
 	jr nc, .asm_1708ec
 	ld a, [wCurDay]
@@ -1270,9 +1266,7 @@ Function1708f0: ; BattleTowerAction $0d
 	ld a, c
 	cp [hl]
 	jr nz, Function170923
-	ld a, BANK(s5_aa5d)
 	call GetSRAMBank
-	ld a, [s5_aa5d]
 	call CloseSRAM
 	cp 5
 	ret c
@@ -1281,13 +1275,10 @@ Function1708f0: ; BattleTowerAction $0d
 	ret
 
 Function170923:
-	ld a, BANK(s5_aa48) ; aka BANK(s5_aa47) and BANK(s5_aa5d)
 	call GetSRAMBank
 	xor a
 	ld [s5_aa48], a
 	ld [s5_aa47], a
-	ld hl, s5_aa5d
-	ld bc, MOBILE_LOGIN_PASSWORD_LENGTH
 	call ByteFill
 	call CloseSRAM
 	ret
