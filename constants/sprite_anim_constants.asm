@@ -33,7 +33,6 @@ NUM_SPRITE_ANIM_STRUCTS EQU 10 ; see wSpriteAnimationStructs
 	const SPRITE_ANIM_INDEX_COMPOSE_MAIL_CURSOR      ; 09
 	const SPRITE_ANIM_INDEX_RED_WALK                 ; 0a
 	const SPRITE_ANIM_INDEX_UNUSED_CURSOR            ; 0b
-	const SPRITE_ANIM_INDEX_DUMMY_GAME               ; 0c
 	const SPRITE_ANIM_INDEX_POKEGEAR_ARROW           ; 0d
 	const SPRITE_ANIM_INDEX_TRADE_POKE_BALL          ; 0e
 	const SPRITE_ANIM_INDEX_TRADE_POOF               ; 0f
@@ -83,7 +82,6 @@ NUM_SPRITE_ANIM_STRUCTS EQU 10 ; see wSpriteAnimationStructs
 	const SPRITE_ANIM_SEQ_SLOTS_EGG               ; 0b
 	const SPRITE_ANIM_SEQ_MAIL_CURSOR             ; 0c
 	const SPRITE_ANIM_SEQ_UNUSED_CURSOR           ; 0d
-	const SPRITE_ANIM_SEQ_DUMMY_GAME_CURSOR       ; 0e
 	const SPRITE_ANIM_SEQ_POKEGEAR_ARROW          ; 0f
 	const SPRITE_ANIM_SEQ_TRADE_POKE_BALL         ; 10
 	const SPRITE_ANIM_SEQ_TRADE_TUBE_BULGE        ; 11
