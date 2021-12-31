@@ -844,22 +844,6 @@ Slots_UpdateReelPositionAndOAM:
 	jr nz, .loop
 	ret
 
-Unreferenced_Function92bbe:
-	push hl
-	srl a
-	srl a
-	add LOW(.Unknown_92bce)
-	ld l, a
-	ld a, 0
-	adc HIGH(.Unknown_92bce)
-	ld h, a
-	ld a, [hl]
-	pop hl
-	ret
-
-.Unknown_92bce:
-	db 0, 1, 2, 3, 4, 5
-
 ReelActionJumptable:
 	ld hl, REEL_ACTION
 	add hl, bc

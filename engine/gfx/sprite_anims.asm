@@ -27,7 +27,6 @@ DoAnimFrame:
 	dw .SlotsChanseyEgg
 	dw .MailCursor
 	dw .UnusedCursor
-	dw .DummyGameCursor
 	dw .PokegearArrow
 	dw .TradePokeBall
 	dw .TradeTubeBulge
@@ -405,10 +404,6 @@ DoAnimFrame:
 
 .PokegearArrow
 	callfar AnimatePokegearModeIndicatorArrow
-	ret
-
-.DummyGameCursor
-	callfar DummyGame_InterpretJoypad_AnimateCursor
 	ret
 
 .TradePokeBall
