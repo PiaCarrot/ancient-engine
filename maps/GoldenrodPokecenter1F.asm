@@ -136,6 +136,8 @@ GoldenrodPokecenter1F_MapEvents:
 	warp_event  4,  7, GOLDENROD_CITY, 15
 	warp_event  0,  7, POKECENTER_2F, 1
 
+	db 0 ; coord events
+
 	db 0 ; bg events
 
 	db 4 ; object events
