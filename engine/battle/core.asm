@@ -7807,13 +7807,27 @@ WithdrawMonText:
 .WithdrawMonText:
 	text_far Text_BattleMonNickComma
 	text_asm
-; Print text to withdraw mon
-; depending on HP the message is different
 	push de
 	push bc
 	ld hl, wEnemyMonHP + 1
 	ld de, wEnemyHPAtTimeOfPlayerSwitch + 1
+; Avoid the 1HP bug
+	ld a, [de]
 	ld b, [hl]
+	cp b
+	jp nz, .not_shedinja
+	pop bc
+	pop de
+	ld hl, TextJump_ThatsEnoughComeBack
+	ret
+; Print text to withdraw mon
+; depending on HP the message is different
+.not_shedinja
+	ld b, [hl]
+	dec hl
+	ld a, [de]
+	sub b
+	ldh [hMultiplicand + 2], a
 	dec hl
 	ld a, [de]
 	sub b
