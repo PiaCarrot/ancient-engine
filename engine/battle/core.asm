@@ -7813,9 +7813,8 @@ WithdrawMonText:
 	ld de, wEnemyHPAtTimeOfPlayerSwitch + 1
 ; Avoid the 1HP bug
 	ld a, [de]
-	ld b, [hl]
-	cp b
-	jp nz, .not_shedinja
+	cp [hl]
+	jr nz, .not_shedinja
 	pop bc
 	pop de
 	ld hl, TextJump_ThatsEnoughComeBack
