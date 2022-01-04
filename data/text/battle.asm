@@ -1111,3 +1111,10 @@ BattleText_0x8188e:
 	text "There is no time"
 	line "left today!"
 	done
+
+; Ability texts
+AbilityText_RunAway:
+	text_ram wBattleMonNick
+	text " fled"
+	line "using RUN AWAY!"
+	prompt

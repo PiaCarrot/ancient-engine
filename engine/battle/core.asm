@@ -87,6 +87,7 @@ DoBattle:
 	call InitBattleMon
 	call ResetPlayerStatLevels
 	call SendOutMonText
+	farcall CalcPlayerBattleAbility
 	call NewBattleMonStatus
 	call BreakAttraction
 	call SendOutPlayerMon
@@ -2787,6 +2788,7 @@ ForcePlayerMonChoice:
 	call GetMemSGBLayout
 	call SetPalettes
 	call SendOutMonText
+	farcall CalcPlayerBattleAbility
 	call NewBattleMonStatus
 	call BreakAttraction
 	call SendOutPlayerMon
@@ -2808,6 +2810,7 @@ PlayerPartyMonEntrance:
 	call InitBattleMon
 	call ResetPlayerStatLevels
 	call SendOutMonText
+	farcall CalcPlayerBattleAbility
 	call NewBattleMonStatus
 	call BreakAttraction
 	call SendOutPlayerMon
@@ -3722,6 +3725,15 @@ TryToRunAwayFromBattle:
 	dec a
 	jp nz, .cant_run_from_trainer
 
+	; Check for Run Away
+	push bc
+	ld a, [wBattleMonAbility]
+	ld b, a
+	ld a, RUN_AWAY
+	cp b
+	jp z, .run_away
+	pop bc
+	
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_CANT_RUN, a
 	jp nz, .cant_escape
@@ -3866,6 +3878,25 @@ TryToRunAwayFromBattle:
 	pop de
 	call WaitSFX
 	ld hl, BattleText_GotAwaySafely
+	call StdBattleTextbox
+	call WaitSFX
+	call LoadTileMapToTempTileMap
+	scf
+	ret
+.run_away
+	pop bc
+	ld b, a
+	ld a, [wBattleResult]
+	and BATTLERESULT_BITMASK
+	add b
+	ld [wBattleResult], a
+	call StopDangerSound
+	push de
+	ld de, SFX_RUN
+	call WaitPlaySFX
+	pop de
+	call WaitSFX
+	ld hl, AbilityText_RunAway
 	call StdBattleTextbox
 	call WaitSFX
 	call LoadTileMapToTempTileMap
@@ -5262,6 +5293,8 @@ BattleMonEntrance:
 	call InitBattleMon
 	call ResetPlayerStatLevels
 	call SendOutMonText
+	farcall CalcPlayerBattleAbility
+	ld [wBattleMonAbility], a 
 	call NewBattleMonStatus
 	call BreakAttraction
 	call SendOutPlayerMon
@@ -9245,3 +9278,4 @@ BattleStartMessage:
 	ret nz
 	ld c, $2 ; start
 	ret
+
