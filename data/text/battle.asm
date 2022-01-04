@@ -1118,3 +1118,17 @@ AbilityText_RunAway:
 	text " fled"
 	line "using RUN AWAY!"
 	prompt
+
+AbilityText_ArenaTrap1:
+	text "Enemy @"
+	text_ram wEnemyMonNick
+	text_start
+	line "prevents escape"
+	cont "with ARENA TRAP!"
+	prompt
+
+AbilityText_ArenaTrap2:
+	text "Foe's ARENA TRAP"
+	line "prevents switch-"
+	cont "ing!"
+	prompt

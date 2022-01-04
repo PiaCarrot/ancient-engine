@@ -763,6 +763,11 @@ TryEnemyFlee:
 	dec a
 	jr nz, .Stay
 
+	ld a, [wBattleMonAbility]
+	push bc
+	cp ARENA_TRAP
+	jr z, .Stay
+
 	ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_CANT_RUN, a
 	jr nz, .Stay
@@ -3579,6 +3584,7 @@ Function_SetEnemyMonAndSendOutAnimation:
 	ld [wMonType], a
 	predef CopyMonToTempMon
 	call GetEnemyMonFrontpic
+	farcall CalcEnemyAbility
 
 	xor a
 	ld [wNumHits], a
@@ -3732,8 +3738,14 @@ TryToRunAwayFromBattle:
 	ld a, RUN_AWAY
 	cp b
 	jp z, .run_away
-	pop bc
 	
+	ld a, [wEnemyMonAbility]
+	ld b, a
+	ld a, ARENA_TRAP
+	cp b
+	jp z, .arena_trap
+	pop bc
+
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_CANT_RUN, a
 	jp nz, .cant_escape
@@ -3901,6 +3913,12 @@ TryToRunAwayFromBattle:
 	call WaitSFX
 	call LoadTileMapToTempTileMap
 	scf
+	ret
+.arena_trap:
+	pop bc
+	ld hl, AbilityText_ArenaTrap1
+	call StdBattleTextbox
+	call WaitSFX
 	ret
 
 .mobile
@@ -5186,12 +5204,23 @@ TryPlayerSwitch:
 	jp BattleMenuPKMN_Loop
 
 .check_trapped
+	ld a, [wEnemyMonAbility]
+	cp ARENA_TRAP
+	jr z, .arena_trap
 	ld a, [wPlayerWrapCount]
 	and a
 	jr nz, .trapped
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_CANT_RUN, a
 	jr z, .try_switch
+
+.arena_trap
+	ld a, [wBattleMonAbility]
+	cp RUN_AWAY
+	jr z, .try_switch
+	ld hl, AbilityText_ArenaTrap2
+	call StdBattleTextbox
+	jp BattleMenuPKMN_Loop
 
 .trapped
 	ld hl, BattleText_MonCantBeRecalled
@@ -8317,6 +8346,7 @@ InitEnemyWildmon:
 	ld a, WILD_BATTLE
 	ld [wBattleMode], a
 	call LoadEnemyMon
+	farcall CalcEnemyAbility
 	ld hl, wEnemyMonMoves
 	ld de, wWildMonMoves
 	ld bc, NUM_MOVES

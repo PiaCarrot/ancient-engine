@@ -52,6 +52,7 @@ CalcEnemyAbility:
 	inc bc
 .done
 	ld a, [bc]
+  ld [wEnemyMonAbility], a
 	pop bc
 	pop hl
 	ret
