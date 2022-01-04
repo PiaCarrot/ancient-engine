@@ -764,7 +764,6 @@ TryEnemyFlee:
 	jr nz, .Stay
 
 	ld a, [wBattleMonAbility]
-	push bc
 	cp ARENA_TRAP
 	jr z, .Stay
 
