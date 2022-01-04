@@ -212,6 +212,7 @@ TryWildEncounter::
 	call GetMapEncounterRate
 	call ApplyMusicEffectOnEncounterRate
 	call ApplyCleanseTagEffectOnEncounterRate
+	call AbilityEncounterEffects
 	call Random
 	cp b
 	ret
@@ -1000,3 +1001,41 @@ INCLUDE "data/wild/kanto_grass.asm"
 INCLUDE "data/wild/kanto_water.asm"
 INCLUDE "data/wild/swarm_grass.asm"
 INCLUDE "data/wild/swarm_water.asm"
+
+; Abilities
+; Overworld party mon ability effects
+AbilityEncounterEffects:
+	push hl
+	push bc
+	ld a, [wPartyMon1]
+	ld hl, wPartyMon1DVs
+	inc hl
+	ld a, [hl]
+	ld bc, wBaseAbility1
+	cp %1
+	jr z, .done
+	inc bc
+.done
+	ld a, [bc]
+	pop bc
+	pop hl
+
+	cp STENCH
+	jr z, .half
+	cp QUICK_FEET
+	jr z, .half
+	cp WHITE_SMOKE 
+	jr z, .half
+	cp NO_GUARD
+	jr z, .double
+	cp ILLUMINATE
+	jr z, .double
+	cp ARENA_TRAP
+	jr z, .double
+	ret
+.half
+	srl b
+	ret
+.double
+	sla b
+	ret
