@@ -1132,3 +1132,34 @@ AbilityText_ArenaTrap2:
 	line "prevents switch-"
 	cont "ing!"
 	prompt
+
+AbilityText_Intimidate:
+	text_ram wBattleMonNick
+	text "'s"
+	line "INTIMIDATE lowers"
+	cont "enemy @"
+	text_ram wEnemyMonNick
+	text "'s"
+	cont "ATTACK!"
+	prompt
+
+AbilityText_Drizzle:
+	text_ram wBattleMonNick
+	text "'s"
+	line "DRIZZLE made it"
+	cont "rain!"
+	prompt
+
+AbilityText_Drought:
+	text_ram wBattleMonNick
+	text "'s"
+	line "DROUGHT made the"
+	cont "sunlight harsh!"
+	prompt
+
+AbilityText_SandStream:
+	text_ram wBattleMonNick
+	text "'s"
+	line "SAND STREAM caused"
+	cont "a sandstorm!"
+	prompt

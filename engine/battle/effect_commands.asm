@@ -4556,7 +4556,6 @@ BattleCommand_StatDownMessage:
 
 TryLowerStat:
 ; Lower stat c from stat struct hl (buffer de).
-
 	push bc
 	sla c
 	ld b, 0

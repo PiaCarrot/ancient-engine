@@ -95,6 +95,7 @@ DoBattle:
 	call LoadTileMapToTempTileMap
 	call SetPlayerTurn
 	call SpikesDamage
+	farcall CheckPlayerEntranceAbility
 	ld a, [wLinkMode]
 	and a
 	jr z, .not_linked_2
@@ -109,6 +110,7 @@ DoBattle:
 	call EnemySwitch
 	call SetEnemyTurn
 	call SpikesDamage
+	farcall CalcEnemyAbility
 
 .not_linked_2
 	jp BattleTurn
@@ -2368,6 +2370,7 @@ EnemyPartyMonEntrance:
 	call ResetBattleParticipants
 	call SetEnemyTurn
 	call SpikesDamage
+	farcall CalcEnemyAbility
 	xor a
 	ld [wEnemyMoveStruct + MOVE_ANIM], a
 	ld [wBattlePlayerAction], a
@@ -2800,6 +2803,7 @@ ForcePlayerMonChoice:
 	call LoadTileMapToTempTileMap
 	call SetPlayerTurn
 	call SpikesDamage
+	farcall CheckPlayerEntranceAbility
 	ld a, $1
 	and a
 	ld c, a
@@ -2821,7 +2825,8 @@ PlayerPartyMonEntrance:
 	call EmptyBattleTextbox
 	call LoadTileMapToTempTileMap
 	call SetPlayerTurn
-	jp SpikesDamage
+	call SpikesDamage
+	farcall CheckPlayerEntranceAbility
 
 CheckMobileBattleError:
 	ld a, [wLinkMode]
@@ -5322,7 +5327,6 @@ BattleMonEntrance:
 	call ResetPlayerStatLevels
 	call SendOutMonText
 	farcall CalcPlayerBattleAbility
-	ld [wBattleMonAbility], a 
 	call NewBattleMonStatus
 	call BreakAttraction
 	call SendOutPlayerMon
@@ -5330,6 +5334,7 @@ BattleMonEntrance:
 	call LoadTileMapToTempTileMap
 	call SetPlayerTurn
 	call SpikesDamage
+	farcall CheckPlayerEntranceAbility
 	ld a, $2
 	ld [wMenuCursorY], a
 	ret

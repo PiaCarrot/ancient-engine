@@ -56,3 +56,42 @@ CalcEnemyAbility:
 	pop bc
 	pop hl
 	ret
+
+; Abilities that trigger upon player Pokémon entrance
+CheckPlayerEntranceAbility:
+	push af
+	push hl
+	ld a, [wBattleMonAbility]
+	cp DRIZZLE
+	jr z, .drizzle
+	cp DROUGHT
+	jr z, .drought
+	cp SAND_STREAM
+	jr z, .sand_stream
+	pop hl
+	pop af
+	ret
+.drizzle
+	ld a, WEATHER_RAIN
+	ld [wBattleWeather], a
+	ld hl, AbilityText_Drizzle
+	call StdBattleTextbox
+	pop hl
+	pop af
+	ret
+.drought
+	ld a, WEATHER_SUN
+	ld [wBattleWeather], a
+	ld hl, AbilityText_Drought
+	call StdBattleTextbox
+	pop hl
+	pop af
+	ret
+.sand_stream
+	ld a, WEATHER_SANDSTORM
+	ld [wBattleWeather], a
+	ld hl, AbilityText_SandStream
+	call StdBattleTextbox
+	pop hl
+	pop af
+	ret

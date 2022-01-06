@@ -12,7 +12,7 @@
 	db 15 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/zubat/front.dimensions"
-	db INNER_FOCUS, INNER_FOCUS ; wBaseAbility1, wBaseAbility2
+	db SAND_STREAM, SAND_STREAM ; wBaseAbility1, wBaseAbility2
 	db 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_FLYING, EGG_FLYING ; egg groups
