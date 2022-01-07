@@ -95,7 +95,6 @@ DoBattle:
 	call LoadTileMapToTempTileMap
 	call SetPlayerTurn
 	call SpikesDamage
-	farcall CheckPlayerEntranceAbility
 	ld a, [wLinkMode]
 	and a
 	jr z, .not_linked_2
@@ -110,9 +109,37 @@ DoBattle:
 	call EnemySwitch
 	call SetEnemyTurn
 	call SpikesDamage
-	farcall CalcEnemyAbility
-
 .not_linked_2
+	; Are the abilities equal?
+	push bc
+	ld a, [wEnemyMonAbility]
+	ld b, a
+	ld a, [wBattleMonAbility]
+	cp b
+	jr z, .same_ability
+	; If they're different, who is faster?
+	ld bc, wBattleMonSpeed
+	ld a, [bc]
+	ld b, a
+	push de
+	ld de, wEnemyMonSpeed
+	ld a, [de]
+	pop de
+	cp b
+	jr c, .enemy
+.player
+	farcall CheckPlayerEntranceAbility
+	farcall CheckEnemyEntranceAbility
+	pop bc
+	jr .dobattle_battle_turn
+.enemy
+	farcall CheckEnemyEntranceAbility
+.same_ability
+	farcall CheckPlayerEntranceAbility
+	pop bc
+	jr .dobattle_battle_turn
+
+.dobattle_battle_turn
 	jp BattleTurn
 
 .tutorial_debug
@@ -462,6 +489,8 @@ DetermineMoveOrder:
 	callfar AI_Switch
 	call SetEnemyTurn
 	call SpikesDamage
+	farcall CalcEnemyAbility
+	farcall CheckEnemyEntranceAbility
 	jp .enemy_first
 
 .use_move
@@ -2371,6 +2400,7 @@ EnemyPartyMonEntrance:
 	call SetEnemyTurn
 	call SpikesDamage
 	farcall CalcEnemyAbility
+	farcall CheckEnemyEntranceAbility
 	xor a
 	ld [wEnemyMoveStruct + MOVE_ANIM], a
 	ld [wBattlePlayerAction], a

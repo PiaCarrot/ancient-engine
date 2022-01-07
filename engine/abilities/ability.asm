@@ -51,7 +51,7 @@ CalcPlayerBattleAbility:
 	ret
 
 ; Calcs the enemy ability the same way the players is
-; again, we will eventually switch this to be the PV. Somehow.
+; again, we will eventually switch this to be the PV.
 CalcEnemyAbility:
 	push hl
 	push bc
