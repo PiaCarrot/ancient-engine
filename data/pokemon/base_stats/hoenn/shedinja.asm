@@ -12,7 +12,7 @@
 	db 15 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/hoenn/shedinja/front.dimensions"
-	db ARENA_TRAP, ARENA_TRAP ; wBaseAbility1, wBaseAbility2
+	db WONDER_GUARD, WONDER_GUARD ; wBaseAbility1, wBaseAbility2
 	db 0, 0 ; padding
 	db GROWTH_ERRATIC ; growth rate
 	dn EGG_MINERAL, EGG_MINERAL ; egg groups
