@@ -3743,13 +3743,14 @@ TryToRunAwayFromBattle:
 	cp b
 	jp z, .run_away
 	
+	; Check for Arena Trap
 	ld a, [wEnemyMonAbility]
 	ld b, a
 	ld a, ARENA_TRAP
 	cp b
 	jp z, .arena_trap
+.skip_arena_trap
 	pop bc
-
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_CANT_RUN, a
 	jp nz, .cant_escape
@@ -3852,6 +3853,7 @@ TryToRunAwayFromBattle:
 
 .print_inescapable_text
 	call StdBattleTextbox
+.didnt_run
 	ld a, TRUE
 	ld [wFailedToFlee], a
 	call LoadTileMapToTempTileMap
@@ -3873,7 +3875,7 @@ TryToRunAwayFromBattle:
 	call LinkBattleSendReceiveAction
 	call Call_LoadTempTileMapToTileMap
 	call CheckMobileBattleError
-	jr c, .mobile
+	jp c, .mobile
 
 	; Got away safely
 	ld a, [wBattleAction]
@@ -3919,11 +3921,23 @@ TryToRunAwayFromBattle:
 	scf
 	ret
 .arena_trap:
+	ld a, [wBattleMonType1]
+	cp FLYING
+	jp z, .skip_arena_trap
+	ld a, [wBattleMonType2]
+	cp FLYING
+	jp z, .skip_arena_trap
+	ld a, [wBattleMonAbility]
+	cp LEVITATE
+	jp z, .skip_arena_trap
+	cp MOLD_BREAKER
+	jp z, .skip_arena_trap
+	push de
+	ld de, wEnemyMonNick
+	farcall DoEscapeAbilityText
+	pop de
 	pop bc
-	ld hl, AbilityText_ArenaTrap1
-	call StdBattleTextbox
-	call WaitSFX
-	ret
+	jp .didnt_run
 
 .mobile
 	call StopDangerSound
@@ -5211,6 +5225,7 @@ TryPlayerSwitch:
 	ld a, [wEnemyMonAbility]
 	cp ARENA_TRAP
 	jr z, .arena_trap
+.skip_arena_trap
 	ld a, [wPlayerWrapCount]
 	and a
 	jr nz, .trapped
@@ -5219,11 +5234,21 @@ TryPlayerSwitch:
 	jr z, .try_switch
 
 .arena_trap
+	ld a, [wBattleMonType1]
+	cp FLYING
+	jp z, .skip_arena_trap
+	ld a, [wBattleMonType2]
+	cp FLYING
+	jp z, .skip_arena_trap
 	ld a, [wBattleMonAbility]
-	cp RUN_AWAY
-	jr z, .try_switch
-	ld hl, AbilityText_ArenaTrap2
-	call StdBattleTextbox
+	cp LEVITATE
+	jp z, .skip_arena_trap
+	cp MOLD_BREAKER
+	jp z, .skip_arena_trap
+	push de
+	ld de, wEnemyMonNick
+	farcall DoEscapeAbilityText
+	pop de
 	jp BattleMenuPKMN_Loop
 
 .trapped

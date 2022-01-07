@@ -697,6 +697,7 @@ INCLUDE "engine/natures/natures.asm"
 ; Abilities
 INCLUDE "engine/abilities/ability.asm"
 INCLUDE "engine/abilities/ability_prints.asm"
+INCLUDE "data/text/ability.asm"
 
 ; own section
 INCLUDE "data/trainers/parties.asm"
