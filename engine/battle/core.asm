@@ -87,7 +87,6 @@ DoBattle:
 	call InitBattleMon
 	call ResetPlayerStatLevels
 	call SendOutMonText
-	farcall CalcPlayerBattleAbility
 	call NewBattleMonStatus
 	call BreakAttraction
 	call SendOutPlayerMon
@@ -109,37 +108,8 @@ DoBattle:
 	call EnemySwitch
 	call SetEnemyTurn
 	call SpikesDamage
-.not_linked_2
-	; Are the abilities equal?
-	push bc
-	ld a, [wEnemyMonAbility]
-	ld b, a
-	ld a, [wBattleMonAbility]
-	cp b
-	jr z, .same_ability
-	; If they're different, who is faster?
-	ld bc, wBattleMonSpeed
-	ld a, [bc]
-	ld b, a
-	push de
-	ld de, wEnemyMonSpeed
-	ld a, [de]
-	pop de
-	cp b
-	jr c, .enemy
-.player
-	farcall CheckPlayerEntranceAbility
-	farcall CheckEnemyEntranceAbility
-	pop bc
-	jr .dobattle_battle_turn
-.enemy
-	farcall CheckEnemyEntranceAbility
-.same_ability
-	farcall CheckPlayerEntranceAbility
-	pop bc
-	jr .dobattle_battle_turn
 
-.dobattle_battle_turn
+.not_linked_2
 	jp BattleTurn
 
 .tutorial_debug
@@ -489,8 +459,6 @@ DetermineMoveOrder:
 	callfar AI_Switch
 	call SetEnemyTurn
 	call SpikesDamage
-	farcall CalcEnemyAbility
-	farcall CheckEnemyEntranceAbility
 	jp .enemy_first
 
 .use_move
@@ -793,10 +761,6 @@ TryEnemyFlee:
 	ld a, [wBattleMode]
 	dec a
 	jr nz, .Stay
-
-	ld a, [wBattleMonAbility]
-	cp ARENA_TRAP
-	jr z, .Stay
 
 	ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_CANT_RUN, a
@@ -2399,8 +2363,6 @@ EnemyPartyMonEntrance:
 	call ResetBattleParticipants
 	call SetEnemyTurn
 	call SpikesDamage
-	farcall CalcEnemyAbility
-	farcall CheckEnemyEntranceAbility
 	xor a
 	ld [wEnemyMoveStruct + MOVE_ANIM], a
 	ld [wBattlePlayerAction], a
@@ -2825,7 +2787,6 @@ ForcePlayerMonChoice:
 	call GetMemSGBLayout
 	call SetPalettes
 	call SendOutMonText
-	farcall CalcPlayerBattleAbility
 	call NewBattleMonStatus
 	call BreakAttraction
 	call SendOutPlayerMon
@@ -2833,7 +2794,6 @@ ForcePlayerMonChoice:
 	call LoadTileMapToTempTileMap
 	call SetPlayerTurn
 	call SpikesDamage
-	farcall CheckPlayerEntranceAbility
 	ld a, $1
 	and a
 	ld c, a
@@ -2848,15 +2808,13 @@ PlayerPartyMonEntrance:
 	call InitBattleMon
 	call ResetPlayerStatLevels
 	call SendOutMonText
-	farcall CalcPlayerBattleAbility
 	call NewBattleMonStatus
 	call BreakAttraction
 	call SendOutPlayerMon
 	call EmptyBattleTextbox
 	call LoadTileMapToTempTileMap
 	call SetPlayerTurn
-	call SpikesDamage
-	farcall CheckPlayerEntranceAbility
+	jp SpikesDamage
 
 CheckMobileBattleError:
 	ld a, [wLinkMode]
@@ -3618,7 +3576,6 @@ Function_SetEnemyMonAndSendOutAnimation:
 	ld [wMonType], a
 	predef CopyMonToTempMon
 	call GetEnemyMonFrontpic
-	farcall CalcEnemyAbility
 
 	xor a
 	ld [wNumHits], a
@@ -3765,22 +3722,6 @@ TryToRunAwayFromBattle:
 	dec a
 	jp nz, .cant_run_from_trainer
 
-	; Check for Run Away
-	push bc
-	ld a, [wBattleMonAbility]
-	ld b, a
-	ld a, RUN_AWAY
-	cp b
-	jp z, .run_away
-	
-	; Check for Arena Trap
-	ld a, [wEnemyMonAbility]
-	ld b, a
-	ld a, ARENA_TRAP
-	cp b
-	jp z, .arena_trap
-.skip_arena_trap
-	pop bc
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_CANT_RUN, a
 	jp nz, .cant_escape
@@ -3883,7 +3824,6 @@ TryToRunAwayFromBattle:
 
 .print_inescapable_text
 	call StdBattleTextbox
-.didnt_run
 	ld a, TRUE
 	ld [wFailedToFlee], a
 	call LoadTileMapToTempTileMap
@@ -3905,7 +3845,7 @@ TryToRunAwayFromBattle:
 	call LinkBattleSendReceiveAction
 	call Call_LoadTempTileMapToTileMap
 	call CheckMobileBattleError
-	jp c, .mobile
+	jr c, .mobile
 
 	; Got away safely
 	ld a, [wBattleAction]
@@ -3931,43 +3871,6 @@ TryToRunAwayFromBattle:
 	call LoadTileMapToTempTileMap
 	scf
 	ret
-.run_away
-	pop bc
-	ld b, a
-	ld a, [wBattleResult]
-	and BATTLERESULT_BITMASK
-	add b
-	ld [wBattleResult], a
-	call StopDangerSound
-	push de
-	ld de, SFX_RUN
-	call WaitPlaySFX
-	pop de
-	call WaitSFX
-	ld hl, AbilityText_RunAway
-	call StdBattleTextbox
-	call WaitSFX
-	call LoadTileMapToTempTileMap
-	scf
-	ret
-.arena_trap:
-	ld a, [wBattleMonType1]
-	cp FLYING
-	jp z, .skip_arena_trap
-	ld a, [wBattleMonType2]
-	cp FLYING
-	jp z, .skip_arena_trap
-	ld a, [wBattleMonAbility]
-	cp LEVITATE
-	jp z, .skip_arena_trap
-	cp MOLD_BREAKER
-	jp z, .skip_arena_trap
-	push de
-	ld de, wEnemyMonNick
-	farcall DoEscapeAbilityText
-	pop de
-	pop bc
-	jp .didnt_run
 
 .mobile
 	call StopDangerSound
@@ -5252,34 +5155,12 @@ TryPlayerSwitch:
 	jp BattleMenuPKMN_Loop
 
 .check_trapped
-	ld a, [wEnemyMonAbility]
-	cp ARENA_TRAP
-	jr z, .arena_trap
-.skip_arena_trap
 	ld a, [wPlayerWrapCount]
 	and a
 	jr nz, .trapped
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_CANT_RUN, a
 	jr z, .try_switch
-
-.arena_trap
-	ld a, [wBattleMonType1]
-	cp FLYING
-	jp z, .skip_arena_trap
-	ld a, [wBattleMonType2]
-	cp FLYING
-	jp z, .skip_arena_trap
-	ld a, [wBattleMonAbility]
-	cp LEVITATE
-	jp z, .skip_arena_trap
-	cp MOLD_BREAKER
-	jp z, .skip_arena_trap
-	push de
-	ld de, wEnemyMonNick
-	farcall DoEscapeAbilityText
-	pop de
-	jp BattleMenuPKMN_Loop
 
 .trapped
 	ld hl, BattleText_MonCantBeRecalled
@@ -5381,7 +5262,6 @@ BattleMonEntrance:
 	call InitBattleMon
 	call ResetPlayerStatLevels
 	call SendOutMonText
-	farcall CalcPlayerBattleAbility
 	call NewBattleMonStatus
 	call BreakAttraction
 	call SendOutPlayerMon
@@ -5389,7 +5269,6 @@ BattleMonEntrance:
 	call LoadTileMapToTempTileMap
 	call SetPlayerTurn
 	call SpikesDamage
-	farcall CheckPlayerEntranceAbility
 	ld a, $2
 	ld [wMenuCursorY], a
 	ret
@@ -8405,7 +8284,6 @@ InitEnemyWildmon:
 	ld a, WILD_BATTLE
 	ld [wBattleMode], a
 	call LoadEnemyMon
-	farcall CalcEnemyAbility
 	ld hl, wEnemyMonMoves
 	ld de, wWildMonMoves
 	ld bc, NUM_MOVES
@@ -9367,4 +9245,3 @@ BattleStartMessage:
 	ret nz
 	ld c, $2 ; start
 	ret
-
